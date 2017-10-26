@@ -10,6 +10,17 @@ export default class Header extends Component {
     };
   }
 
+  componentDidMount() {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({
+          displayName: user.displayName.split(' ')[0],
+          user: user
+        });
+      }
+    });
+  }
+
   login = () => {
     auth.signInWithPopup(provider)
       .then((result) => {
@@ -21,7 +32,13 @@ export default class Header extends Component {
   }
 
   logout = () => {
-
+    auth.signOut()
+      .then(() => {
+        this.setState({
+          displayName: '',
+          user: null
+        });
+      });
   }
 
   render () {
@@ -32,6 +49,8 @@ export default class Header extends Component {
         {/* <input type="text" placeholder="Email" />
         <input type="text" placeholder="Password" /> */}
         {this.state.user ?
+          <h2>Ready to get your game on, {this.state.displayName}?</h2>
+          <p>Join or create a game below.</p>
           <button onClick={this.logout}>Log Out</button>
           :
           <button onClick={this.login}>Log In</button>
