@@ -13,7 +13,7 @@ const Main = () => {
       <EventDirectory />
     </div>
   );
-}
+};
 
 
 export default Main;

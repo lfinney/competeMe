@@ -11,7 +11,7 @@ const EventDirectory = () => {
 
     </div>
   );
-}
+};
 
 
 export default EventDirectory;
