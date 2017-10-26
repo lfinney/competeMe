@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import dummyMap from '../assets/dummyMap.png';
 import firebase from '../firebase';
+import Map from '../Map/Map';
+import apiKey from '../apiKeys';
 
 export default class EventCreator extends Component {
   constructor() {
@@ -37,6 +39,13 @@ export default class EventCreator extends Component {
       // time: '',
       location: ''
     });
+  }
+
+  //location is hardcoded to denver; this needs to be changed to pull from user search in event creator
+  getLocation() {
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=denver&key=${apiKey.placesApi}`)
+    .then(res => res.json())
+    .then(res => console.log(res));
   }
 
   render() {
@@ -99,7 +108,13 @@ export default class EventCreator extends Component {
           value={this.state.location}
           onChange={ this.updateState.bind(this, 'location') }/>
         <div className="park-map">
-          <img className="map" src={dummyMap} alt="placeholder map" />
+          {/* <img className="map" src={dummyMap} alt="placeholder map" /> */}
+          <Map
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${apiKey.placesApi}&parks=places&callback=initMap`}
+            loadingElement={<div style={{ height: '200px', width: '200px'}} />}
+            containerElement={<div style={{ height: '200px', width: '200px'}} />}
+            mapElement={<div style={{ height: '200px', width: '200px'}} />}
+            />
         </div>
         <button onClick={ () => this.handleSubmit() }>Game On!</button>
       </div>
