@@ -1,0 +1,56 @@
+.EventCreator {
+  display: inline-block;
+  grid-area: right;
+  width: 370px;
+  background-color: #7a7d7d;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.EventCreator h2 {
+  color: #2f487f; }
+
+.EventCreator .radio-buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "rad1 text1" "rad2 text2" "rad3 text3";
+  height: 60px; }
+
+.rad1 {
+  grid-area: rad1; }
+
+.rad2 {
+  grid-area: rad2; }
+
+.rad3 {
+  grid-area: rad3; }
+
+.text1, .text2, .text3 {
+  margin-right: auto; }
+
+.text1 {
+  grid-area: text1; }
+
+.text2 {
+  grid-area: text2; }
+
+.text3 {
+  grid-area: text3; }
+
+.EventCreator .form-title, .text-input, select, form {
+  width: 80%;
+  margin: 10px; }
+
+.date-input {
+  width: 100%;
+  margin: 0; }
+
+.map {
+  width: 200px;
+  height: 200px; }
+
+.EventCreator button {
+  width: 40%; }

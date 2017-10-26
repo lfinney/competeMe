@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+// import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+// import rootReducer from './reducers';
+// import { createStore, applyMiddleware } from 'redux';
+import App from './App/App';
 import registerServiceWorker from './registerServiceWorker';
+import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const router = (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+)
+
+ReactDOM.render(router, document.getElementById('root'));
 registerServiceWorker();

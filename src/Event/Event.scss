@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+.Event {
+  background-color: $gray-black;
+  border-radius: $border-radius;
+  margin: 0px 15px 15px 15px;
+}
+
+.Event h3, h4, p {
+  margin: 0;
+}

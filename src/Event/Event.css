@@ -1,0 +1,7 @@
+.Event {
+  background-color: #393939;
+  border-radius: 10px;
+  margin: 0px 15px 15px 15px; }
+
+.Event h3, h4, p {
+  margin: 0; }

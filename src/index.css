@@ -1,5 +1,118 @@
+.App {
+  text-align: center;
+  background-image: url("localhost:3000/../assets/background-grass-texture.png");
+  background-color: #377100;
+  display: grid;
+  grid-template-columns: auto 400px;
+  grid-template-rows: 100px auto;
+  grid-template-areas: "top top" "left right"; }
+
+.Event {
+  background-color: #393939;
+  border-radius: 10px;
+  margin: 0px 15px 15px 15px; }
+
+.Event h3, h4, p {
+  margin: 0; }
+
+.EventCreator {
+  display: inline-block;
+  grid-area: right;
+  width: 370px;
+  background-color: #7a7d7d;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.EventCreator h2 {
+  color: #2f487f; }
+
+.EventCreator .radio-buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "rad1 text1" "rad2 text2" "rad3 text3";
+  height: 60px; }
+
+.rad1 {
+  grid-area: rad1; }
+
+.rad2 {
+  grid-area: rad2; }
+
+.rad3 {
+  grid-area: rad3; }
+
+.text1, .text2, .text3 {
+  margin-right: auto; }
+
+.text1 {
+  grid-area: text1; }
+
+.text2 {
+  grid-area: text2; }
+
+.text3 {
+  grid-area: text3; }
+
+.EventCreator .form-title, .text-input, select, form {
+  width: 80%;
+  margin: 10px; }
+
+.date-input {
+  width: 100%;
+  margin: 0; }
+
+.map {
+  width: 200px;
+  height: 200px; }
+
+.EventCreator button {
+  width: 40%; }
+
+.Header {
+  height: 100px;
+  position: sticky;
+  top: 0px;
+  color: #6da34d;
+  background-color: #393939;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: top; }
+
+.Header h1 {
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  left: 20px; }
+
+.Header input {
+  height: 20px;
+  margin: 0 20px; }
+
+.Main {
+  display: inline-block;
+  width: auto;
+  grid-area: left; }
+
+.Main .nav-tabs {
+  display: flex;
+  justify-content: space-around; }
+
+.Main .nav-tabs h2 {
+  margin: 15px 0 0 0;
+  padding: 5px 10px;
+  color: #f26419;
+  background-color: #393939;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px; }
+  .Main .nav-tabs h2:hover {
+    background-color: #c1c9c3; }
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }

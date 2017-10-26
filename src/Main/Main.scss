@@ -1,0 +1,24 @@
+@import '../variables.scss';
+
+.Main {
+  display: inline-block;
+  width: auto;
+  grid-area: left;
+}
+
+.Main .nav-tabs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Main .nav-tabs h2 {
+  margin: 15px 0 0 0;
+  padding: 5px 10px;
+  color: $secondary-two;
+  background-color: $gray-black;
+  &:hover {
+    background-color: $gray-white;
+  }
+  border-top-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+}
