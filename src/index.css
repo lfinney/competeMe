@@ -29,7 +29,7 @@
 .EventCreator h2 {
   color: #2f487f; }
 
-.EventCreator .radio-buttons {
+.EventCreator .radioButtons {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
@@ -57,7 +57,7 @@
 .text3 {
   grid-area: text3; }
 
-.EventCreator .form-title, .text-input, select, form {
+.EventCreator .formTitle, .textInput, select, form {
   width: 80%;
   margin: 10px; }
 
