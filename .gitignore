@@ -22,3 +22,6 @@ yarn-error.log*
 
 #apiKeys
 apiKeys.js
+
+#firebase
+firebase.js

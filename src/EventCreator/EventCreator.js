@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import dummyMap from '../assets/dummyMap.png';
-import firebase from '../firebase';
+import firebase, { auth, provider } from '../firebase.js';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
 
@@ -16,8 +16,6 @@ export default class EventCreator extends Component {
       // time: '',
       location: ''
     };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   updateState(key, event) {
@@ -25,7 +23,7 @@ export default class EventCreator extends Component {
 
   }
 
-  handleSubmit() {
+  handleSubmit = () => {
     const competition = Object.assign({}, {id: Date.now()}, this.state);
     const compsRef = firebase.database().ref('comps');
 
@@ -44,8 +42,8 @@ export default class EventCreator extends Component {
   //location is hardcoded to denver; this needs to be changed to pull from user search in event creator
   getLocation() {
     fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=denver&key=${apiKey.placesApi}`)
-    .then(res => res.json())
-    .then(res => console.log(res));
+      .then(res => res.json())
+      .then(res => console.log(res));
   }
 
   render() {
