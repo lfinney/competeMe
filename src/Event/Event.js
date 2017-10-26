@@ -12,7 +12,7 @@ const Event = () => {
       <button>Count Me In!</button>
     </div>
   );
-}
+};
 
 
 export default Event;
