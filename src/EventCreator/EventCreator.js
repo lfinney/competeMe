@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import dummyMap from '../assets/dummyMap.png';
+import firebase from '../firebase';
 
 export default class EventCreator extends Component {
   constructor() {
@@ -9,16 +10,34 @@ export default class EventCreator extends Component {
       // sport: '',
       // competitiveness: '',
       // date: '',
+      // details: '',
       // time: '',
       location: ''
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   updateState(key, event) {
     this.setState({[key]: event.target.value});
+
   }
 
+  handleSubmit() {
+    const competition = Object.assign({}, {id: Date.now()}, this.state);
+    const compsRef = firebase.database().ref('comps');
 
+    compsRef.push(competition);
+    this.setState({
+      compName: '',
+      // sport: '',
+      // competitiveness: '',
+      // date: '',
+      // details: '',
+      // time: '',
+      location: ''
+    });
+  }
 
   render() {
     return (
@@ -82,7 +101,7 @@ export default class EventCreator extends Component {
         <div className="park-map">
           <img className="map" src={dummyMap} alt="placeholder map" />
         </div>
-        <button>Game On!</button>
+        <button onClick={ () => this.handleSubmit() }>Game On!</button>
       </div>
     );
   }
