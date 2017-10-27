@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { userLogin } from './headerActions';
 import firebase, { auth, provider } from '../firebase.js';
 
-export default class Header extends Component {
+export class Header extends Component {
   constructor() {
     super();
     this.state = {
@@ -28,6 +30,7 @@ export default class Header extends Component {
           displayName: result.user.displayName.split(' ')[0],
           user: result.user
         });
+        this.props.userLogin(result.user);
       });
   }
 
@@ -49,13 +52,29 @@ export default class Header extends Component {
         {/* <input type="text" placeholder="Email" />
         <input type="text" placeholder="Password" /> */}
         {this.state.user ?
-          <h2>Ready to get your game on, {this.state.displayName}?</h2>
-          <p>Join or create a game below.</p>
-          <button onClick={this.logout}>Log Out</button>
+          <div className="headerPrompt">
+            <h2>Ready to get your game on, {this.state.displayName}?</h2>
+            <p>Join or create a game below.</p>
+            <button onClick={this.logout}>Log Out</button>
+          </div>
           :
-          <button onClick={this.login}>Log In</button>
+          <div className="headerPrompt">
+            <h2>Sign-in using Google to join the competitions!</h2>
+            <button onClick={this.login}>Log In</button>
+          </div>
         }
       </div>
     );
   }
 }
+
+const mapStateToProps = (store) => ({
+  activeUser: store.activeUser
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  userLogin: ( activeUser ) => { dispatch(userLogin(activeUser)); }
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

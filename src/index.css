@@ -83,15 +83,31 @@
   align-items: center;
   grid-area: top; }
 
+.Header .headerPrompt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%; }
+
 .Header h1 {
   margin: 0;
   position: absolute;
   top: 30px;
   left: 20px; }
 
-.Header input {
-  height: 20px;
-  margin: 0 20px; }
+.Header h2 {
+  margin: 0; }
+
+.Header p {
+  margin-left: 20px;
+  margin-right: auto; }
+
+.Header button {
+  margin-right: 50px;
+  border: none;
+  background-color: #f6ae2d;
+  width: 75px;
+  height: 25px; }
 
 .Main {
   display: inline-block;
