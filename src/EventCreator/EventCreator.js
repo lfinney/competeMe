@@ -10,15 +10,16 @@ export default class EventCreator extends Component {
     this.state = {
       compName: '',
       sport: '',
-      competitiveness: '',
-      // date: '',
-      // details: '',
-      // time: '',
+      competitiveness: 'Casual',
+      date: '1987-10-09',
+      time: '15:00',
+      details: '',
       location: ''
     };
   }
 
   updateState(key, event) {
+    event.preventDefault();
     this.setState({[key]: event.target.value});
 
   }
@@ -31,10 +32,10 @@ export default class EventCreator extends Component {
     this.setState({
       compName: '',
       sport: '',
-      competitiveness: 'Casual',
-      // date: '',
-      // details: '',
-      // time: '',
+      competitiveness: '',
+      date: '',
+      time: '',
+      details: '',
       location: ''
     });
   }
@@ -94,19 +95,30 @@ export default class EventCreator extends Component {
           <span className="text3">Competitive</span>
           <br />
         </form>
-        {/* <form>
+        <form>
           <h3 className="formTitle">Event Date and Time</h3>
           <input
             className="date-input"
-            type="datetime-local"
-            name="date-time" />
-        </form> */}
-        {/* <input
+            type="date"
+            name="date"
+            value={this.state.date}
+            onChange={ this.updateState.bind(this, 'date')}/>
+          <input
+            className="time-input"
+            type="time"
+            name="time"
+            value={this.state.time}
+            step="1800"
+            onChange={ this.updateState.bind(this, 'time')}/>
+        </form>
+        <input
           className="textInput"
           type="textarea"
           placeholder="Other details competitors should know about..."
           rows="5"
-          cols="40"/> */}
+          cols="40"
+          value={this.state.details}
+          onChange={ this.updateState.bind(this, 'details') }/>
         <input
           className="text-input"
           type="text"
