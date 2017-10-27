@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import dummyMap from '../assets/dummyMap.png';
-import firebase, { auth, provider } from '../firebase.js';
+import { connect } from 'react-redux';
+import { submitComp } from './eventCreatorActions';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
+import PropTypes from 'prop-types';
+import firebase, { auth, provider } from '../firebase.js';
 
-export default class EventCreator extends Component {
+export class EventCreator extends Component {
   constructor() {
     super();
     this.state = {
@@ -29,6 +31,7 @@ export default class EventCreator extends Component {
     const compsRef = firebase.database().ref('comps');
 
     compsRef.push(competition);
+    this.props.submitComp(competition);
     this.setState({
       compName: '',
       sport: '',
@@ -126,7 +129,6 @@ export default class EventCreator extends Component {
           value={this.state.location}
           onChange={ this.updateState.bind(this, 'location') }/>
         <div className="park-map">
-          {/* <img className="map" src={dummyMap} alt="placeholder map" /> */}
           <Map
             googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${apiKey.placesApi}&parks=places&callback=initMap`}
             loadingElement={<div style={{ height: '200px', width: '200px'}} />}
@@ -139,3 +141,14 @@ export default class EventCreator extends Component {
     );
   }
 }
+
+EventCreator.propTypes = {
+  submitComp: PropTypes.func
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  submitComp: ( newComp ) => { dispatch(submitComp(newComp)); }
+});
+
+
+export default connect(null, mapDispatchToProps)(EventCreator);
