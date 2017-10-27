@@ -12,6 +12,7 @@ export class EventCreator extends Component {
     this.state = {
       compName: '',
       sport: '',
+      players: '',
       competitiveness: 'Casual',
       date: '1987-10-09',
       time: '15:00',
@@ -35,6 +36,7 @@ export class EventCreator extends Component {
     this.setState({
       compName: '',
       sport: '',
+      players: '',
       competitiveness: '',
       date: '',
       time: '',
@@ -45,7 +47,9 @@ export class EventCreator extends Component {
 
   //location is hardcoded to denver; this needs to be changed to pull from user search in event creator
   getLocation() {
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=denver&key=${apiKey.placesApi}`)
+    fetch(
+      `https://maps.googleapis.com/maps/api/geocode/json?address=denver&key=${
+        apiKey.placesApi}`)
       .then(res => res.json())
       .then(res => console.log(res));
   }
@@ -68,6 +72,13 @@ export class EventCreator extends Component {
           <option value="Frisbee">Frisbee</option>
           <option value="Flag Football">Flag Football</option>
         </select>
+        <input
+          className="text-input"
+          type="number"
+          pattern="\d*"
+          placeholder="# Players Needed"
+          value={this.state.players}
+          onChange={ this.updateState.bind(this, 'players') }/>
         <h3 className="formTitle">Competitiveness</h3>
         <form className="radioButtons" action="selectCompetitiveness">
           <input
@@ -130,11 +141,18 @@ export class EventCreator extends Component {
           onChange={ this.updateState.bind(this, 'location') }/>
         <div className="park-map">
           <Map
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${apiKey.placesApi}&parks=places&callback=initMap`}
-            loadingElement={<div style={{ height: '200px', width: '200px'}} />}
-            containerElement={<div style={{ height: '200px', width: '200px'}} />}
-            mapElement={<div style={{ height: '200px', width: '200px'}} />}
-            />
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
+              apiKey.placesApi}&parks=places&callback=initMap`}
+            loadingElement={
+              <div style={{ height: '200px', width: '200px'}} />
+            }
+            containerElement={
+              <div style={{ height: '200px', width: '200px'}} />
+            }
+            mapElement={
+              <div style={{ height: '200px', width: '200px'}} />
+            }
+          />
         </div>
         <button onClick={ () => this.handleSubmit() }>Game On!</button>
       </div>
