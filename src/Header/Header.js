@@ -72,7 +72,8 @@ export class Header extends Component {
 }
 
 Header.propTypes = {
-  activeUser: PropTypes.func
+  activeUser: PropTypes.func,
+  user: PropTypes.object
 };
 
 const mapStateToProps = (store) => ({
