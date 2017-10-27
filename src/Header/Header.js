@@ -1,46 +1,51 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { activeUser } from './headerActions';
+import PropTypes from 'prop-types';
 import firebase, { auth, provider } from '../firebase.js';
 
 export class Header extends Component {
   constructor() {
     super();
     this.state = {
-      displayName: '',
-      user: null
+      liveUser: false
     };
   }
 
   componentDidMount() {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        this.setState({
-          displayName: user.displayName.split(' ')[0],
-          user: user
-        });
-        this.props.activeUser(user);
+        const cleanedUser = this.cleanUserData(user);
+        this.setState({ liveUser: true });
+        this.props.activeUser(cleanedUser);
       }
     });
   }
 
+  cleanUserData(user) {
+    return {
+      userId: user.uid,
+      displayName: user.displayName.split(' ')[0],
+      email: user.email
+    };
+  }
+
   login = () => {
     auth.signInWithPopup(provider)
-      .then((result) => {
-        this.setState({
-          displayName: result.user.displayName.split(' ')[0],
-          user: result.user
-        });
-        this.props.activeUser(result.user);
+      .then((result) => result = result.user)
+      .then((userData) => {
+        const cleanedUser = this.cleanUserData(userData);
+        this.setState({ liveUser: true });
+        this.props.activeUser(cleanedUser);
       });
   }
 
   logout = () => {
     auth.signOut()
       .then(() => {
+        this.props.activeUser({});
         this.setState({
-          displayName: '',
-          user: null
+          liveUser: false
         });
       });
   }
@@ -49,9 +54,9 @@ export class Header extends Component {
     return (
       <div className="Header">
         <h1>CompeteMe</h1>
-        {this.state.user ?
+        {this.state.liveUser ?
           <div className="headerPrompt">
-            <h2>Ready to get your game on, {this.state.displayName}?</h2>
+            <h2>Ready to get your game on, {this.props.user.displayName}?</h2>
             <p>Join or create a game below.</p>
             <button onClick={this.logout}>Log Out</button>
           </div>
@@ -66,6 +71,10 @@ export class Header extends Component {
   }
 }
 
+Header.propTypes = {
+  activeUser: PropTypes.func
+};
+
 const mapStateToProps = (store) => ({
   user: store.activeUser
 });
@@ -73,6 +82,5 @@ const mapStateToProps = (store) => ({
 const mapDispatchToProps = (dispatch) => ({
   activeUser: ( user ) => { dispatch(activeUser(user)); }
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

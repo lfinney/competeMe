@@ -1,6 +1,6 @@
-export const activeUser = (activeUser) => {
+export const activeUser = (user) => {
   return {
     type: 'USER_LOGIN',
-    activeUser
+    user
   };
 };
