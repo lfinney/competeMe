@@ -9,8 +9,8 @@ export default class EventCreator extends Component {
     super();
     this.state = {
       compName: '',
-      // sport: '',
-      // competitiveness: '',
+      sport: '',
+      competitiveness: '',
       // date: '',
       // details: '',
       // time: '',
@@ -30,8 +30,8 @@ export default class EventCreator extends Component {
     compsRef.push(competition);
     this.setState({
       compName: '',
-      // sport: '',
-      // competitiveness: '',
+      sport: '',
+      competitiveness: 'Casual',
       // date: '',
       // details: '',
       // time: '',
@@ -56,7 +56,9 @@ export default class EventCreator extends Component {
           placeholder="Competition Name"
           value={this.state.compName}
           onChange={ this.updateState.bind(this, 'compName') }/>
-        {/* <select>
+        <select
+          value={this.state.value}
+          onChange={ this.updateState.bind(this, 'sport')}>
           <option value="">-Select a Sport-</option>
           <option value="Soccer">Soccer</option>
           <option value="Frisbee">Frisbee</option>
@@ -68,24 +70,30 @@ export default class EventCreator extends Component {
             className="radio rad1"
             type="radio"
             name="competitiveness"
-            value="Casual" />
+            value="Casual"
+            checked={this.state.competitiveness === 'Casual'}
+            onChange={ this.updateState.bind(this, 'competitiveness') } />
           <span className="text1">Casual</span>
           <br />
           <input
             className="radio rad2"
             type="radio"
             name="competitiveness"
-            value="Casual/Competitive" />
+            value="Casual/Competitive"
+            checked={this.state.competitiveness === 'Casual/Competitive'}
+            onChange={ this.updateState.bind(this, 'competitiveness') }  />
           <span className="text2">Casual/Competitive</span>
           <br />
           <input
             className="radio rad3"
             type="radio"
             name="competitiveness"
-            value="Competitive" />
+            value="Competitive"
+            checked={this.state.competitiveness === 'Competitive'}
+            onChange={ this.updateState.bind(this, 'competitiveness') }  />
           <span className="text3">Competitive</span>
           <br />
-        </form> */}
+        </form>
         {/* <form>
           <h3 className="formTitle">Event Date and Time</h3>
           <input
