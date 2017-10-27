@@ -30,7 +30,13 @@
 
 .Header button {
   margin-right: 50px;
+  margin-left: auto;
   border: none;
   background-color: #f6ae2d;
+  color: #4573ae;
   width: 75px;
   height: 25px; }
+  .Header button:hover {
+    background-color: #4573ae; }
+  .Header button:hover {
+    color: #f6ae2d; }

@@ -37,8 +37,16 @@
 
 .Header button {
   margin-right: 50px;
+  margin-left: auto;
   border: none;
   background-color: $secondary-one;
+    &:hover {
+      background-color: $primary-accent;
+    }
+  color: $primary-accent;
+    &:hover {
+      color: $secondary-one;
+    }
   width: 75px;
   height: 25px;
 }

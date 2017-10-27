@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { userLogin } from './headerActions';
+import { activeUser } from './headerActions';
 import firebase, { auth, provider } from '../firebase.js';
 
 export class Header extends Component {
@@ -19,6 +19,7 @@ export class Header extends Component {
           displayName: user.displayName.split(' ')[0],
           user: user
         });
+        this.props.activeUser(user);
       }
     });
   }
@@ -30,7 +31,7 @@ export class Header extends Component {
           displayName: result.user.displayName.split(' ')[0],
           user: result.user
         });
-        this.props.userLogin(result.user);
+        this.props.activeUser(result.user);
       });
   }
 
@@ -48,9 +49,6 @@ export class Header extends Component {
     return (
       <div className="Header">
         <h1>CompeteMe</h1>
-        {/* <input type="text" placeholder="Search" /> */}
-        {/* <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Password" /> */}
         {this.state.user ?
           <div className="headerPrompt">
             <h2>Ready to get your game on, {this.state.displayName}?</h2>
@@ -69,11 +67,11 @@ export class Header extends Component {
 }
 
 const mapStateToProps = (store) => ({
-  activeUser: store.activeUser
+  user: store.activeUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  userLogin: ( activeUser ) => { dispatch(userLogin(activeUser)); }
+  activeUser: ( user ) => { dispatch(activeUser(user)); }
 });
 
 
