@@ -4,6 +4,7 @@ import { submitComp } from './eventCreatorActions';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
 import PropTypes from 'prop-types';
+import Popup from '../Popup/Popup';
 import firebase, { auth, provider } from '../firebase.js';
 
 export class EventCreator extends Component {
@@ -57,6 +58,10 @@ export class EventCreator extends Component {
   render() {
     return (
       <div className="EventCreator">
+        {
+          !this.props.liveUser &&
+          <Popup />
+        }
         <h2 className="formTitle">Create New Competition</h2>
         <input
           className="text-input"
@@ -163,14 +168,14 @@ export class EventCreator extends Component {
 EventCreator.propTypes = {
   submitComp: PropTypes.func
 };
-// 
-// const mapStatetoProps = (store) => {
-//
-// }
+
+const mapStatetoProps = (store) => ({
+  liveUser: store.activeUser.userId ? true : false
+});
 
 const mapDispatchToProps = (dispatch) => ({
   submitComp: ( newComp ) => { dispatch(submitComp(newComp)); }
 });
 
 
-export default connect(null, mapDispatchToProps)(EventCreator);
+export default connect(mapStatetoProps, mapDispatchToProps)(EventCreator);

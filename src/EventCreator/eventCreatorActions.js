@@ -4,3 +4,10 @@ export const submitComp = (newComp) => {
     newComp
   };
 };
+
+export const loginRequired = (bool) => {
+  return {
+    type: 'LOGIN_REQUIRED',
+    activePopup: true
+  };
+};

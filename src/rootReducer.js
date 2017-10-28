@@ -1,10 +1,13 @@
 import { combineReducers } from 'redux';
 import { activeUser } from './Header/headerReducer';
-import { submitComp } from './EventCreator/eventCreatorReducer';
+import { submitComp, loginRequired } from './EventCreator/eventCreatorReducer';
+import { removePopup } from './Popup/popupReducer';
 
 const rootReducer = combineReducers({
   activeUser,
-  submitComp
+  submitComp,
+  loginRequired,
+  removePopup
 });
 
 export default rootReducer;

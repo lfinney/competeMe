@@ -7,3 +7,13 @@ export function submitComp(state = [], action) {
     return state;
   }
 }
+
+export const loginRequired = (state = false, action) => {
+  switch (action.type) {
+  case 'LOGIN_REQUIRED':
+    return action.activePopup;
+
+  default:
+    return state;
+  }
+};
