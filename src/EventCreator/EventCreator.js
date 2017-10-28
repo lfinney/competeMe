@@ -163,6 +163,10 @@ export class EventCreator extends Component {
 EventCreator.propTypes = {
   submitComp: PropTypes.func
 };
+// 
+// const mapStatetoProps = (store) => {
+//
+// }
 
 const mapDispatchToProps = (dispatch) => ({
   submitComp: ( newComp ) => { dispatch(submitComp(newComp)); }

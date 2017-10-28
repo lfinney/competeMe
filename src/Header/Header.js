@@ -8,7 +8,7 @@ export class Header extends Component {
   constructor() {
     super();
     this.state = {
-      liveUser: false
+      // liveUser: false
     };
   }
 
@@ -16,7 +16,7 @@ export class Header extends Component {
     auth.onAuthStateChanged((user) => {
       if (user) {
         const cleanedUser = this.cleanUserData(user);
-        this.setState({ liveUser: true });
+        // this.setState({ liveUser: true });
         this.props.activeUser(cleanedUser);
       }
     });
@@ -35,7 +35,7 @@ export class Header extends Component {
       .then((result) => result = result.user)
       .then((userData) => {
         const cleanedUser = this.cleanUserData(userData);
-        this.setState({ liveUser: true });
+        // this.setState({ liveUser: true });
         this.props.activeUser(cleanedUser);
       });
   }
@@ -44,9 +44,9 @@ export class Header extends Component {
     auth.signOut()
       .then(() => {
         this.props.activeUser({});
-        this.setState({
-          liveUser: false
-        });
+        // this.setState({
+        //   liveUser: false
+        // });
       });
   }
 
@@ -54,7 +54,7 @@ export class Header extends Component {
     return (
       <div className="Header">
         <h1>CompeteMe</h1>
-        {this.state.liveUser ?
+        {this.props.liveUser ?
           <div className="headerPrompt">
             <h2>Ready to get your game on, {this.props.user.displayName}?</h2>
             <p>Join or create a game below.</p>
@@ -77,6 +77,7 @@ Header.propTypes = {
 };
 
 const mapStateToProps = (store) => ({
+  liveUser: store.activeUser.userId ? true : false,
   user: store.activeUser
 });
 
