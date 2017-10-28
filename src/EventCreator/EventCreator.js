@@ -58,10 +58,10 @@ export class EventCreator extends Component {
   render() {
     return (
       <div className="EventCreator">
-        {
+        {/* {
           !this.props.liveUser &&
           <Popup />
-        }
+        } */}
         <h2 className="formTitle">Create New Competition</h2>
         <input
           className="text-input"
