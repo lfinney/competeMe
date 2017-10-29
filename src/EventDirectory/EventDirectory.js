@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import Event from '../Event/Event';
+import { fetchFromFirebase } from '../utilities/firebaseHelper';
 
-const EventDirectory = () => {
-  // const events = //map over array of values from firebase
+export default class EventDirectory extends Component {
+  constructor() {
+    super();
+    this.state = {
+      upcoming: []
+    };
+  }
 
-  return (
-    <div className="EventDirectory">
-      {/* {events} */}
-    </div>
-  );
-};
+  componentDidMount() {
+    const events = fetchFromFirebase();
+    this.setState({
+      upcoming: events
+    });
+    console.log(events);
+  }
 
-
-export default EventDirectory;
+  render() {
+    return (
+      <div className="EventDirectory"
+        events={this.state.upcoming}>
+        {/* {events} */}
+      </div>
+    );
+  }
+}
