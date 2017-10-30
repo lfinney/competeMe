@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import EventDirectory from '../EventDirectory/EventDirectory';
+import PropTypes from 'prop-types';
 import { fetchFromFirebase } from '../utilities/firebaseHelper';
 
 
@@ -22,6 +23,11 @@ render() {
     );
   }
 }
+
+Main.propTypes = {
+  fetchFromFirebase: PropTypes.func,
+  competitions: PropTypes.arrayOf(PropTypes.object)
+};
 
 const mapStateToProps = (store) => ({
   competitions: store.fetchFromFirebase
