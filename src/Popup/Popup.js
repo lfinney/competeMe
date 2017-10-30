@@ -21,7 +21,7 @@ const Popup = ({ activePopup }) => {
 };
 
 Popup.propTypes = {
-  removePopup: PropTypes.func
+  activePopup: PropTypes.func
 };
 
 

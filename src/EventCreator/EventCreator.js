@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { submitComp, activePopup } from './eventCreatorActions';
+// import { handleSubmit } from '../utilities/userEventsHelper';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
 import PropTypes from 'prop-types';

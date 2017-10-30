@@ -19,7 +19,8 @@ export class Header extends Component {
     return {
       userId: user.uid,
       displayName: user.displayName.split(' ')[0],
-      email: user.email
+      email: user.email,
+      competitions: []
     };
   }
 

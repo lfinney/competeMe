@@ -1,14 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { handleSubmit } from '../utilities/userEventsHelper';
 const dateFormat = require('dateformat');
 const convertTime = require('convert-time');
-
-const handleSubmit = (liveUser, activePopup) => {
-  if (!liveUser) {
-    activePopup(true);
-    return;
-  }
-};
 
 const Event = ({ comp, liveUser, activePopup }) => {
   return (

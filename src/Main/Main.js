@@ -16,9 +16,8 @@ render() {
     return (
       <div className="Main">
         <div className="nav-tabs">
-          <h2>Upcoming</h2>
-          <h2>In-Progress</h2>
-          <h2>Completed</h2>
+          <h2>Upcoming Competitions</h2>
+          <h2>Your Competitions</h2>
         </div>
         <EventDirectory
           competitions={this.props.competitions}
