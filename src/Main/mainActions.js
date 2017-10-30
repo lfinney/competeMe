@@ -4,3 +4,10 @@ export const fetchFromFirebase = (events) => {
     events
   };
 };
+
+export const postToStore = (firebaseData) => {
+  return {
+    type: 'POST_TO_STORE',
+    firebaseData
+  };
+};

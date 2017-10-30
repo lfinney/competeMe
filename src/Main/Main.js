@@ -5,8 +5,17 @@ import { fetchFromFirebase } from '../utilities/firebaseHelper';
 
 
 export class Main extends Component {
+  constructor() {
+    super();
+    this.state = {
+      items: []
+    }
+  }
+
   componentDidMount() {
-    this.props.fetchFromFirebase();
+    this.setState({
+      items: this.props.fetchFromFirebase()
+    });
   }
 
   render() {
