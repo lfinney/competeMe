@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Event from '../Event/Event';
 
 const EventDirectory = ({ competitions }) => {
@@ -14,6 +15,11 @@ const EventDirectory = ({ competitions }) => {
       {compCatalogue}
     </div>
   );
+};
+
+
+EventDirectory.propTypes = {
+  competitions: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default EventDirectory;

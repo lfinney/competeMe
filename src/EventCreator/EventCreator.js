@@ -5,7 +5,7 @@ import Map from '../Map/Map';
 import apiKey from '../apiKeys';
 import PropTypes from 'prop-types';
 import Popup from '../Popup/Popup';
-import firebase, { auth, provider } from '../firebase.js';
+import firebase from '../firebase.js';
 
 export class EventCreator extends Component {
   constructor() {

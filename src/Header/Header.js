@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { activeUser } from './headerActions';
 import PropTypes from 'prop-types';
-import firebase, { auth, provider } from '../firebase.js';
+import { auth, provider } from '../firebase.js';
 
 export class Header extends Component {
   componentDidMount() {
