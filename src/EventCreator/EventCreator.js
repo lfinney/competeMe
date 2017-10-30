@@ -30,7 +30,7 @@ export class EventCreator extends Component {
   handleSubmit = () => {
     if (!this.props.liveUser) {
       this.props.activePopup(true);
-      return
+      return;
     }
     const competition = Object.assign({}, {id: Date.now()}, this.state);
     const compsRef = firebase.database().ref('comps');
@@ -167,7 +167,9 @@ export class EventCreator extends Component {
 }
 
 EventCreator.propTypes = {
-  submitComp: PropTypes.func
+  submitComp: PropTypes.func,
+  activePopup: PropTypes.func,
+  liveUser: PropTypes.bool
 };
 
 const mapStatetoProps = (store) => ({

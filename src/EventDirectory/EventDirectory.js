@@ -21,7 +21,9 @@ const EventDirectory = ({ competitions, liveUser, activePopup }) => {
 
 
 EventDirectory.propTypes = {
-  competitions: PropTypes.arrayOf(PropTypes.object)
+  competitions: PropTypes.arrayOf(PropTypes.object),
+  activePopup: PropTypes.func,
+  liveUser: PropTypes.bool
 };
 
 export default EventDirectory;

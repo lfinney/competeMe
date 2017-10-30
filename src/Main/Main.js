@@ -32,7 +32,8 @@ render() {
 Main.propTypes = {
   fetchFromFirebase: PropTypes.func,
   competitions: PropTypes.arrayOf(PropTypes.object),
-  liveUser: PropTypes.bool
+  liveUser: PropTypes.bool,
+  activePopup: PropTypes.func
 };
 
 const mapStateToProps = (store) => ({

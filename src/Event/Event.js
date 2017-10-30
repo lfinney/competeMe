@@ -23,7 +23,10 @@ const Event = ({ comp, liveUser, activePopup }) => {
         at {comp.location}</h4>
       <p>{comp.details}</p>
       <div className="park-map"></div>
-      <button onClick={ () => handleSubmit(liveUser, activePopup) }>Count Me In!</button>
+      <button
+        onClick={ () => handleSubmit(liveUser, activePopup) }>
+        Count Me In!
+      </button>
     </div>
   );
 };
