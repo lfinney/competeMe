@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { activeUser } from './headerActions';
 import PropTypes from 'prop-types';
-import firebase, { auth, provider } from '../firebase.js';
+import { auth, provider } from '../firebase.js';
+import Popup from '../Popup/Popup';
 
 export class Header extends Component {
   componentDidMount() {
@@ -18,7 +19,8 @@ export class Header extends Component {
     return {
       userId: user.uid,
       displayName: user.displayName.split(' ')[0],
-      email: user.email
+      email: user.email,
+      competitions: []
     };
   }
 
@@ -54,6 +56,8 @@ export class Header extends Component {
             <button onClick={this.login}>Log In</button>
           </div>
         }
+        {
+          this.props.activePopup && <Popup />        }
       </div>
     );
   }
@@ -67,7 +71,8 @@ Header.propTypes = {
 
 const mapStateToProps = (store) => ({
   liveUser: store.activeUser.userId ? true : false,
-  user: store.activeUser
+  user: store.activeUser,
+  activePopup: store.activePopup
 });
 
 const mapDispatchToProps = (dispatch) => ({

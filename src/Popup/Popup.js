@@ -1,9 +1,9 @@
 import React from 'react';import { connect } from 'react-redux';
-import { removePopup } from './popupActions';
+import { activePopup } from '../EventCreator/eventCreatorActions';
 import PropTypes from 'prop-types';
 
 
-const Popup = ({ removePopup }) => {
+const Popup = ({ activePopup }) => {
   return (
     <div className="Popup">
       <h3>Sorry, competitor.</h3>
@@ -12,7 +12,7 @@ const Popup = ({ removePopup }) => {
         className="remove-popup"
         onClick={ (event) => {
           event.preventDefault();
-          removePopup();
+          activePopup();
         }}>
         Got it!
       </button>
@@ -21,16 +21,15 @@ const Popup = ({ removePopup }) => {
 };
 
 Popup.propTypes = {
-  removePopup: PropTypes.func
+  activePopup: PropTypes.func
 };
 
 
-const mapStateToProps = (store) => ({
-  liveUser: store.activeUser.userId ? true : false
-});
+// const mapStateToProps = (store) => ({
+// });
 
 const mapDispatchToProps = (dispatch) => ({
-  removePopup: () => { dispatch(removePopup(true)); }
+  activePopup: () => { dispatch(activePopup(false)); }
 });
 
 export default connect(null, mapDispatchToProps)(Popup);

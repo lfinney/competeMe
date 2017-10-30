@@ -5,9 +5,9 @@ export const submitComp = (newComp) => {
   };
 };
 
-export const loginRequired = (bool) => {
+export const activePopup = (bool) => {
   return {
-    type: 'LOGIN_REQUIRED',
-    activePopup: true
+    type: 'ACTIVE_POPUP',
+    activePopup: bool
   };
 };

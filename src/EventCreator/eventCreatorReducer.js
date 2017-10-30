@@ -8,9 +8,9 @@ export function submitComp(state = [], action) {
   }
 }
 
-export const loginRequired = (state = false, action) => {
+export const activePopup = (state = false, action) => {
   switch (action.type) {
-  case 'LOGIN_REQUIRED':
+  case 'ACTIVE_POPUP':
     return action.activePopup;
 
   default:

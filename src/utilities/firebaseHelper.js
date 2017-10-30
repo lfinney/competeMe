@@ -1,5 +1,5 @@
 import { postToStore } from '../Main/mainActions';
-import firebase, { auth, provider, database } from '../firebase.js';
+import firebase from '../firebase.js';
 
 export const fetchFromFirebase = () => {
   return (dispatch) => {
