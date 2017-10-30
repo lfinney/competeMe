@@ -17,14 +17,14 @@ render() {
           <h2>In-Progress</h2>
           <h2>Completed</h2>
         </div>
-        <EventDirectory events={this.props.events}/>
+        <EventDirectory competitions={this.props.competitions}/>
       </div>
     );
   }
 }
 
 const mapStateToProps = (store) => ({
-  events: store.fetchFromFirebase
+  competitions: store.fetchFromFirebase
 });
 
 const mapDispatchToProps = (dispatch) => {
