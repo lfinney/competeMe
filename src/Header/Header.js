@@ -5,18 +5,10 @@ import PropTypes from 'prop-types';
 import firebase, { auth, provider } from '../firebase.js';
 
 export class Header extends Component {
-  constructor() {
-    super();
-    this.state = {
-      liveUser: false
-    };
-  }
-
   componentDidMount() {
     auth.onAuthStateChanged((user) => {
       if (user) {
         const cleanedUser = this.cleanUserData(user);
-        this.setState({ liveUser: true });
         this.props.activeUser(cleanedUser);
       }
     });
@@ -35,7 +27,6 @@ export class Header extends Component {
       .then((result) => result = result.user)
       .then((userData) => {
         const cleanedUser = this.cleanUserData(userData);
-        this.setState({ liveUser: true });
         this.props.activeUser(cleanedUser);
       });
   }
@@ -44,9 +35,6 @@ export class Header extends Component {
     auth.signOut()
       .then(() => {
         this.props.activeUser({});
-        this.setState({
-          liveUser: false
-        });
       });
   }
 
@@ -54,7 +42,7 @@ export class Header extends Component {
     return (
       <div className="Header">
         <h1>CompeteMe</h1>
-        {this.state.liveUser ?
+        {this.props.liveUser ?
           <div className="headerPrompt">
             <h2>Ready to get your game on, {this.props.user.displayName}?</h2>
             <p>Join or create a game below.</p>
@@ -73,10 +61,12 @@ export class Header extends Component {
 
 Header.propTypes = {
   activeUser: PropTypes.func,
-  user: PropTypes.object
+  user: PropTypes.object,
+  liveUser: PropTypes.bool
 };
 
 const mapStateToProps = (store) => ({
+  liveUser: store.activeUser.userId ? true : false,
   user: store.activeUser
 });
 

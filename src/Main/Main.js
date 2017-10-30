@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import EventDirectory from '../EventDirectory/EventDirectory';
+import { fetchFromFirebase } from '../utilities/firebaseHelper';
 
 
-const Main = () => {
-  return (
-    <div className="Main">
-      <div className="nav-tabs">
-        <h2>Upcoming</h2>
-        <h2>In-Progress</h2>
-        <h2>Completed</h2>
+export class Main extends Component {
+  componentDidMount() {
+    this.props.fetchFromFirebase();
+  }
+
+render() {
+    return (
+      <div className="Main">
+        <div className="nav-tabs">
+          <h2>Upcoming</h2>
+          <h2>In-Progress</h2>
+          <h2>Completed</h2>
+        </div>
+        <EventDirectory competitions={this.props.competitions}/>
       </div>
-      <EventDirectory />
-    </div>
-  );
+    );
+  }
+}
+
+const mapStateToProps = (store) => ({
+  competitions: store.fetchFromFirebase
+});
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchFromFirebase: () => dispatch(fetchFromFirebase())
+  };
 };
 
-
-export default Main;
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

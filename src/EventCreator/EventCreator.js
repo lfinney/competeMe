@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
-import dummyMap from '../assets/dummyMap.png';
-import firebase, { auth, provider } from '../firebase.js';
+import { connect } from 'react-redux';
+import { submitComp } from './eventCreatorActions';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
+import PropTypes from 'prop-types';
+import Popup from '../Popup/Popup';
+import firebase, { auth, provider } from '../firebase.js';
 
-export default class EventCreator extends Component {
+export class EventCreator extends Component {
   constructor() {
     super();
     this.state = {
       compName: '',
-      // sport: '',
-      // competitiveness: '',
-      // date: '',
-      // details: '',
-      // time: '',
+      sport: '',
+      players: '',
+      competitiveness: 'Casual',
+      date: '1987-10-09',
+      time: '15:00',
+      details: '',
       location: ''
     };
   }
 
   updateState(key, event) {
+    event.preventDefault();
     this.setState({[key]: event.target.value});
 
   }
@@ -28,20 +33,24 @@ export default class EventCreator extends Component {
     const compsRef = firebase.database().ref('comps');
 
     compsRef.push(competition);
+    this.props.submitComp(competition);
     this.setState({
       compName: '',
-      // sport: '',
-      // competitiveness: '',
-      // date: '',
-      // details: '',
-      // time: '',
+      sport: '',
+      players: '',
+      competitiveness: '',
+      date: '',
+      time: '',
+      details: '',
       location: ''
     });
   }
 
   //location is hardcoded to denver; this needs to be changed to pull from user search in event creator
   getLocation() {
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=denver&key=${apiKey.placesApi}`)
+    fetch(
+      `https://maps.googleapis.com/maps/api/geocode/json?address=denver&key=${
+        apiKey.placesApi}`)
       .then(res => res.json())
       .then(res => console.log(res));
   }
@@ -49,6 +58,10 @@ export default class EventCreator extends Component {
   render() {
     return (
       <div className="EventCreator">
+        {/* {
+          !this.props.liveUser &&
+          <Popup />
+        } */}
         <h2 className="formTitle">Create New Competition</h2>
         <input
           className="text-input"
@@ -56,49 +69,75 @@ export default class EventCreator extends Component {
           placeholder="Competition Name"
           value={this.state.compName}
           onChange={ this.updateState.bind(this, 'compName') }/>
-        {/* <select>
+        <select
+          value={this.state.value}
+          onChange={ this.updateState.bind(this, 'sport')}>
           <option value="">-Select a Sport-</option>
           <option value="Soccer">Soccer</option>
           <option value="Frisbee">Frisbee</option>
           <option value="Flag Football">Flag Football</option>
         </select>
+        <input
+          className="text-input"
+          type="number"
+          pattern="\d*"
+          placeholder="# Players Needed"
+          value={this.state.players}
+          onChange={ this.updateState.bind(this, 'players') }/>
         <h3 className="formTitle">Competitiveness</h3>
         <form className="radioButtons" action="selectCompetitiveness">
           <input
             className="radio rad1"
             type="radio"
             name="competitiveness"
-            value="Casual" />
+            value="Casual"
+            checked={this.state.competitiveness === 'Casual'}
+            onChange={ this.updateState.bind(this, 'competitiveness') } />
           <span className="text1">Casual</span>
           <br />
           <input
             className="radio rad2"
             type="radio"
             name="competitiveness"
-            value="Casual/Competitive" />
+            value="Casual/Competitive"
+            checked={this.state.competitiveness === 'Casual/Competitive'}
+            onChange={ this.updateState.bind(this, 'competitiveness') }  />
           <span className="text2">Casual/Competitive</span>
           <br />
           <input
             className="radio rad3"
             type="radio"
             name="competitiveness"
-            value="Competitive" />
+            value="Competitive"
+            checked={this.state.competitiveness === 'Competitive'}
+            onChange={ this.updateState.bind(this, 'competitiveness') }  />
           <span className="text3">Competitive</span>
           <br />
-        </form> */}
-        {/* <form>
+        </form>
+        <form>
           <h3 className="formTitle">Event Date and Time</h3>
           <input
             className="date-input"
-            type="datetime-local"
-            name="date-time" />
-        </form> */}
-        {/* <input
+            type="date"
+            name="date"
+            value={this.state.date}
+            onChange={ this.updateState.bind(this, 'date')}/>
+          <input
+            className="time-input"
+            type="time"
+            name="time"
+            value={this.state.time}
+            step="1800"
+            onChange={ this.updateState.bind(this, 'time')}/>
+        </form>
+        <input
           className="textInput"
           type="textarea"
           placeholder="Other details competitors should know about..."
           rows="5"
-          cols="40"/> */}
+          cols="40"
+          value={this.state.details}
+          onChange={ this.updateState.bind(this, 'details') }/>
         <input
           className="text-input"
           type="text"
@@ -106,16 +145,37 @@ export default class EventCreator extends Component {
           value={this.state.location}
           onChange={ this.updateState.bind(this, 'location') }/>
         <div className="park-map">
-          {/* <img className="map" src={dummyMap} alt="placeholder map" /> */}
           <Map
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${apiKey.placesApi}&parks=places&callback=initMap`}
-            loadingElement={<div style={{ height: '200px', width: '200px'}} />}
-            containerElement={<div style={{ height: '200px', width: '200px'}} />}
-            mapElement={<div style={{ height: '200px', width: '200px'}} />}
-            />
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
+              apiKey.placesApi}&parks=places&callback=initMap`}
+            loadingElement={
+              <div style={{ height: '200px', width: '200px'}} />
+            }
+            containerElement={
+              <div style={{ height: '200px', width: '200px'}} />
+            }
+            mapElement={
+              <div style={{ height: '200px', width: '200px'}} />
+            }
+          />
         </div>
         <button onClick={ () => this.handleSubmit() }>Game On!</button>
       </div>
     );
   }
 }
+
+EventCreator.propTypes = {
+  submitComp: PropTypes.func
+};
+
+const mapStatetoProps = (store) => ({
+  liveUser: store.activeUser.userId ? true : false
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  submitComp: ( newComp ) => { dispatch(submitComp(newComp)); }
+});
+
+
+export default connect(mapStatetoProps, mapDispatchToProps)(EventCreator);
