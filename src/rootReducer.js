@@ -9,8 +9,7 @@ const rootReducer = combineReducers({
   submitComp,
   loginRequired,
   removePopup,
-  fetchFromFirebase,
-  storeData
+  fetchFromFirebase
 });
 
 export default rootReducer;
