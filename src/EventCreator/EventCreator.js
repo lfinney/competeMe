@@ -28,7 +28,7 @@ export class EventCreator extends Component {
   }
 
   handleSubmit = () => {
-    if (!this.props.user) {
+    if (!this.props.liveUser) {
       this.props.loginRequired(true);
       return
     }
