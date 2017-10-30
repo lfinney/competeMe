@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import EventDirectory from '../EventDirectory/EventDirectory';
 import PropTypes from 'prop-types';
 import { fetchFromFirebase } from '../utilities/firebaseHelper';
+import { activePopup } from '../EventCreator/eventCreatorActions';
+
 
 
 export class Main extends Component {
@@ -18,7 +20,10 @@ render() {
           <h2>In-Progress</h2>
           <h2>Completed</h2>
         </div>
-        <EventDirectory competitions={this.props.competitions}/>
+        <EventDirectory
+          competitions={this.props.competitions}
+          liveUser={this.props.liveUser}
+          activePopup={this.props.activePopup}/>
       </div>
     );
   }
@@ -26,16 +31,19 @@ render() {
 
 Main.propTypes = {
   fetchFromFirebase: PropTypes.func,
-  competitions: PropTypes.arrayOf(PropTypes.object)
+  competitions: PropTypes.arrayOf(PropTypes.object),
+  liveUser: PropTypes.bool
 };
 
 const mapStateToProps = (store) => ({
-  competitions: store.fetchFromFirebase
+  competitions: store.fetchFromFirebase,
+  liveUser: store.activeUser.userId ? true : false
 });
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchFromFirebase: () => dispatch(fetchFromFirebase())
+    fetchFromFirebase: () => { dispatch(fetchFromFirebase()); },
+    activePopup: ( bool ) => { dispatch(activePopup(bool)); }
   };
 };
 
