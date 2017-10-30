@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { submitComp } from './eventCreatorActions';
+import { submitComp, loginRequired } from './eventCreatorActions';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
 import PropTypes from 'prop-types';
-import Popup from '../Popup/Popup';
 import firebase from '../firebase.js';
 
 export class EventCreator extends Component {
@@ -29,6 +28,10 @@ export class EventCreator extends Component {
   }
 
   handleSubmit = () => {
+    if (!this.props.user) {
+      this.props.loginRequired(true);
+      return
+    }
     const competition = Object.assign({}, {id: Date.now()}, this.state);
     const compsRef = firebase.database().ref('comps');
 
@@ -57,109 +60,107 @@ export class EventCreator extends Component {
 
   render() {
     return (
-      <div className="EventCreator">
-        {/* {
-          !this.props.liveUser &&
-          <Popup />
-        } */}
-        <h2 className="formTitle">Create New Competition</h2>
-        <input
-          className="text-input"
-          type="text"
-          placeholder="Competition Name"
-          value={this.state.compName}
-          onChange={ this.updateState.bind(this, 'compName') }/>
-        <select
-          value={this.state.value}
-          onChange={ this.updateState.bind(this, 'sport')}>
-          <option value="">-Select a Sport-</option>
-          <option value="Soccer">Soccer</option>
-          <option value="Frisbee">Frisbee</option>
-          <option value="Flag Football">Flag Football</option>
-        </select>
-        <input
-          className="text-input"
-          type="number"
-          pattern="\d*"
-          placeholder="# Players Needed"
-          value={this.state.players}
-          onChange={ this.updateState.bind(this, 'players') }/>
-        <h3 className="formTitle">Competitiveness</h3>
-        <form className="radioButtons" action="selectCompetitiveness">
+      <div>
+        <div className="EventCreator">
+          <h2 className="formTitle">Create New Competition</h2>
           <input
-            className="radio rad1"
-            type="radio"
-            name="competitiveness"
-            value="Casual"
-            checked={this.state.competitiveness === 'Casual'}
-            onChange={ this.updateState.bind(this, 'competitiveness') } />
-          <span className="text1">Casual</span>
-          <br />
+            className="text-input"
+            type="text"
+            placeholder="Competition Name"
+            value={this.state.compName}
+            onChange={ this.updateState.bind(this, 'compName') }/>
+          <select
+            value={this.state.value}
+            onChange={ this.updateState.bind(this, 'sport')}>
+            <option value="">-Select a Sport-</option>
+            <option value="Soccer">Soccer</option>
+            <option value="Frisbee">Frisbee</option>
+            <option value="Flag Football">Flag Football</option>
+          </select>
           <input
-            className="radio rad2"
-            type="radio"
-            name="competitiveness"
-            value="Casual/Competitive"
-            checked={this.state.competitiveness === 'Casual/Competitive'}
-            onChange={ this.updateState.bind(this, 'competitiveness') }  />
-          <span className="text2">Casual/Competitive</span>
-          <br />
+            className="text-input"
+            type="number"
+            pattern="\d*"
+            placeholder="# Players Needed"
+            value={this.state.players}
+            onChange={ this.updateState.bind(this, 'players') }/>
+          <h3 className="formTitle">Competitiveness</h3>
+          <form className="radioButtons" action="selectCompetitiveness">
+            <input
+              className="radio rad1"
+              type="radio"
+              name="competitiveness"
+              value="Casual"
+              checked={this.state.competitiveness === 'Casual'}
+              onChange={ this.updateState.bind(this, 'competitiveness') } />
+            <span className="text1">Casual</span>
+            <br />
+            <input
+              className="radio rad2"
+              type="radio"
+              name="competitiveness"
+              value="Casual/Competitive"
+              checked={this.state.competitiveness === 'Casual/Competitive'}
+              onChange={ this.updateState.bind(this, 'competitiveness') }  />
+            <span className="text2">Casual/Competitive</span>
+            <br />
+            <input
+              className="radio rad3"
+              type="radio"
+              name="competitiveness"
+              value="Competitive"
+              checked={this.state.competitiveness === 'Competitive'}
+              onChange={ this.updateState.bind(this, 'competitiveness') }  />
+            <span className="text3">Competitive</span>
+            <br />
+          </form>
+          <form>
+            <h3 className="formTitle">Event Date and Time</h3>
+            <input
+              className="date-input"
+              type="date"
+              name="date"
+              value={this.state.date}
+              onChange={ this.updateState.bind(this, 'date')}/>
+            <input
+              className="time-input"
+              type="time"
+              name="time"
+              value={this.state.time}
+              step="1800"
+              onChange={ this.updateState.bind(this, 'time')}/>
+          </form>
           <input
-            className="radio rad3"
-            type="radio"
-            name="competitiveness"
-            value="Competitive"
-            checked={this.state.competitiveness === 'Competitive'}
-            onChange={ this.updateState.bind(this, 'competitiveness') }  />
-          <span className="text3">Competitive</span>
-          <br />
-        </form>
-        <form>
-          <h3 className="formTitle">Event Date and Time</h3>
+            className="textInput"
+            type="textarea"
+            placeholder="Other details competitors should know about..."
+            rows="5"
+            cols="40"
+            value={this.state.details}
+            onChange={ this.updateState.bind(this, 'details') }/>
           <input
-            className="date-input"
-            type="date"
-            name="date"
-            value={this.state.date}
-            onChange={ this.updateState.bind(this, 'date')}/>
-          <input
-            className="time-input"
-            type="time"
-            name="time"
-            value={this.state.time}
-            step="1800"
-            onChange={ this.updateState.bind(this, 'time')}/>
-        </form>
-        <input
-          className="textInput"
-          type="textarea"
-          placeholder="Other details competitors should know about..."
-          rows="5"
-          cols="40"
-          value={this.state.details}
-          onChange={ this.updateState.bind(this, 'details') }/>
-        <input
-          className="text-input"
-          type="text"
-          placeholder="Park Search"
-          value={this.state.location}
-          onChange={ this.updateState.bind(this, 'location') }/>
-        <div className="park-map">
-          <Map
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
-              apiKey.placesApi}&parks=places&callback=initMap`}
-            loadingElement={
-              <div style={{ height: '200px', width: '200px'}} />
-            }
-            containerElement={
-              <div style={{ height: '200px', width: '200px'}} />
-            }
-            mapElement={
-              <div style={{ height: '200px', width: '200px'}} />
-            }
-          />
+            className="text-input"
+            type="text"
+            placeholder="Park Search"
+            value={this.state.location}
+            onChange={ this.updateState.bind(this, 'location') }/>
+          <div className="park-map">
+            <Map
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
+                apiKey.placesApi}&parks=places&callback=initMap`}
+              loadingElement={
+                <div style={{ height: '200px', width: '200px'}} />
+              }
+              containerElement={
+                <div style={{ height: '200px', width: '200px'}} />
+              }
+              mapElement={
+                <div style={{ height: '200px', width: '200px'}} />
+              }
+            />
+          </div>
+          <button onClick={ () => this.handleSubmit() }>Game On!</button>
         </div>
-        <button onClick={ () => this.handleSubmit() }>Game On!</button>
       </div>
     );
   }
@@ -174,7 +175,8 @@ const mapStatetoProps = (store) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  submitComp: ( newComp ) => { dispatch(submitComp(newComp)); }
+  submitComp: ( newComp ) => { dispatch(submitComp(newComp)); },
+  loginRequired: ( bool ) => { dispatch(loginRequired(bool)); }
 });
 
 

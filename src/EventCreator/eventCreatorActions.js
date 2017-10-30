@@ -8,6 +8,6 @@ export const submitComp = (newComp) => {
 export const loginRequired = (bool) => {
   return {
     type: 'LOGIN_REQUIRED',
-    activePopup: true
+    activePopup: bool
   };
 };

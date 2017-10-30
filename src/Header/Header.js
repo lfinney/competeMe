@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { activeUser } from './headerActions';
 import PropTypes from 'prop-types';
 import { auth, provider } from '../firebase.js';
+import Popup from '../Popup/Popup';
 
 export class Header extends Component {
   componentDidMount() {
@@ -54,6 +55,8 @@ export class Header extends Component {
             <button onClick={this.login}>Log In</button>
           </div>
         }
+        {
+          this.props.loginRequired && <Popup />        }
       </div>
     );
   }
@@ -67,7 +70,8 @@ Header.propTypes = {
 
 const mapStateToProps = (store) => ({
   liveUser: store.activeUser.userId ? true : false,
-  user: store.activeUser
+  user: store.activeUser,
+  loginRequired: store.loginRequired
 });
 
 const mapDispatchToProps = (dispatch) => ({
