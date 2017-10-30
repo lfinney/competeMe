@@ -5,20 +5,11 @@ import { fetchFromFirebase } from '../utilities/firebaseHelper';
 
 
 export class Main extends Component {
-  constructor() {
-    super();
-    this.state = {
-      items: []
-    }
-  }
-
   componentDidMount() {
-    this.setState({
-      items: this.props.fetchFromFirebase()
-    });
+    this.props.fetchFromFirebase();
   }
 
-  render() {
+render() {
     return (
       <div className="Main">
         <div className="nav-tabs">
@@ -26,14 +17,14 @@ export class Main extends Component {
           <h2>In-Progress</h2>
           <h2>Completed</h2>
         </div>
-        <EventDirectory />
+        <EventDirectory events={this.props.events}/>
       </div>
     );
   }
 }
 
 const mapStateToProps = (store) => ({
-  events: store.events
+  events: store.fetchFromFirebase
 });
 
 const mapDispatchToProps = (dispatch) => {
