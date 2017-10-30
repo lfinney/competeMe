@@ -1,9 +1,9 @@
 import React from 'react';import { connect } from 'react-redux';
-import { loginRequired } from '../EventCreator/eventCreatorActions';
+import { activePopup } from '../EventCreator/eventCreatorActions';
 import PropTypes from 'prop-types';
 
 
-const Popup = ({ loginRequired }) => {
+const Popup = ({ activePopup }) => {
   return (
     <div className="Popup">
       <h3>Sorry, competitor.</h3>
@@ -12,7 +12,7 @@ const Popup = ({ loginRequired }) => {
         className="remove-popup"
         onClick={ (event) => {
           event.preventDefault();
-          loginRequired();
+          activePopup();
         }}>
         Got it!
       </button>
@@ -29,7 +29,7 @@ Popup.propTypes = {
 // });
 
 const mapDispatchToProps = (dispatch) => ({
-  loginRequired: () => { dispatch(loginRequired(false)); }
+  activePopup: () => { dispatch(activePopup(false)); }
 });
 
 export default connect(null, mapDispatchToProps)(Popup);

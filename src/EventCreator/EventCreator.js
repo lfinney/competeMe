@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { submitComp, loginRequired } from './eventCreatorActions';
+import { submitComp, activePopup } from './eventCreatorActions';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
 import PropTypes from 'prop-types';
@@ -29,7 +29,7 @@ export class EventCreator extends Component {
 
   handleSubmit = () => {
     if (!this.props.liveUser) {
-      this.props.loginRequired(true);
+      this.props.activePopup(true);
       return
     }
     const competition = Object.assign({}, {id: Date.now()}, this.state);
@@ -176,7 +176,7 @@ const mapStatetoProps = (store) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   submitComp: ( newComp ) => { dispatch(submitComp(newComp)); },
-  loginRequired: ( bool ) => { dispatch(loginRequired(bool)); }
+  activePopup: ( bool ) => { dispatch(activePopup(bool)); }
 });
 
 

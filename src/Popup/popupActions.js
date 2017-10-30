@@ -1,6 +1,6 @@
-export const removePopup = (bool) => {
-  return {
-    type: 'REMOVE_POPUP',
-    bool
-  };
-};
+// export const removePopup = (bool) => {
+//   return {
+//     type: 'REMOVE_POPUP',
+//     bool
+//   };
+// };

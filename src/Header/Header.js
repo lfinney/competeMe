@@ -56,7 +56,7 @@ export class Header extends Component {
           </div>
         }
         {
-          this.props.loginRequired && <Popup />        }
+          this.props.activePopup && <Popup />        }
       </div>
     );
   }
@@ -71,7 +71,7 @@ Header.propTypes = {
 const mapStateToProps = (store) => ({
   liveUser: store.activeUser.userId ? true : false,
   user: store.activeUser,
-  loginRequired: store.loginRequired
+  activePopup: store.activePopup
 });
 
 const mapDispatchToProps = (dispatch) => ({

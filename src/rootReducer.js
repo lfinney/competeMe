@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 import { activeUser } from './Header/headerReducer';
-import { submitComp, loginRequired } from './EventCreator/eventCreatorReducer';
+import { submitComp, activePopup } from './EventCreator/eventCreatorReducer';
 import { removePopup } from './Popup/popupReducer';
 import { fetchFromFirebase } from './Main/mainReducer';
 
 const rootReducer = combineReducers({
   activeUser,
   submitComp,
-  loginRequired,
+  activePopup,
   removePopup,
   fetchFromFirebase
 });
