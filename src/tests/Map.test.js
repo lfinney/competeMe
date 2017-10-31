@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from '../Main/Main';
+import Map from '../Map/Map';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Main />, div);
+
+describe('Map', () => {
+
+  it('should render component', () => {
+    const wrapper = shallow(
+      <Map />);
+
+    expect(wrapper.length).toEqual(1);
+  });
 });

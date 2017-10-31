@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from '../Main/Main';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Main />, div);
+
+describe('Main', () => {
+
+  it('should render component', () => {
+    const wrapper = shallow(
+      <Main />);
+
+    expect(wrapper.length).toEqual(1);
+  });
 });

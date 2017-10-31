@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from '../Header/Header';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Header />, div);
+
+describe('Header', () => {
+
+  it('should render component', () => {
+    const wrapper = shallow(
+      <Header />);
+
+    expect(wrapper.length).toEqual(1);
+  });
 });

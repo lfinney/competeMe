@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import EventDirectory from '../EventDirectory/EventDirectory';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<EventDirectory />, div);
+
+describe('EventDirectory', () => {
+
+  it('should render component', () => {
+    const wrapper = shallow(
+      <EventDirectory />);
+
+    expect(wrapper.length).toEqual(1);
+  });
 });

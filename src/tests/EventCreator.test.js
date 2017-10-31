@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import EventCreator from '../EventCreator/EventCreator';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<EventCreator />, div);
+
+describe('EventCreator', () => {
+
+  it('should render component', () => {
+    const wrapper = shallow(
+      <EventCreator />);
+
+    expect(wrapper.length).toEqual(1);
+  });
 });

@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Popup from '../Popup/Popup';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Popup />, div);
+
+describe('Popup', () => {
+
+  it('should render component', () => {
+    const wrapper = shallow(
+      <Popup />);
+
+    expect(wrapper.length).toEqual(1);
+  });
 });
