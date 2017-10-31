@@ -10,3 +10,13 @@ export function fetchFromFirebase(state = [], action) {
     return state;
   }
 }
+
+export function userCompetitions(state = [], action) {
+  switch (action.type) {
+  case 'USER_COMPETITON':
+    return action.comp;
+
+  default:
+    return state;
+  }
+}

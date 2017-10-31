@@ -4,7 +4,7 @@ import { handleSubmit } from '../utilities/userEventsHelper';
 const dateFormat = require('dateformat');
 const convertTime = require('convert-time');
 
-const Event = ({ comp, liveUser, activePopup }) => {
+const Event = ({ comp, liveUser, activePopup, userCompetitions, activeUser }) => {
   return (
     <div
       className="Event"
@@ -18,7 +18,10 @@ const Event = ({ comp, liveUser, activePopup }) => {
       <p>{comp.details}</p>
       <div className="park-map"></div>
       <button
-        onClick={ () => handleSubmit(liveUser, activePopup) }>
+        onClick={ () => {
+          handleSubmit(liveUser, activePopup);
+          userCompetitions(comp, activeUser);
+        }}>
         Count Me In!
       </button>
     </div>
@@ -29,7 +32,9 @@ const Event = ({ comp, liveUser, activePopup }) => {
 Event.propTypes = {
   comp: PropTypes.object,
   liveUser: PropTypes.bool,
-  activePopup: PropTypes.func
+  activePopup: PropTypes.func,
+  userCompetitions: PropTypes.func,
+  activeUser: PropTypes.object
 };
 
 export default Event;

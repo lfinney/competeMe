@@ -22,6 +22,10 @@ export class EventCreator extends Component {
     };
   }
 
+  componentDidMount() {
+    this.getLocation();
+  }
+
   updateState(key, event) {
     event.preventDefault();
     this.setState({[key]: event.target.value});
@@ -51,11 +55,13 @@ export class EventCreator extends Component {
   }
 
   //location is hardcoded to denver; this needs to be changed to pull from user search in event creator
+  //https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=YOUR_API_KEY
+
   getLocation() {
     fetch(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=denver&key=${
+      `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=${
         apiKey.placesApi}`)
-      .then(res => res.json())
+      // .then(res => res.json())
       .then(res => console.log(res));
   }
 
