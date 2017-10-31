@@ -20,7 +20,9 @@ const Event = ({ comp, liveUser, activePopup, userCompetitions, activeUser }) =>
       <button
         onClick={ () => {
           handleSubmit(liveUser, activePopup);
-          userCompetitions(comp, activeUser);
+          if (liveUser) {
+            userCompetitions(comp, activeUser);
+          }
         }}>
         Count Me In!
       </button>
