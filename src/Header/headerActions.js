@@ -4,3 +4,12 @@ export const activeUser = (user) => {
     user
   };
 };
+
+
+export const userCompetitions = (comp, activeUser) => {
+  return {
+    type: 'USER_COMPETITON',
+    comp,
+    user: activeUser
+  };
+};

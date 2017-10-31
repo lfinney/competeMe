@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { activeUser } from './headerActions';
 import PropTypes from 'prop-types';
-import { auth, provider } from '../firebase.js';
+import firebase, { auth, provider } from '../firebase.js';
 import Popup from '../Popup/Popup';
 
 export class Header extends Component {
   componentDidMount() {
+    const usersRef = firebase.database().ref('users');
+    console.log(usersRef);
+
     auth.onAuthStateChanged((user) => {
       if (user) {
         const cleanedUser = this.cleanUserData(user);
@@ -20,7 +23,7 @@ export class Header extends Component {
       userId: user.uid,
       displayName: user.displayName.split(' ')[0],
       email: user.email,
-      competitions: new Set()
+      competitions: []
     };
   }
 
@@ -31,6 +34,7 @@ export class Header extends Component {
         const cleanedUser = this.cleanUserData(userData);
         this.props.activeUser(cleanedUser);
       });
+    // firebase.auth().onAuthStateChanged( () => )
   }
 
   logout = () => {

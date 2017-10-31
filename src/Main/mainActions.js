@@ -11,10 +11,3 @@ export const postToStore = (firebaseData) => {
     firebaseData
   };
 };
-
-export const userCompetitions = (comp) => {
-  return {
-    type: 'USER_COMPETITON',
-    comp
-  };
-};

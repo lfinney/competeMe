@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Event from '../Event/Event';
 
 const EventDirectory = ({ competitions, liveUser, activePopup, userCompetitions, activeUser }) => {
-  console.log(activeUser);
 
   const compCatalogue = competitions.map( (comp) => {
     return <Event
