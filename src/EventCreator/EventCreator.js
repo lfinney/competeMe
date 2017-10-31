@@ -58,11 +58,12 @@ export class EventCreator extends Component {
   //https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=YOUR_API_KEY
 
   getLocation() {
+   const proxy = 'https://cors-anywhere.herokuapp.com/'
     fetch(
-      `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=${
+      ` ${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=${
         apiKey.placesApi}`)
       // .then(res => res.json())
-      .then(res => console.log(res));
+      .then(res => res.json()).then(data => data);
   }
 
   render() {

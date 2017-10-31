@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { handleSubmit } from '../utilities/userEventsHelper';
+import { handleSubmit, joinComp } from '../utilities/userEventsHelper';
 const dateFormat = require('dateformat');
 const convertTime = require('convert-time');
 

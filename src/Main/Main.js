@@ -51,7 +51,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchFromFirebase: () => { dispatch(fetchFromFirebase()); },
     activePopup: (bool) => { dispatch(activePopup(bool)); },
-    userCompetitions: (comp) => { dispatch(joinComp(comp)); }
+    userCompetitions: (comp, activeUser) => { dispatch(joinComp(comp, activeUser)); }
   };
 };
 

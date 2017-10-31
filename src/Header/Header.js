@@ -20,7 +20,7 @@ export class Header extends Component {
       userId: user.uid,
       displayName: user.displayName.split(' ')[0],
       email: user.email,
-      competitions: []
+      competitions: new Set()
     };
   }
 
