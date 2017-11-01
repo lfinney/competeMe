@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import EventDirectory from '../EventDirectory/EventDirectory';
 import PropTypes from 'prop-types';
-import { fetchFromFirebase } from '../utilities/firebaseHelper';
+import { fetchFromFirebase, loadUserComps } from '../utilities/firebaseHelper';
 import { joinComp } from '../utilities/userEventsHelper';
 import { NavLink } from 'react-router-dom';
 import { activePopup } from '../EventCreator/eventCreatorActions';
@@ -12,21 +12,31 @@ import { activePopup } from '../EventCreator/eventCreatorActions';
 export class Main extends Component {
   componentDidMount() {
     this.props.fetchFromFirebase();
+    loadUserComps(this.props.activeUser, this.props.competitions);
   }
 
-render() {
+  render() {
     return (
       <div className="Main">
         <div className="nav-tabs">
           <h2><NavLink to='/'>Upcoming Competitions</NavLink></h2>
           <h2><NavLink to='/my-competitions'>Your Competitions</NavLink></h2>
         </div>
-        <EventDirectory
-          competitions={this.props.competitions}
-          liveUser={this.props.liveUser}
-          activePopup={this.props.activePopup}
-          userCompetitions={this.props.userCompetitions}
-          activeUser={this.props.activeUser}/>
+        { this.props.location.pathname === '/my-competitions' && this.props.liveUser ?
+          <EventDirectory
+            competitions={this.props.activeUser.competitions}
+            liveUser={this.props.liveUser}
+            activePopup={this.props.activePopup}
+            userCompetitions={this.props.userCompetitions}
+            activeUser={this.props.activeUser}/>
+          :
+          <EventDirectory
+            competitions={this.props.competitions}
+            liveUser={this.props.liveUser}
+            activePopup={this.props.activePopup}
+            userCompetitions={this.props.userCompetitions}
+            activeUser={this.props.activeUser}/>
+        }
       </div>
     );
   }

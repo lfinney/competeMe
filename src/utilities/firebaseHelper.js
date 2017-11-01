@@ -1,5 +1,6 @@
 import { postToStore } from '../Main/mainActions';
 import firebase from '../firebase.js';
+import { joinComp } from './userEventsHelper'
 
 export const fetchFromFirebase = () => {
   return (dispatch) => {
@@ -12,4 +13,15 @@ export const fetchFromFirebase = () => {
       }
     });
   };
+};
+
+export const loadUserComps = (activeUser, activeCompetitions) => {
+  const joinedCompetitions = activeCompetitions.map( (comp) => {
+    if (comp.activePlayers.map( player => player === activeUser.userId)) {
+      console.log(activeUser);
+      joinComp(comp, activeUser);
+    }
+    return;
+  });
+  console.log(joinedCompetitions);
 };
