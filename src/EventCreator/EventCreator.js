@@ -16,7 +16,7 @@ export class EventCreator extends Component {
       sport: '',
       players: '',
       competitiveness: 'Casual',
-      date: '1987-10-09',
+      date: '2017-11-01',
       time: '15:00',
       details: '',
       location: '',
@@ -26,7 +26,6 @@ export class EventCreator extends Component {
   }
 
   componentDidMount() {
-    this.getLocation();
   }
 
   updateState(key, event) {
@@ -52,16 +51,12 @@ export class EventCreator extends Component {
     this.props.userCompetitions(competition, this.props.activeUser);
   }
 
-  //location is hardcoded to denver; this needs to be changed to pull from user search in event creator
-  //https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=YOUR_API_KEY
-
-  getLocation() {
-   const proxy = 'https://cors-anywhere.herokuapp.com/'
+  getLocation(userSearch) {
+    console.log(userSearch);
+    const proxy = 'https://cors-anywhere.herokuapp.com/';
     fetch(
-      ` ${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=${
-        apiKey.placesApi}`)
-      // .then(res => res.json())
-      .then(res => res.json()).then(data => data);
+      ` ${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.7508,-104.9966&radius=5000&type=park&keyword=${userSearch}&key=${apiKey.placesApi}`)
+      .then(res => res.json()).then(parkData => console.log(parkData));
   }
 
   render() {
@@ -150,6 +145,7 @@ export class EventCreator extends Component {
             placeholder="Park Search"
             value={this.state.location}
             onChange={ this.updateState.bind(this, 'location') }/>
+          <button onClick={ () => this.getLocation(this.state.location) }>Find Park</button>
           <div className="park-map">
             <Map
               googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import EventDirectory from '../EventDirectory/EventDirectory';
 import PropTypes from 'prop-types';
 import { fetchFromFirebase, loadUserComps } from '../utilities/firebaseHelper';
-import { joinComp } from '../utilities/userEventsHelper';
+import { joinComp, locationDefaults } from '../utilities/userEventsHelper';
 import { NavLink } from 'react-router-dom';
 import { activePopup } from '../EventCreator/eventCreatorActions';
 
@@ -12,8 +12,17 @@ import { activePopup } from '../EventCreator/eventCreatorActions';
 export class Main extends Component {
   componentDidMount() {
     this.props.fetchFromFirebase();
-    loadUserComps(this.props.activeUser, this.props.competitions);
+    this.props.getUserLocation();
+    console.log('fired');
   }
+
+  // componentWillUpdate(nextProps) {
+  //   if ( this.props.competitions.length !== nextProps.activeUser.competitions.length) {
+  //     const { activeUser, competitions, userCompetitions } =  nextProps
+  //     console.log(activeUser);
+  //     // loadUserComps(activeUser, competitions, userCompetitions)
+  //   }
+  // }
 
   render() {
     return (
@@ -63,7 +72,8 @@ const mapDispatchToProps = (dispatch) => {
     activePopup: (bool) => { dispatch(activePopup(bool)); },
     userCompetitions: (comp, activeUser) => {
       dispatch(joinComp(comp, activeUser));
-    }
+    },
+    getUserLocation: () => { dispatch(locationDefaults()); }
   };
 };
 

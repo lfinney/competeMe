@@ -1,4 +1,5 @@
 import { userCompetitions } from '../Header/headerActions';
+import { userLocation } from '../Main/mainActions';
 
 export const handleSubmit = (liveUser, activePopup) => {
   if (!liveUser) {
@@ -9,9 +10,20 @@ export const handleSubmit = (liveUser, activePopup) => {
 
 export const joinComp = (comp, activeUser) => {
   let newComps = activeUser.competitions.includes(comp) ?
-    activeUser.competitions.filter( item => item !== comp) :
+    activeUser.competitions.filter( item => item.id !== comp.id) :
     [...activeUser.competitions, comp];
+    console.log(newComps);
   return (dispatch) => dispatch(userCompetitions(newComps, activeUser));
+};
+
+export const locationDefaults = () => {
+  return (dispatch) => {
+    navigator.geolocation.getCurrentPosition( position => {
+      console.log(position.cords);
+      dispatch(userLocation(position.coords))
+    }
+    );
+  };
 };
 
 export const defaultUserFormState = {

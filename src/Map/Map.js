@@ -3,12 +3,12 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-map
 import apiKey from '../apiKeys';
 
 const Map = withScriptjs(withGoogleMap(() => {
-  // console.log(props);
   return (
     <GoogleMap
       defaultZoom={10}
-      defaultCenter={{ lat: -34.397, lng: 150.644 }}
-      >
+      defaultCenter={{ lat:39.7508006, lng:-104.9965947 }}
+    >
+
     </GoogleMap>
   );
 }

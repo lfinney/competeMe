@@ -11,3 +11,10 @@ export const postToStore = (firebaseData) => {
     firebaseData
   };
 };
+
+export const userLocation = (location) => {
+  return {
+    type: 'USER_LOCATION',
+    location
+  };
+};
