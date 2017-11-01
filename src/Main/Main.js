@@ -4,7 +4,7 @@ import EventDirectory from '../EventDirectory/EventDirectory';
 import PropTypes from 'prop-types';
 import { fetchFromFirebase } from '../utilities/firebaseHelper';
 import { joinComp } from '../utilities/userEventsHelper';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { activePopup } from '../EventCreator/eventCreatorActions';
 
 
@@ -18,8 +18,8 @@ render() {
     return (
       <div className="Main">
         <div className="nav-tabs">
-          <h2><Link to='/'>Upcoming Competitions</Link></h2>
-          <h2><Link to='/my-competitions'>Your Competitions</Link></h2>
+          <h2><NavLink to='/'>Upcoming Competitions</NavLink></h2>
+          <h2><NavLink to='/my-competitions'>Your Competitions</NavLink></h2>
         </div>
         <EventDirectory
           competitions={this.props.competitions}
