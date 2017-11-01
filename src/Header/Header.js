@@ -7,9 +7,6 @@ import Popup from '../Popup/Popup';
 
 export class Header extends Component {
   componentDidMount() {
-    const usersRef = firebase.database().ref('users');
-    console.log(usersRef);
-
     auth.onAuthStateChanged((user) => {
       if (user) {
         const cleanedUser = this.cleanUserData(user);
@@ -28,6 +25,13 @@ export class Header extends Component {
   }
 
   login = () => {
+    // const usersRef = firebase.database().ref('users');
+    // usersRef.on('value', (snapshot) => {
+    //     const newUser = snapshot.val();
+    //
+    //     if (newUser) this.createAccount(newUser);
+      // });
+
     auth.signInWithPopup(provider)
       .then((result) => result = result.user)
       .then((userData) => {

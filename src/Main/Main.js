@@ -4,7 +4,7 @@ import EventDirectory from '../EventDirectory/EventDirectory';
 import PropTypes from 'prop-types';
 import { fetchFromFirebase } from '../utilities/firebaseHelper';
 import { joinComp } from '../utilities/userEventsHelper';
-import { userCompetitions } from '../Main/mainActions';
+// import { userCompetitions } from '../Main/mainActions';
 import { activePopup } from '../EventCreator/eventCreatorActions';
 
 
@@ -51,7 +51,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchFromFirebase: () => { dispatch(fetchFromFirebase()); },
     activePopup: (bool) => { dispatch(activePopup(bool)); },
-    userCompetitions: (comp, activeUser) => { dispatch(joinComp(comp, activeUser)); }
+    userCompetitions: (comp, activeUser) => {
+      dispatch(joinComp(comp, activeUser));
+    }
   };
 };
 

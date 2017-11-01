@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { submitComp, activePopup } from './eventCreatorActions';
-// import { handleSubmit } from '../utilities/userEventsHelper';
+import { defaultUserFormState, joinComp } from '../utilities/userEventsHelper';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
 import PropTypes from 'prop-types';
 import firebase from '../firebase.js';
+// import { userCompetitions } from '../Main/mainActions';
 
 export class EventCreator extends Component {
   constructor() {
@@ -18,7 +19,9 @@ export class EventCreator extends Component {
       date: '1987-10-09',
       time: '15:00',
       details: '',
-      location: ''
+      location: '',
+      creator: '',
+      activePlayers: null
     };
   }
 
@@ -37,21 +40,16 @@ export class EventCreator extends Component {
       this.props.activePopup(true);
       return;
     }
-    const competition = Object.assign({}, {id: Date.now()}, this.state);
+    const competition = Object.assign({}, this.state, {
+      id: Date.now(),
+      creator:this.props.activeUser.userId,
+      activePlayers: [this.props.activeUser.userId] });
     const compsRef = firebase.database().ref('comps');
 
     compsRef.push(competition);
     this.props.submitComp(competition);
-    this.setState({
-      compName: '',
-      sport: '',
-      players: '',
-      competitiveness: '',
-      date: '',
-      time: '',
-      details: '',
-      location: ''
-    });
+    this.setState({ defaultUserFormState });
+    this.props.userCompetitions(competition, this.props.activeUser);
   }
 
   //location is hardcoded to denver; this needs to be changed to pull from user search in event creator
@@ -181,12 +179,16 @@ EventCreator.propTypes = {
 };
 
 const mapStatetoProps = (store) => ({
-  liveUser: store.activeUser.userId ? true : false
+  liveUser: store.activeUser.userId ? true : false,
+  activeUser: store.activeUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
   submitComp: ( newComp ) => { dispatch(submitComp(newComp)); },
-  activePopup: ( bool ) => { dispatch(activePopup(bool)); }
+  activePopup: ( bool ) => { dispatch(activePopup(bool)); },
+  userCompetitions: (comp, activeUser) => {
+    dispatch(joinComp(comp, activeUser));
+  }
 });
 
 

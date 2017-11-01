@@ -14,6 +14,19 @@ export const joinComp = (comp, activeUser) => {
   return (dispatch) => dispatch(userCompetitions(newComps, activeUser));
 };
 
+export const defaultUserFormState = {
+  compName: '',
+  sport: '',
+  players: '',
+  competitiveness: 'Casual',
+  date: '2017-11-01',
+  time: '15:00',
+  details: '',
+  location: '',
+  creator: '',
+  activePlayers: null
+};
+
 // export const joinComp = (comp, activeUser) => {
 //   activeUser.competitions.has(comp) ?
 //     activeUser.competitions.delete(comp) :
