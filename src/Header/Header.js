@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { activeUser } from './headerActions';
 import PropTypes from 'prop-types';
-import { auth, provider } from '../firebase.js';
+import firebase, { auth, provider } from '../firebase.js';
 import Popup from '../Popup/Popup';
 
 export class Header extends Component {
@@ -25,12 +25,20 @@ export class Header extends Component {
   }
 
   login = () => {
+    // const usersRef = firebase.database().ref('users');
+    // usersRef.on('value', (snapshot) => {
+    //     const newUser = snapshot.val();
+    //
+    //     if (newUser) this.createAccount(newUser);
+      // });
+
     auth.signInWithPopup(provider)
       .then((result) => result = result.user)
       .then((userData) => {
         const cleanedUser = this.cleanUserData(userData);
         this.props.activeUser(cleanedUser);
       });
+    // firebase.auth().onAuthStateChanged( () => )
   }
 
   logout = () => {

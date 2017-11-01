@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Event from '../Event/Event';
 
-const EventDirectory = ({ competitions, liveUser, activePopup }) => {
+const EventDirectory = ({ competitions, liveUser, activePopup, userCompetitions, activeUser }) => {
 
   const compCatalogue = competitions.map( (comp) => {
     return <Event
       comp={comp}
       key={comp.key}
       liveUser={liveUser}
-      activePopup={activePopup}/>;
+      activePopup={activePopup}
+      userCompetitions={userCompetitions}
+      activeUser={activeUser} />;
   });
 
   return (
@@ -22,8 +24,10 @@ const EventDirectory = ({ competitions, liveUser, activePopup }) => {
 
 EventDirectory.propTypes = {
   competitions: PropTypes.arrayOf(PropTypes.object),
+  liveUser: PropTypes.bool,
   activePopup: PropTypes.func,
-  liveUser: PropTypes.bool
+  userCompetitions: PropTypes.func,
+  activeUser: PropTypes.object
 };
 
 export default EventDirectory;
