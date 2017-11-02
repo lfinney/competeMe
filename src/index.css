@@ -1,19 +1,44 @@
 .App {
   text-align: center;
   background-image: url("localhost:3000/../assets/background-grass-texture.png");
-  background-color: #377100;
+  background-color: #6a9143;
   display: grid;
   grid-template-columns: auto 400px;
   grid-template-rows: 100px auto;
   grid-template-areas: "top top" "left right"; }
 
 .Event {
-  background-color: #393939;
+  background-color: #7a7d7d;
   border-radius: 10px;
-  margin: 0px 15px 15px 15px; }
+  margin: 0px 15px 15px 15px;
+  box-shadow: 5px 5px 0px 1px rgba(26, 26, 26, 0.75); }
 
 .Event h3, h4, p {
-  margin: 0; }
+  margin: 10px 0; }
+
+.Event .event-info {
+  display: grid;
+  grid-template-columns: auto 250px 125px;
+  grid-template-areas: "info map button"; }
+
+.Event .event-test-details {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
+.Event .park-map {
+  width: 200px;
+  height: 200px;
+  background-color: #1a1a1a;
+  margin: 25px;
+  grid-area: map; }
+
+.Event button {
+  width: 100px;
+  height: 100px;
+  margin-top: 75px;
+  grid-area: button; }
 
 .EventCreator {
   display: inline-block;
@@ -77,7 +102,7 @@
   position: sticky;
   top: 0px;
   color: #6da34d;
-  background-color: #393939;
+  background-color: #1a1a1a;
   display: flex;
   justify-content: flex-end;
   align-items: center;

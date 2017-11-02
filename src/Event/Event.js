@@ -9,23 +9,27 @@ const Event = ({ comp, liveUser, activePopup, userCompetitions, activeUser }) =>
     <div
       className="Event"
       liveUser={liveUser}>
-      <h3>{comp.compName}</h3>
-      <h4>{comp.sport} - {comp.competitiveness}</h4>
-      <h4>{comp.players}</h4>
-      <h4>{convertTime(comp.time) + ' '}
-        on {dateFormat(comp.date, 'mediumDate') + ' '}
-        at {comp.location}</h4>
-      <p>{comp.details}</p>
-      <div className="park-map"></div>
-      <button
-        onClick={ () => {
-          handleSubmit(liveUser, activePopup);
-          if (liveUser) {
-            userCompetitions(comp, activeUser);
-          }
-        }}>
-        Count Me In!
-      </button>
+      <div className="event-info">
+        <div className="event-text-details">
+          <h4>{comp.sport} - {comp.competitiveness}</h4>
+          <h4>{comp.players}</h4>
+          <h4>{convertTime(comp.time) + ' '}
+            on {dateFormat(comp.date, 'mediumDate') + ' '}
+            at {comp.location}</h4>
+          <p>{comp.details}</p>
+        <h3>{comp.compName}</h3>
+        </div>
+        <div className="park-map"></div>
+        <button
+          onClick={ () => {
+            handleSubmit(liveUser, activePopup);
+            if (liveUser) {
+              userCompetitions(comp, activeUser);
+            }
+          }}>
+          Count Me In!
+        </button>
+      </div>
     </div>
   );
 };

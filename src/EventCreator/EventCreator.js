@@ -135,6 +135,7 @@ export class EventCreator extends Component {
             cols="40"
             value={this.state.details}
             onChange={ this.updateState.bind(this, 'details') }/>
+          <h3 className="formTitle">Pick a Park to Play At</h3>
           <input
             className="text-input"
             type="text"
