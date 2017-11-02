@@ -13,16 +13,15 @@ export class Main extends Component {
   componentDidMount() {
     this.props.fetchFromFirebase();
     this.props.getUserLocation();
-    console.log('fired');
+
   }
 
-  // componentWillUpdate(nextProps) {
-  //   if ( this.props.competitions.length !== nextProps.activeUser.competitions.length) {
-  //     const { activeUser, competitions, userCompetitions } =  nextProps
-  //     console.log(activeUser);
-  //     // loadUserComps(activeUser, competitions, userCompetitions)
-  //   }
-  // }
+  componentWillUpdate(nextProps) {
+    if ( this.props.competitions.length !== nextProps.competitions.length) {
+      const { activeUser, competitions } =  nextProps;
+      loadUserComps(activeUser, competitions);
+    }
+  }
 
   render() {
     return (

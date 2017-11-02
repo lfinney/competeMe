@@ -1,6 +1,5 @@
 import { postToStore } from '../Main/mainActions';
 import firebase from '../firebase.js';
-import { joinComp } from './userEventsHelper';
 
 export const fetchFromFirebase = () => {
   return (dispatch) => {

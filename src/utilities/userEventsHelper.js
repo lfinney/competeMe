@@ -12,8 +12,9 @@ export const joinComp = (comp, activeUser) => {
   let newComps = activeUser.competitions.includes(comp) ?
     activeUser.competitions.filter( item => item.id !== comp.id) :
     [...activeUser.competitions, comp];
-    console.log(newComps);
-  return (dispatch) => dispatch(userCompetitions(newComps, activeUser));
+  console.log(newComps);
+
+  // return (dispatch) => dispatch(userCompetitions(newComps, activeUser));
 };
 
 export const locationDefaults = () => {
