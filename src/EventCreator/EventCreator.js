@@ -154,7 +154,8 @@ export class EventCreator extends Component {
                 <div style={{ height: '200px', width: '200px'}} />
               }
               mapElement={
-                <div style={{ height: '200px', width: '200px'}} />
+                <div style={{ height: '200px', width: '200px'}}
+              markerIsShown={true}/>
               }
             />
           </div>
