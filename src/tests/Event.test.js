@@ -12,6 +12,6 @@ describe('Event', () => {
       <Event
         comp={mockCompetition}/>);
 
-    expect(wrapper.length).toEqual(1);
+    expect(wrapper).toMatchSnapshot();
   });
 });

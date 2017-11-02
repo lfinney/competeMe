@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import EventDirectory from '../EventDirectory/EventDirectory';
 import { shallow } from 'enzyme';
+import mockCompetitionsArray from './mockData/mockCompetitionsArray';
 
 
 describe('EventDirectory', () => {
 
   it('should render component', () => {
     const wrapper = shallow(
-      <EventDirectory />);
+      <EventDirectory competitions={mockCompetitionsArray}/>);
 
-    expect(wrapper.length).toEqual(1);
+    expect(wrapper).toMatchSnapshot();
   });
 });
