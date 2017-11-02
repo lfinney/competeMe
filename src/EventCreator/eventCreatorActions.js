@@ -11,3 +11,10 @@ export const activePopup = (bool) => {
     activePopup: bool
   };
 };
+
+export const parkSearch = (searchResults) => {
+  return {
+    type: 'PARK_SEARCH',
+    searchResults
+  };
+};

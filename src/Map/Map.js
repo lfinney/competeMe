@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import apiKey from '../apiKeys';
 
-const Map = withScriptjs(withGoogleMap(() => {
+const Map = withScriptjs(withGoogleMap(({ nearbyParks }) => {
+  console.log(nearbyParks);
   return (
     <GoogleMap
       defaultZoom={10}

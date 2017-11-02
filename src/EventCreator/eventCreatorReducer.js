@@ -17,3 +17,13 @@ export const activePopup = (state = false, action) => {
     return state;
   }
 };
+
+export const nearbyParks = (state = [], action) => {
+  switch (action.type) {
+  case 'PARK_SEARCH':
+    return action.searchResults;
+
+  default:
+    return state;
+  }
+};

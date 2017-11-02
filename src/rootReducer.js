@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { activeUser } from './Header/headerReducer';
-import { submitComp, activePopup } from './EventCreator/eventCreatorReducer';
+import { submitComp, activePopup, nearbyParks } from './EventCreator/eventCreatorReducer';
 import { fetchFromFirebase, userLocation } from './Main/mainReducer';
 
 const rootReducer = combineReducers({
@@ -8,7 +8,8 @@ const rootReducer = combineReducers({
   submitComp,
   activePopup,
   fetchFromFirebase,
-  userLocation
+  userLocation,
+  nearbyParks
 });
 
 export default rootReducer;

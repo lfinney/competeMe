@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { submitComp, activePopup } from './eventCreatorActions';
+import { submitComp, activePopup, parkSearch } from './eventCreatorActions';
 import { defaultUserFormState, joinComp } from '../utilities/userEventsHelper';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
@@ -23,9 +23,6 @@ export class EventCreator extends Component {
       creator: '',
       activePlayers: null
     };
-  }
-
-  componentDidMount() {
   }
 
   updateState(key, event) {
@@ -52,11 +49,10 @@ export class EventCreator extends Component {
   }
 
   getLocation(userSearch) {
-    console.log(userSearch);
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     fetch(
-      ` ${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.7508,-104.9966&radius=5000&type=park&keyword=${userSearch}&key=${apiKey.placesApi}`)
-      .then(res => res.json()).then(parkData => console.log(parkData));
+      ` ${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.7508,-104.9966&radius=2000&type=park&keyword=${userSearch}&key=${apiKey.placesApi}`)
+      .then(res => res.json()).then(parkData =>     this.props.parkSearch(parkData.results));
   }
 
   render() {
@@ -150,6 +146,7 @@ export class EventCreator extends Component {
             <Map
               googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
                 apiKey.placesApi}&parks=places&callback=initMap`}
+              nearbyParks={this.props.nearbyParks}
               loadingElement={
                 <div style={{ height: '200px', width: '200px'}} />
               }
@@ -171,12 +168,14 @@ export class EventCreator extends Component {
 EventCreator.propTypes = {
   submitComp: PropTypes.func,
   activePopup: PropTypes.func,
-  liveUser: PropTypes.bool
+  liveUser: PropTypes.bool,
+  nearbyParks: PropTypes.arrayOf(PropTypes.object)
 };
 
 const mapStatetoProps = (store) => ({
   liveUser: store.activeUser.userId ? true : false,
-  activeUser: store.activeUser
+  activeUser: store.activeUser,
+  nearbyParks: store.nearbyParks
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -184,7 +183,8 @@ const mapDispatchToProps = (dispatch) => ({
   activePopup: ( bool ) => { dispatch(activePopup(bool)); },
   userCompetitions: (comp, activeUser) => {
     dispatch(joinComp(comp, activeUser));
-  }
+  },
+  parkSearch: ( searchResults ) => { dispatch(parkSearch(searchResults)); }
 });
 
 
