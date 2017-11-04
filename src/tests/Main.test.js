@@ -18,7 +18,7 @@ describe('Main', () => {
       fetchFromFirebase: [],
       userLocation: {},
       nearbyParks: []
-    }
+    };
     const store = mockStore(initialState);
     const wrapper = shallow(
       <Main store={store}/>);
