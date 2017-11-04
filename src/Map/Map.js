@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps';
+const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
+
 
 const Map = withScriptjs(withGoogleMap(({ nearbyParks, markerIsShown }) => {
   console.log(nearbyParks);
+
+  const toggleLabel = () => console.log(this.props);
+
   const markers = nearbyParks.map( (park, index) => {
     return (
-      <Marker
+      <MarkerWithLabel
         key={index}
-        position={{lat:park.geometry.location.lat, lng:park.geometry.location.lng}}/>
+        position={{
+          lat:park.geometry.location.lat, lng:park.geometry.location.lng}}
+          labelStyle={{backgroundColor: "gray", fontSize: "1em", padding: "2px"}}
+          labelVisible={false}
+          onMouseOver={() => toggleLabel()}
+     >
+       <div>{park.name}</div>
+     </MarkerWithLabel>
     );
   });
 

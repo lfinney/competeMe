@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import EventCreator from '../EventCreator/EventCreator';
+import { EventCreator } from '../EventCreator/EventCreator';
 import { shallow } from 'enzyme';
 
 
@@ -10,6 +10,6 @@ describe('EventCreator', () => {
     const wrapper = shallow(
       <EventCreator />);
 
-    expect(wrapper.length).toEqual(1);
+    expect(wrapper).toMatchSnapshot();
   });
 });

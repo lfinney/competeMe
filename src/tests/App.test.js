@@ -10,6 +10,6 @@ describe('App', () => {
     const wrapper = shallow(
       <App />);
 
-    expect(wrapper.length).toEqual(1);
+    expect(wrapper).toMatchSnapshot();
   });
 });
