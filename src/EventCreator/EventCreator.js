@@ -22,7 +22,7 @@ export class EventCreator extends Component {
       location: '',
       creator: '',
       activePlayers: null,
-      pickedPark: {},
+      pickedPark: [],
       nearbyParks: []
     };
     this.pickPark = this.pickPark.bind(this);
@@ -62,8 +62,7 @@ export class EventCreator extends Component {
   }
 
   pickPark(park) {
-    console.log(this);
-    this.setState({pickedPark: park});
+    this.setState({pickedPark: [park]});
   }
 
   render() {
