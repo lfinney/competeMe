@@ -4,11 +4,10 @@ import { handleSubmit } from '../utilities/userEventsHelper';
 const dateFormat = require('dateformat');
 const convertTime = require('convert-time');
 
-const Event = ({ comp, liveUser, activePopup, userCompetitions, activeUser }) => {
+const Event = ({ comp, liveUser, activePopup,
+  userCompetitions, activeUser }) => {
   return (
-    <div
-      className="Event"
-      liveUser={liveUser}>
+    <div className="Event">
       <div className="event-info">
         <div className="event-text-details">
           <h4>{comp.sport} - {comp.competitiveness}</h4>
@@ -17,7 +16,7 @@ const Event = ({ comp, liveUser, activePopup, userCompetitions, activeUser }) =>
             on {dateFormat(comp.date, 'mediumDate') + ' '}
             at {comp.location}</h4>
           <p>{comp.details}</p>
-        <h3>{comp.compName}</h3>
+          <h3>{comp.compName}</h3>
         </div>
         <div className="park-map"></div>
         <button
