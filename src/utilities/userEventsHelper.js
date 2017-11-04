@@ -12,9 +12,8 @@ export const joinComp = (comp, activeUser) => {
   let newComps = activeUser.competitions.includes(comp) ?
     activeUser.competitions.filter( item => item.id !== comp.id) :
     [...activeUser.competitions, comp];
-  console.log(newComps);
 
-  // return (dispatch) => dispatch(userCompetitions(newComps, activeUser));
+  return (dispatch) => dispatch(userCompetitions(newComps, activeUser));
 };
 
 export const locationDefaults = () => {
@@ -39,10 +38,3 @@ export const defaultUserFormState = {
   creator: '',
   activePlayers: null
 };
-
-// export const joinComp = (comp, activeUser) => {
-//   activeUser.competitions.has(comp) ?
-//     activeUser.competitions.delete(comp) :
-//     activeUser.competitions.add(comp);
-//   return (dispatch) => dispatch(userCompetitions(activeUser.competitions));
-// };

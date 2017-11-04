@@ -21,7 +21,8 @@ export class EventCreator extends Component {
       details: '',
       location: '',
       creator: '',
-      activePlayers: null
+      activePlayers: null,
+      nearbyParks: []
     };
   }
 
@@ -51,8 +52,11 @@ export class EventCreator extends Component {
   getLocation(userSearch) {
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     fetch(
-      `${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.7508,-104.9966&radius=2000&type=park&keyword=${userSearch}&key=${apiKey.placesApi}`)
-      .then(res => res.json()).then(parkData =>     this.props.parkSearch(parkData.results));
+      `${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.7508,-104.9966&radius=500&type=park&keyword=${userSearch}&key=${apiKey.placesApi}`)
+      .then(res => res.json()).then(parkData => {
+        this.props.parkSearch(parkData.results);
+        this.setState({nearbyParks: parkData.results});
+      });
   }
 
   render() {
@@ -156,7 +160,7 @@ export class EventCreator extends Component {
               }
               mapElement={
                 <div style={{ height: '200px', width: '200px'}}
-              markerIsShown={true}/>
+              />
               }
             />
           </div>
@@ -170,7 +174,10 @@ export class EventCreator extends Component {
 EventCreator.propTypes = {
   submitComp: PropTypes.func,
   activePopup: PropTypes.func,
+  userCompetitions: PropTypes.func,
+  parkSearch: PropTypes.func,
   liveUser: PropTypes.bool,
+  activeUser: PropTypes.object,
   nearbyParks: PropTypes.arrayOf(PropTypes.object)
 };
 

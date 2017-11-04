@@ -56,7 +56,9 @@ Main.propTypes = {
   liveUser: PropTypes.bool,
   activePopup: PropTypes.func,
   userCompetitions: PropTypes.func,
-  activeUser: PropTypes.object
+  getUserLocation: PropTypes.func,
+  activeUser: PropTypes.object,
+  location: PropTypes.object
 };
 
 const mapStateToProps = (store) => ({
