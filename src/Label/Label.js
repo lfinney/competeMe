@@ -13,7 +13,7 @@ export default class Label extends Component {
     console.log(parkName);
     return (
       <div>
-        {parkName};
+        {parkName}
       </div>
     );
   }
