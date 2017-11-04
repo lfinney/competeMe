@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Popup from '../Popup/Popup';
+import PopupContainer, { Popup } from '../Popup/Popup';
 import configureStore from 'redux-mock-store';
 import { shallow, mount } from 'enzyme';
-
 
 const middlewares = [];
 const mockStore = configureStore(middlewares);
@@ -15,7 +14,7 @@ describe('Popup', () => {
   it('should render component', () => {
 
     const wrapper = shallow(
-      <Popup store={store}/>);
+      <PopupContainer store={store}/>);
 
     expect(wrapper).toMatchSnapshot();
   });

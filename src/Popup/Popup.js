@@ -3,7 +3,7 @@ import { activePopup } from '../EventCreator/eventCreatorActions';
 import PropTypes from 'prop-types';
 
 
-const Popup = ({ activePopup }) => {
+export const Popup = ({ activePopup }) => {
   return (
     <div className="Popup">
       <h3>Sorry, competitor.</h3>

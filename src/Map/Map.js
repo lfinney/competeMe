@@ -4,11 +4,7 @@ import Label from '../Label/Label';
 const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
 
 
-const Map = withScriptjs(withGoogleMap(({ nearbyParks, markerIsShown }) => {
-  console.log(nearbyParks);
-
-  const selectPark = (park) => console.log(park);
-
+const Map = withScriptjs(withGoogleMap(({ nearbyParks, pickPark }) => {
   const markers = nearbyParks.map( (park, index) => {
     const parkObject = {
       name: park.name,
@@ -21,7 +17,7 @@ const Map = withScriptjs(withGoogleMap(({ nearbyParks, markerIsShown }) => {
         key={index}
         position={{
           lat:parkObject.lat, lng:parkObject.lng}}
-        onClick={() => selectPark(parkObject)}>
+        onClick={() => pickPark(parkObject)}>
         <Label parkName={parkObject.name}/>
       </Marker>
     );

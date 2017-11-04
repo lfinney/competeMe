@@ -22,8 +22,10 @@ export class EventCreator extends Component {
       location: '',
       creator: '',
       activePlayers: null,
+      pickedPark: {},
       nearbyParks: []
     };
+    this.pickPark = this.pickPark.bind(this);
   }
 
   updateState(key, event) {
@@ -57,6 +59,11 @@ export class EventCreator extends Component {
         this.props.parkSearch(parkData.results);
         this.setState({nearbyParks: parkData.results});
       });
+  }
+
+  pickPark(park) {
+    console.log(this);
+    this.setState({pickedPark: park});
   }
 
   render() {
@@ -149,6 +156,7 @@ export class EventCreator extends Component {
           <button onClick={ () => this.getLocation(this.state.location) }>Find Park</button>
           <div className="park-map">
             <Map
+              pickPark={this.pickPark}
               googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
                 apiKey.placesApi}&parks=places&callback=initMap`}
               nearbyParks={this.props.nearbyParks}
@@ -184,7 +192,8 @@ EventCreator.propTypes = {
 const mapStatetoProps = (store) => ({
   liveUser: store.activeUser.userId ? true : false,
   activeUser: store.activeUser,
-  nearbyParks: store.nearbyParks
+  nearbyParks: store.nearbyParks,
+  selectedPark: store.selectedPark
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -193,7 +202,7 @@ const mapDispatchToProps = (dispatch) => ({
   userCompetitions: (comp, activeUser) => {
     dispatch(joinComp(comp, activeUser));
   },
-  parkSearch: ( searchResults ) => { dispatch(parkSearch(searchResults)); }
+  parkSearch: ( searchResults ) => { dispatch(parkSearch(searchResults)); },
 });
 
 
