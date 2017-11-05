@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { submitComp, activePopup } from './eventCreatorActions';
+import { submitComp, activePopup, parkSearch } from './eventCreatorActions';
 import { defaultUserFormState, joinComp } from '../utilities/userEventsHelper';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
@@ -16,17 +16,16 @@ export class EventCreator extends Component {
       sport: '',
       players: '',
       competitiveness: 'Casual',
-      date: '1987-10-09',
+      date: '2017-11-01',
       time: '15:00',
       details: '',
       location: '',
       creator: '',
-      activePlayers: null
+      activePlayers: null,
+      pickedPark: [],
+      nearbyParks: []
     };
-  }
-
-  componentDidMount() {
-    this.getLocation();
+    this.pickPark = this.pickPark.bind(this);
   }
 
   updateState(key, event) {
@@ -52,16 +51,18 @@ export class EventCreator extends Component {
     this.props.userCompetitions(competition, this.props.activeUser);
   }
 
-  //location is hardcoded to denver; this needs to be changed to pull from user search in event creator
-  //https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=YOUR_API_KEY
-
-  getLocation() {
-   const proxy = 'https://cors-anywhere.herokuapp.com/'
+  getLocation(userSearch) {
+    const proxy = 'https://cors-anywhere.herokuapp.com/';
     fetch(
-      ` ${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=${
-        apiKey.placesApi}`)
-      // .then(res => res.json())
-      .then(res => res.json()).then(data => data);
+      `${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.7508,-104.9966&radius=200&type=park&keyword=${userSearch}&key=${apiKey.placesApi}`)
+      .then(res => res.json()).then(parkData => {
+        this.props.parkSearch(parkData.results);
+        this.setState({nearbyParks: parkData.results});
+      });
+  }
+
+  pickPark(park) {
+    this.setState({pickedPark: [park]});
   }
 
   render() {
@@ -144,16 +145,20 @@ export class EventCreator extends Component {
             cols="40"
             value={this.state.details}
             onChange={ this.updateState.bind(this, 'details') }/>
+          <h3 className="formTitle">Pick a Park to Play At</h3>
           <input
             className="text-input"
             type="text"
             placeholder="Park Search"
             value={this.state.location}
             onChange={ this.updateState.bind(this, 'location') }/>
+          <button onClick={ () => this.getLocation(this.state.location) }>Find Park</button>
           <div className="park-map">
             <Map
+              pickPark={this.pickPark}
               googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
                 apiKey.placesApi}&parks=places&callback=initMap`}
+              nearbyParks={this.props.nearbyParks}
               loadingElement={
                 <div style={{ height: '200px', width: '200px'}} />
               }
@@ -161,7 +166,8 @@ export class EventCreator extends Component {
                 <div style={{ height: '200px', width: '200px'}} />
               }
               mapElement={
-                <div style={{ height: '200px', width: '200px'}} />
+                <div style={{ height: '200px', width: '200px'}}
+              />
               }
             />
           </div>
@@ -175,12 +181,18 @@ export class EventCreator extends Component {
 EventCreator.propTypes = {
   submitComp: PropTypes.func,
   activePopup: PropTypes.func,
-  liveUser: PropTypes.bool
+  userCompetitions: PropTypes.func,
+  parkSearch: PropTypes.func,
+  liveUser: PropTypes.bool,
+  activeUser: PropTypes.object,
+  nearbyParks: PropTypes.arrayOf(PropTypes.object)
 };
 
 const mapStatetoProps = (store) => ({
   liveUser: store.activeUser.userId ? true : false,
-  activeUser: store.activeUser
+  activeUser: store.activeUser,
+  nearbyParks: store.nearbyParks,
+  selectedPark: store.selectedPark
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -188,7 +200,8 @@ const mapDispatchToProps = (dispatch) => ({
   activePopup: ( bool ) => { dispatch(activePopup(bool)); },
   userCompetitions: (comp, activeUser) => {
     dispatch(joinComp(comp, activeUser));
-  }
+  },
+  parkSearch: ( searchResults ) => { dispatch(parkSearch(searchResults)); },
 });
 
 

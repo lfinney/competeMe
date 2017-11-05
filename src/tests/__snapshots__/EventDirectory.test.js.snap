@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventDirectory should render component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <EventDirectory
+    competitions={
+        Array [
+            Object {
+              "compName": "Frisbee",
+              "competitiveness": "casual",
+              "date": "1987-10-09",
+              "details": "This will be fun",
+              "location": "Washington Park",
+              "player": 7,
+              "sport": "Frisbee",
+              "time": "15:00",
+            },
+            Object {
+              "compName": "Frisbee",
+              "competitiveness": "casual",
+              "date": "1987-10-09",
+              "details": "This will be fun",
+              "location": "Washington Park",
+              "player": 7,
+              "sport": "Frisbee",
+              "time": "15:00",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Event
+          activePopup={undefined}
+          activeUser={undefined}
+          comp={
+                    Object {
+                              "compName": "Frisbee",
+                              "competitiveness": "casual",
+                              "date": "1987-10-09",
+                              "details": "This will be fun",
+                              "location": "Washington Park",
+                              "player": 7,
+                              "sport": "Frisbee",
+                              "time": "15:00",
+                            }
+          }
+          liveUser={undefined}
+          userCompetitions={undefined}
+/>,
+        <Event
+          activePopup={undefined}
+          activeUser={undefined}
+          comp={
+                    Object {
+                              "compName": "Frisbee",
+                              "competitiveness": "casual",
+                              "date": "1987-10-09",
+                              "details": "This will be fun",
+                              "location": "Washington Park",
+                              "player": 7,
+                              "sport": "Frisbee",
+                              "time": "15:00",
+                            }
+          }
+          liveUser={undefined}
+          userCompetitions={undefined}
+/>,
+      ],
+      "className": "EventDirectory",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "function",
+        "props": Object {
+          "activePopup": undefined,
+          "activeUser": undefined,
+          "comp": Object {
+            "compName": "Frisbee",
+            "competitiveness": "casual",
+            "date": "1987-10-09",
+            "details": "This will be fun",
+            "location": "Washington Park",
+            "player": 7,
+            "sport": "Frisbee",
+            "time": "15:00",
+          },
+          "liveUser": undefined,
+          "userCompetitions": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "function",
+        "props": Object {
+          "activePopup": undefined,
+          "activeUser": undefined,
+          "comp": Object {
+            "compName": "Frisbee",
+            "competitiveness": "casual",
+            "date": "1987-10-09",
+            "details": "This will be fun",
+            "location": "Washington Park",
+            "player": 7,
+            "sport": "Frisbee",
+            "time": "15:00",
+          },
+          "liveUser": undefined,
+          "userCompetitions": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Event
+            activePopup={undefined}
+            activeUser={undefined}
+            comp={
+                        Object {
+                                    "compName": "Frisbee",
+                                    "competitiveness": "casual",
+                                    "date": "1987-10-09",
+                                    "details": "This will be fun",
+                                    "location": "Washington Park",
+                                    "player": 7,
+                                    "sport": "Frisbee",
+                                    "time": "15:00",
+                                  }
+            }
+            liveUser={undefined}
+            userCompetitions={undefined}
+/>,
+          <Event
+            activePopup={undefined}
+            activeUser={undefined}
+            comp={
+                        Object {
+                                    "compName": "Frisbee",
+                                    "competitiveness": "casual",
+                                    "date": "1987-10-09",
+                                    "details": "This will be fun",
+                                    "location": "Washington Park",
+                                    "player": 7,
+                                    "sport": "Frisbee",
+                                    "time": "15:00",
+                                  }
+            }
+            liveUser={undefined}
+            userCompetitions={undefined}
+/>,
+        ],
+        "className": "EventDirectory",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "function",
+          "props": Object {
+            "activePopup": undefined,
+            "activeUser": undefined,
+            "comp": Object {
+              "compName": "Frisbee",
+              "competitiveness": "casual",
+              "date": "1987-10-09",
+              "details": "This will be fun",
+              "location": "Washington Park",
+              "player": 7,
+              "sport": "Frisbee",
+              "time": "15:00",
+            },
+            "liveUser": undefined,
+            "userCompetitions": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "function",
+          "props": Object {
+            "activePopup": undefined,
+            "activeUser": undefined,
+            "comp": Object {
+              "compName": "Frisbee",
+              "competitiveness": "casual",
+              "date": "1987-10-09",
+              "details": "This will be fun",
+              "location": "Washington Park",
+              "player": 7,
+              "sport": "Frisbee",
+              "time": "15:00",
+            },
+            "liveUser": undefined,
+            "userCompetitions": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

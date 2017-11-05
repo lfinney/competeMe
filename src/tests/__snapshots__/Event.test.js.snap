@@ -1,0 +1,482 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Event should render component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Event
+    comp={
+        Object {
+            "compName": "Frisbee",
+            "competitiveness": "casual",
+            "date": "1987-10-09",
+            "details": "This will be fun",
+            "location": "Washington Park",
+            "player": 7,
+            "sport": "Frisbee",
+            "time": "15:00",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="event-info"
+>
+        <div
+                className="event-text-details"
+        >
+                <h4>
+                        Frisbee
+                         - 
+                        casual
+                </h4>
+                <h4 />
+                <h4>
+                        3:00 pm 
+                        on 
+                        Oct 8, 1987 
+                        at 
+                        Washington Park
+                </h4>
+                <p>
+                        This will be fun
+                </p>
+                <h3>
+                        Frisbee
+                </h3>
+        </div>
+        <div
+                className="park-map"
+        />
+        <button
+                onClick={[Function]}
+        >
+                Count Me In!
+        </button>
+</div>,
+      "className": "Event",
+      "liveUser": undefined,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="event-text-details"
+>
+            <h4>
+                        Frisbee
+                         - 
+                        casual
+            </h4>
+            <h4 />
+            <h4>
+                        3:00 pm 
+                        on 
+                        Oct 8, 1987 
+                        at 
+                        Washington Park
+            </h4>
+            <p>
+                        This will be fun
+            </p>
+            <h3>
+                        Frisbee
+            </h3>
+</div>,
+          <div
+            className="park-map"
+/>,
+          <button
+            onClick={[Function]}
+>
+            Count Me In!
+</button>,
+        ],
+        "className": "event-info",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h4>
+                Frisbee
+                 - 
+                casual
+</h4>,
+              <h4 />,
+              <h4>
+                3:00 pm 
+                on 
+                Oct 8, 1987 
+                at 
+                Washington Park
+</h4>,
+              <p>
+                This will be fun
+</p>,
+              <h3>
+                Frisbee
+</h3>,
+            ],
+            "className": "event-text-details",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Frisbee",
+                  " - ",
+                  "casual",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Frisbee",
+                " - ",
+                "casual",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "3:00 pm ",
+                  "on ",
+                  "Oct 8, 1987 ",
+                  "at ",
+                  "Washington Park",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "3:00 pm ",
+                "on ",
+                "Oct 8, 1987 ",
+                "at ",
+                "Washington Park",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "This will be fun",
+              },
+              "ref": null,
+              "rendered": "This will be fun",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Frisbee",
+              },
+              "ref": null,
+              "rendered": "Frisbee",
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "park-map",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Count Me In!",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Count Me In!",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="event-info"
+>
+          <div
+                    className="event-text-details"
+          >
+                    <h4>
+                              Frisbee
+                               - 
+                              casual
+                    </h4>
+                    <h4 />
+                    <h4>
+                              3:00 pm 
+                              on 
+                              Oct 8, 1987 
+                              at 
+                              Washington Park
+                    </h4>
+                    <p>
+                              This will be fun
+                    </p>
+                    <h3>
+                              Frisbee
+                    </h3>
+          </div>
+          <div
+                    className="park-map"
+          />
+          <button
+                    onClick={[Function]}
+          >
+                    Count Me In!
+          </button>
+</div>,
+        "className": "Event",
+        "liveUser": undefined,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="event-text-details"
+>
+              <h4>
+                            Frisbee
+                             - 
+                            casual
+              </h4>
+              <h4 />
+              <h4>
+                            3:00 pm 
+                            on 
+                            Oct 8, 1987 
+                            at 
+                            Washington Park
+              </h4>
+              <p>
+                            This will be fun
+              </p>
+              <h3>
+                            Frisbee
+              </h3>
+</div>,
+            <div
+              className="park-map"
+/>,
+            <button
+              onClick={[Function]}
+>
+              Count Me In!
+</button>,
+          ],
+          "className": "event-info",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h4>
+                  Frisbee
+                   - 
+                  casual
+</h4>,
+                <h4 />,
+                <h4>
+                  3:00 pm 
+                  on 
+                  Oct 8, 1987 
+                  at 
+                  Washington Park
+</h4>,
+                <p>
+                  This will be fun
+</p>,
+                <h3>
+                  Frisbee
+</h3>,
+              ],
+              "className": "event-text-details",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Frisbee",
+                    " - ",
+                    "casual",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Frisbee",
+                  " - ",
+                  "casual",
+                ],
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "3:00 pm ",
+                    "on ",
+                    "Oct 8, 1987 ",
+                    "at ",
+                    "Washington Park",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "3:00 pm ",
+                  "on ",
+                  "Oct 8, 1987 ",
+                  "at ",
+                  "Washington Park",
+                ],
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "This will be fun",
+                },
+                "ref": null,
+                "rendered": "This will be fun",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Frisbee",
+                },
+                "ref": null,
+                "rendered": "Frisbee",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "className": "park-map",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Count Me In!",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Count Me In!",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

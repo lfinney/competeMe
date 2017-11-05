@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-image: url("localhost:3000/../assets/background-grass-texture.png");
-  background-color: #377100;
+  background-color: #6a9143;
   display: grid;
   grid-template-columns: auto 400px;
   grid-template-rows: 100px auto;

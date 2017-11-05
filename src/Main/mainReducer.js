@@ -1,4 +1,4 @@
-export function fetchFromFirebase(state = [], action) {
+export const fetchFromFirebase = (state = [], action) => {
   switch (action.type) {
   case 'FETCH_EVENT_DATA':
     return action.events;
@@ -9,4 +9,15 @@ export function fetchFromFirebase(state = [], action) {
   default:
     return state;
   }
-}
+};
+
+
+export const userLocation = (state ={}, action) => {
+  switch (action.type) {
+  case 'USER_LOCATION':
+    return action.location;
+
+  default:
+    return state;
+  }
+};

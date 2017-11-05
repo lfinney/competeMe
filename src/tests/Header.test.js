@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from '../Header/Header';
+import { Header } from '../Header/Header';
 import { shallow } from 'enzyme';
 
 
@@ -10,6 +10,6 @@ describe('Header', () => {
     const wrapper = shallow(
       <Header />);
 
-    expect(wrapper.length).toEqual(1);
+    expect(wrapper).toMatchSnapshot();
   });
 });
