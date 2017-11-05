@@ -1,0 +1,11 @@
+.label-container {
+  position: relative;
+  top: -200px;
+  height: 200px; }
+
+.park-label {
+  position: relative;
+  background-color: #c1c9c3;
+  width: 60%;
+  top: 150px;
+  margin: auto; }

@@ -27,7 +27,7 @@ const Map = withScriptjs(withGoogleMap(({ nearbyParks, pickPark }) => {
         position={{
           lat:parkObject.lat, lng:parkObject.lng}}
         onClick={() => pickPark(parkObject)}>
-        <Label parkName={parkObject.name}/>
+        {/* <Label parkName={parkObject.name}/> */}
       </Marker>
     );
   });
