@@ -19,11 +19,17 @@ describe('Popup', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // it('should have a button that modifies the status of an activePopup', () => {
+  // it('should render component', () => {
   //   const mockFunc = jest.fn();
   //   const wrapper = mount(
-  //     <Popup store={store}/>);
-  //   const button = wrapper.find('button')
-  //   expect(wrapper).toMatchSnapshot();
-  // })
+  //     <PopupContainer
+  //       store={store}
+  //       activePopup={mockFunc}/>);
+  //
+  //   const button = wrapper.find('button');
+  //   console.log(button.debug());
+  //   expect(mockFunc).toHaveBeenCalledTimes(0);
+  //   button.simulate('click');
+  //   expect(mockFunc).toHaveBeenCalledTimes(1);
+  // });
 });

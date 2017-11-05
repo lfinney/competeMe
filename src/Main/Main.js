@@ -44,7 +44,8 @@ export class Main extends Component {
             </h2>
           </NavLink>
         </div>
-        { this.props.location.pathname === '/my-competitions' && this.props.liveUser ?
+        { this.props.location.pathname === '/my-competitions' &&
+         this.props.liveUser ?
           <EventDirectory
             competitions={this.props.activeUser.competitions}
             liveUser={this.props.liveUser}

@@ -1,13 +1,14 @@
 import React from 'react';
-import { Header } from '../Header/Header';
+import Label from '../Label/Label';
 import { shallow } from 'enzyme';
 
 
-describe('Header', () => {
+describe('Label', () => {
 
   it('should render component', () => {
+
     const wrapper = shallow(
-      <Header />);
+      <Label />);
 
     expect(wrapper).toMatchSnapshot();
   });

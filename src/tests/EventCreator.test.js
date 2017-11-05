@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { EventCreator } from '../EventCreator/EventCreator';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 
 describe('EventCreator', () => {

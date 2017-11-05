@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import EventDirectory from '../EventDirectory/EventDirectory';
 import { shallow } from 'enzyme';
 import mockCompetitionsArray from './mockData/mockCompetitionsArray';

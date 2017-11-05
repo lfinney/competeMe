@@ -201,6 +201,7 @@ ShallowWrapper {
                                 />
                         }
                         nearbyParks={undefined}
+                        pickPark={[Function]}
                 />
         </div>
         <button
@@ -398,6 +399,7 @@ ShallowWrapper {
                                     />
                         }
                         nearbyParks={undefined}
+                        pickPark={[Function]}
             />
 </div>,
           <button
@@ -886,6 +888,7 @@ ShallowWrapper {
                             />
               }
               nearbyParks={undefined}
+              pickPark={[Function]}
 />,
             "className": "park-map",
           },
@@ -921,6 +924,7 @@ ShallowWrapper {
                 }
 />,
               "nearbyParks": undefined,
+              "pickPark": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -1135,6 +1139,7 @@ ShallowWrapper {
                                         />
                               }
                               nearbyParks={undefined}
+                              pickPark={[Function]}
                     />
           </div>
           <button
@@ -1332,6 +1337,7 @@ ShallowWrapper {
                                           />
                             }
                             nearbyParks={undefined}
+                            pickPark={[Function]}
               />
 </div>,
             <button
@@ -1820,6 +1826,7 @@ ShallowWrapper {
                                 />
                 }
                 nearbyParks={undefined}
+                pickPark={[Function]}
 />,
               "className": "park-map",
             },
@@ -1855,6 +1862,7 @@ ShallowWrapper {
                   }
 />,
                 "nearbyParks": undefined,
+                "pickPark": [Function],
               },
               "ref": null,
               "rendered": null,
