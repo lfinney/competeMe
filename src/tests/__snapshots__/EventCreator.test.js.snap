@@ -26,13 +26,14 @@ ShallowWrapper {
                 Create New Competition
         </h2>
         <input
-                className="text-input"
+                className="text-input compName"
                 onChange={[Function]}
                 placeholder="Competition Name"
                 type="text"
                 value=""
         />
         <select
+                className="sportDropDown"
                 onChange={[Function]}
                 value={undefined}
         >
@@ -58,7 +59,7 @@ ShallowWrapper {
                 </option>
         </select>
         <input
-                className="text-input"
+                className="text-input players"
                 onChange={[Function]}
                 pattern="\\\\d*"
                 placeholder="# Players Needed"
@@ -154,7 +155,7 @@ ShallowWrapper {
                 Pick a Park to Play At
         </h3>
         <input
-                className="text-input"
+                className="text-input parkSearch"
                 onChange={[Function]}
                 placeholder="Park Search"
                 type="text"
@@ -224,13 +225,14 @@ ShallowWrapper {
             Create New Competition
 </h2>,
           <input
-            className="text-input"
+            className="text-input compName"
             onChange={[Function]}
             placeholder="Competition Name"
             type="text"
             value=""
 />,
           <select
+            className="sportDropDown"
             onChange={[Function]}
             value={undefined}
 >
@@ -256,7 +258,7 @@ ShallowWrapper {
             </option>
 </select>,
           <input
-            className="text-input"
+            className="text-input players"
             onChange={[Function]}
             pattern="\\\\d*"
             placeholder="# Players Needed"
@@ -352,7 +354,7 @@ ShallowWrapper {
             Pick a Park to Play At
 </h3>,
           <input
-            className="text-input"
+            className="text-input parkSearch"
             onChange={[Function]}
             placeholder="Park Search"
             type="text"
@@ -429,7 +431,7 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "className": "text-input",
+            "className": "text-input compName",
             "onChange": [Function],
             "placeholder": "Competition Name",
             "type": "text",
@@ -466,6 +468,7 @@ ShallowWrapper {
                 Flag Football
 </option>,
             ],
+            "className": "sportDropDown",
             "onChange": [Function],
             "value": undefined,
           },
@@ -527,7 +530,7 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "className": "text-input",
+            "className": "text-input players",
             "onChange": [Function],
             "pattern": "\\\\d*",
             "placeholder": "# Players Needed",
@@ -828,7 +831,7 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "className": "text-input",
+            "className": "text-input parkSearch",
             "onChange": [Function],
             "placeholder": "Park Search",
             "type": "text",
@@ -964,13 +967,14 @@ ShallowWrapper {
                     Create New Competition
           </h2>
           <input
-                    className="text-input"
+                    className="text-input compName"
                     onChange={[Function]}
                     placeholder="Competition Name"
                     type="text"
                     value=""
           />
           <select
+                    className="sportDropDown"
                     onChange={[Function]}
                     value={undefined}
           >
@@ -996,7 +1000,7 @@ ShallowWrapper {
                     </option>
           </select>
           <input
-                    className="text-input"
+                    className="text-input players"
                     onChange={[Function]}
                     pattern="\\\\d*"
                     placeholder="# Players Needed"
@@ -1092,7 +1096,7 @@ ShallowWrapper {
                     Pick a Park to Play At
           </h3>
           <input
-                    className="text-input"
+                    className="text-input parkSearch"
                     onChange={[Function]}
                     placeholder="Park Search"
                     type="text"
@@ -1162,13 +1166,14 @@ ShallowWrapper {
               Create New Competition
 </h2>,
             <input
-              className="text-input"
+              className="text-input compName"
               onChange={[Function]}
               placeholder="Competition Name"
               type="text"
               value=""
 />,
             <select
+              className="sportDropDown"
               onChange={[Function]}
               value={undefined}
 >
@@ -1194,7 +1199,7 @@ ShallowWrapper {
               </option>
 </select>,
             <input
-              className="text-input"
+              className="text-input players"
               onChange={[Function]}
               pattern="\\\\d*"
               placeholder="# Players Needed"
@@ -1290,7 +1295,7 @@ ShallowWrapper {
               Pick a Park to Play At
 </h3>,
             <input
-              className="text-input"
+              className="text-input parkSearch"
               onChange={[Function]}
               placeholder="Park Search"
               type="text"
@@ -1367,7 +1372,7 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "className": "text-input",
+              "className": "text-input compName",
               "onChange": [Function],
               "placeholder": "Competition Name",
               "type": "text",
@@ -1404,6 +1409,7 @@ ShallowWrapper {
                   Flag Football
 </option>,
               ],
+              "className": "sportDropDown",
               "onChange": [Function],
               "value": undefined,
             },
@@ -1465,7 +1471,7 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "className": "text-input",
+              "className": "text-input players",
               "onChange": [Function],
               "pattern": "\\\\d*",
               "placeholder": "# Players Needed",
@@ -1766,7 +1772,7 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "className": "text-input",
+              "className": "text-input parkSearch",
               "onChange": [Function],
               "placeholder": "Park Search",
               "type": "text",

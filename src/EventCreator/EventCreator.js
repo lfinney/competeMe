@@ -71,12 +71,13 @@ export class EventCreator extends Component {
         <div className="EventCreator">
           <h2 className="formTitle">Create New Competition</h2>
           <input
-            className="text-input"
+            className="text-input compName"
             type="text"
             placeholder="Competition Name"
             value={this.state.compName}
             onChange={ this.updateState.bind(this, 'compName') }/>
           <select
+            className="sportDropDown"
             value={this.state.value}
             onChange={ this.updateState.bind(this, 'sport')}>
             <option value="">-Select a Sport-</option>
@@ -85,7 +86,7 @@ export class EventCreator extends Component {
             <option value="Flag Football">Flag Football</option>
           </select>
           <input
-            className="text-input"
+            className="text-input players"
             type="number"
             pattern="\d*"
             placeholder="# Players Needed"
@@ -147,7 +148,7 @@ export class EventCreator extends Component {
             onChange={ this.updateState.bind(this, 'details') }/>
           <h3 className="formTitle">Pick a Park to Play At</h3>
           <input
-            className="text-input"
+            className="text-input parkSearch"
             type="text"
             placeholder="Park Search"
             value={this.state.location}
