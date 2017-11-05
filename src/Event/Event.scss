@@ -3,8 +3,10 @@
 .Event {
   background-color: $gray;
   border-radius: $border-radius;
-  margin: 0px 15px 15px 15px;
-  box-shadow: 5px 5px 0px 1px rgba(26, 26, 26, .75);
+  margin: 0px 20px 20px 20px;
+  box-shadow: $shadow;
+  border: $border;
+
 }
 
 .Event h3, h4, p {
@@ -13,11 +15,11 @@
 
 .Event .event-info {
   display: grid;
-  grid-template-columns: auto 250px 125px;
+  grid-template-columns: auto 230px 175px;
   grid-template-areas: "info map button"
 }
 
-.Event .event-test-details {
+.Event .event-text-details {
   grid-area: info;
   display: flex;
   flex-direction: column;
@@ -27,14 +29,26 @@
 .Event .park-map {
   width: 200px;
   height: 200px;
-  background-color: $black;
   margin: 25px;
   grid-area: map;
 }
 
 .Event button {
-  width: 100px;
-  height: 100px;
-  margin-top: 75px;
+  width: 125px;
+  height: 75px;
+  margin: 85px auto 0 auto;
   grid-area: button;
+  border: none;
+  background-color: $secondary-one;
+    &:hover {
+      background-color: $gray;
+    }
+  color: $gray-black;
+    &:hover {
+      color: $secondary-one;
+    }
+  border-radius: $border-radius;
+  font-size: 1em;
+  font-weight: bold;
+  border: $border;
 }

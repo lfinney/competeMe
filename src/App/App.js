@@ -10,6 +10,7 @@ class App extends Component {
       <div className="App">
         <Route path="/" component={Header} />
         <Route path="/" component={Main} />
+        <Route path="/all-competitions" component={Main} />
         <Route path="/my-competitions" component={Main} />
         <Route path="/" component={EventCreator} />
       </div>

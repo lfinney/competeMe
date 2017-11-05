@@ -11,7 +11,7 @@
 
 .Header .headerPrompt {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   width: 80%; }
 
@@ -24,19 +24,22 @@
 .Header h2 {
   margin: 0; }
 
-.Header p {
-  margin-left: 20px;
-  margin-right: auto; }
+.Header .welcome-message {
+  display: inline-block;
+  margin: auto; }
 
 .Header button {
   margin-right: 50px;
+  font-size: 1em;
+  font-weight: bold;
   margin-left: auto;
   border: none;
   background-color: #f6ae2d;
-  color: #4573ae;
-  width: 75px;
-  height: 25px; }
+  color: #393939;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px; }
   .Header button:hover {
-    background-color: #4573ae; }
+    background-color: #7a7d7d; }
   .Header button:hover {
     color: #f6ae2d; }

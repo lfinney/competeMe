@@ -1,18 +1,19 @@
 .Event {
   background-color: #7a7d7d;
   border-radius: 10px;
-  margin: 0px 15px 15px 15px;
-  box-shadow: 5px 5px 0px 1px rgba(26, 26, 26, 0.75); }
+  margin: 0px 20px 20px 20px;
+  box-shadow: 8px 8px 0px 1px rgba(26, 26, 26, 0.4);
+  border: solid 2px #1a1a1a; }
 
 .Event h3, h4, p {
   margin: 10px 0; }
 
 .Event .event-info {
   display: grid;
-  grid-template-columns: auto 250px 125px;
+  grid-template-columns: auto 230px 175px;
   grid-template-areas: "info map button"; }
 
-.Event .event-test-details {
+.Event .event-text-details {
   grid-area: info;
   display: flex;
   flex-direction: column;
@@ -21,12 +22,22 @@
 .Event .park-map {
   width: 200px;
   height: 200px;
-  background-color: #1a1a1a;
   margin: 25px;
   grid-area: map; }
 
 .Event button {
-  width: 100px;
-  height: 100px;
-  margin-top: 75px;
-  grid-area: button; }
+  width: 125px;
+  height: 75px;
+  margin: 85px auto 0 auto;
+  grid-area: button;
+  border: none;
+  background-color: #f6ae2d;
+  color: #393939;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  border: solid 2px #1a1a1a; }
+  .Event button:hover {
+    background-color: #7a7d7d; }
+  .Event button:hover {
+    color: #f6ae2d; }

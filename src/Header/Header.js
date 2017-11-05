@@ -25,20 +25,12 @@ export class Header extends Component {
   }
 
   login = () => {
-    // const usersRef = firebase.database().ref('users');
-    // usersRef.on('value', (snapshot) => {
-    //     const newUser = snapshot.val();
-    //
-    //     if (newUser) this.createAccount(newUser);
-      // });
-
     auth.signInWithPopup(provider)
       .then((result) => result = result.user)
       .then((userData) => {
         const cleanedUser = this.cleanUserData(userData);
         this.props.activeUser(cleanedUser);
       });
-    // firebase.auth().onAuthStateChanged( () => )
   }
 
   logout = () => {
@@ -54,13 +46,15 @@ export class Header extends Component {
         <h1>CompeteMe</h1>
         {this.props.liveUser ?
           <div className="headerPrompt">
-            <h2>Ready to get your game on, {this.props.user.displayName}?</h2>
-            <p>Join or create a game below.</p>
+            <div className="welcome-message">
+              <h2>Ready to get your game on, {this.props.user.displayName}?</h2>
+              <p>Sign-in to join or create a game below.</p>
+            </div>
             <button onClick={this.logout}>Log Out</button>
           </div>
           :
           <div className="headerPrompt">
-            <h2>Sign-in using Google to join the competitions!</h2>
+            <h2 className="welcome-message">Sign-in using Google to join the competitions!</h2>
             <button onClick={this.login}>Log In</button>
           </div>
         }

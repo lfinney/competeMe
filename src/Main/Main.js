@@ -27,8 +27,22 @@ export class Main extends Component {
     return (
       <div className="Main">
         <div className="nav-tabs">
-          <h2><NavLink to='/'>Upcoming Competitions</NavLink></h2>
-          <h2><NavLink to='/my-competitions'>Your Competitions</NavLink></h2>
+          <NavLink
+            to='/all-competitions'
+            className='display-link'
+            activeClassName="selected">
+            <h2>
+              Upcoming Competitions
+            </h2>
+          </NavLink>
+          <NavLink
+            to='/my-competitions'
+            className='display-link'
+            activeClassName="selected">
+            <h2>
+              Your Competitions
+            </h2>
+          </NavLink>
         </div>
         { this.props.location.pathname === '/my-competitions' && this.props.liveUser ?
           <EventDirectory

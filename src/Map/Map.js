@@ -34,12 +34,14 @@ const Map = withScriptjs(withGoogleMap(({ nearbyParks, pickPark }) => {
 
 
   const mapSearch = <GoogleMap
+    className="Map"
     defaultZoom={12}
     defaultCenter={{ lat:39.7508006, lng:-104.9965947 }}>
     {markers}
   </GoogleMap>;
 
   const eventMap = <GoogleMap
+    className="Map"
     defaultZoom={12}
     defaultCenter={{ lat:39.7508006, lng:-104.9965947 }}>
     {markers}
