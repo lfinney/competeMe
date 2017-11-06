@@ -12,17 +12,22 @@
 }
 
 .Main .display-link {
-  margin: 20px;
+  margin: 15px;
   padding: 10px;
   border-radius: $border-radius;
   text-decoration: none;
-  color: $secondary-two;
+  color: $secondary-one;
+  text-shadow: 2px 2px 3px $black;
   background-color: $gray-black;
   &:hover {
-    background-color: $gray;
+    background-color: $primary-accent;
+    text-shadow: 2px 2px 3px $black;
   };
   box-shadow: $shadow;
   border: $border;
+  width: 30%;
+  min-width: 325px;
+
 }
 
 .Main h2 {
@@ -30,5 +35,6 @@
 }
 
 .Main .selected {
-  background-color: $gray;
+  background-color: $primary-accent;
+  text-shadow: 2px 2px 3px $black;
 }

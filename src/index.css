@@ -3,41 +3,75 @@
   background-image: url("localhost:3000/../assets/background-grass-texture.png");
   background-color: #6a9143;
   display: grid;
-  grid-template-columns: auto 400px;
-  grid-template-rows: 100px auto;
-  grid-template-areas: "top top" "left right"; }
+  grid-template-rows: 120px auto;
+  grid-template-columns: auto 650px;
+  grid-template-areas: "top top" "left right";
+  height: 100vh;
+  overflow: scroll; }
 
 .Event {
-  background-color: #7a7d7d;
+  background-color: #4573ae;
   border-radius: 10px;
-  margin: 0px 20px 20px 20px;
+  margin: 20px auto;
   box-shadow: 8px 8px 0px 1px rgba(26, 26, 26, 0.4);
-  border: solid 2px #1a1a1a; }
+  border: solid 2px #1a1a1a;
+  width: 75%;
+  min-width: 750px; }
 
 .Event h3, h4, p {
   margin: 10px 0; }
 
+.Event .title {
+  font-weight: bold;
+  font-size: 2em; }
+
+.Event .type, .date-time, .players {
+  font-size: 1.4em; }
+
+.Event .short-des {
+  font-style: italic; }
+
 .Event .event-info {
   display: grid;
-  grid-template-columns: auto 230px 175px;
+  grid-template-columns: auto 350px 250px;
   grid-template-areas: "info map button"; }
+
+.Event .park {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: inline-block;
+  width: 80%;
+  padding: 5px; }
 
 .Event .event-text-details {
   grid-area: info;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px; }
+
+.Event .logisitics {
+  border: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center; }
 
 .Event .park-map {
-  width: 200px;
-  height: 200px;
-  margin: 25px;
-  grid-area: map; }
+  width: 350px;
+  height: 100%;
+  margin: 0 25px 25px 25px;
+  grid-area: map;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0; }
 
 .Event button {
-  width: 125px;
-  height: 75px;
-  margin: 85px auto 0 auto;
+  width: 150px;
+  height: 100px;
   grid-area: button;
   border: none;
   background-color: #f6ae2d;
@@ -47,32 +81,47 @@
   font-weight: bold;
   border: solid 2px #1a1a1a; }
   .Event button:hover {
-    background-color: #7a7d7d; }
+    background-color: #393939; }
   .Event button:hover {
     color: #f6ae2d; }
+
+.Event .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
 
 .EventCreator {
   display: inline-block;
   grid-area: right;
-  width: 370px;
-  background-color: #7a7d7d;
+  width: 90%;
+  min-width: 450px;
+  background-color: #393939;
   border-radius: 10px;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 8px 8px 0px 1px rgba(26, 26, 26, 0.4);
-  border: solid 2px #1a1a1a; }
+  border: solid 2px #1a1a1a;
+  min-height: 900px; }
 
-.EventCreator h2 {
-  color: #2f487f; }
+.EventCreator .title {
+  color: #f6ae2d;
+  font-weight: bold;
+  font-size: 2em; }
+
+.EventCreator .formTitle {
+  color: #f6ae2d;
+  font-size: 1.5em;
+  margin: 25px 0 5px 0; }
 
 .EventCreator .radioButtons {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
   grid-template-areas: "rad1 text1" "rad2 text2" "rad3 text3";
-  height: 60px; }
+  margin-bottom: 15px; }
 
 .rad1 {
   grid-area: rad1; }
@@ -84,7 +133,9 @@
   grid-area: rad3; }
 
 .text1, .text2, .text3 {
-  margin-right: auto; }
+  margin-right: auto;
+  font-size: 1.3em;
+  color: #f8c466; }
 
 .text1 {
   grid-area: text1; }
@@ -95,20 +146,61 @@
 .text3 {
   grid-area: text3; }
 
-.EventCreator .formTitle, .textInput, select, form {
+.EventCreator .textInput, select, .parkSearch {
   width: 80%;
-  margin: 10px; }
+  margin: 10px;
+  padding-left: 5px;
+  height: 30px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: none;
+  background-color: #f8c466; }
 
-.date-input {
-  width: 100%;
-  margin: 0; }
+.EventCreator select {
+  border: none; }
 
-.map {
+.EventCreator .date-time {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.EventCreator .textarea {
+  height: 60px; }
+
+.EventCreator .date-input, .time-input {
+  width: 48%;
+  height: 30px;
+  margin: 5px 0;
+  border-radius: 10px;
+  font-size: 1.2em;
+  padding-left: 5px;
+  background-color: #f8c466;
+  border: none; }
+
+.EventCreator .map {
   width: 200px;
   height: 200px; }
 
 .EventCreator button {
-  width: 40%; }
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  width: 300px;
+  height: 50px;
+  margin: 15px;
+  background-color: #f6ae2d;
+  color: #1a1a1a;
+  border-radius: 10px;
+  border: solid 2px #1a1a1a; }
+  .EventCreator button:hover {
+    background-color: #1a1a1a; }
+  .EventCreator button:hover {
+    color: #f6ae2d; }
+
+.EventCreator ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #1a1a1a; }
 
 .Header {
   height: 100px;
@@ -119,7 +211,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  grid-area: top; }
+  align-content: center;
+  grid-area: top;
+  z-index: 1; }
 
 .Header .headerPrompt {
   display: flex;
@@ -130,8 +224,9 @@
 .Header h1 {
   margin: 0;
   position: absolute;
-  top: 30px;
-  left: 20px; }
+  top: 15px;
+  left: 20px;
+  font-size: 3.5em; }
 
 .Header h2 {
   margin: 0; }
@@ -146,15 +241,15 @@
   font-weight: bold;
   margin-left: auto;
   border: none;
-  background-color: #f6ae2d;
+  background-color: #6da34d;
   color: #393939;
   width: 100px;
   height: 50px;
   border-radius: 10px; }
   .Header button:hover {
-    background-color: #7a7d7d; }
+    background-color: #393939; }
   .Header button:hover {
-    color: #f6ae2d; }
+    color: #6da34d; }
 
 .Main {
   display: inline-block;
@@ -166,22 +261,27 @@
   justify-content: space-around; }
 
 .Main .display-link {
-  margin: 20px;
+  margin: 15px;
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
-  color: #f26419;
+  color: #f6ae2d;
+  text-shadow: 2px 2px 3px #1a1a1a;
   background-color: #393939;
   box-shadow: 8px 8px 0px 1px rgba(26, 26, 26, 0.4);
-  border: solid 2px #1a1a1a; }
+  border: solid 2px #1a1a1a;
+  width: 30%;
+  min-width: 325px; }
   .Main .display-link:hover {
-    background-color: #7a7d7d; }
+    background-color: #4573ae;
+    text-shadow: 2px 2px 3px #1a1a1a; }
 
 .Main h2 {
   margin: 10px; }
 
 .Main .selected {
-  background-color: #7a7d7d; }
+  background-color: #4573ae;
+  text-shadow: 2px 2px 3px #1a1a1a; }
 
 .label-container {
   position: relative;

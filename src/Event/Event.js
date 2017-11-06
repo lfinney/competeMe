@@ -12,40 +12,47 @@ const Event = ({ comp, liveUser, activePopup,
     <div className="Event">
       <div className="event-info">
         <div className="event-text-details">
-          <h4>{comp.sport} - {comp.competitiveness}</h4>
-          <h4>{comp.players}</h4>
-          <h4>{convertTime(comp.time) + ' '}
-            on {dateFormat(comp.date, 'mediumDate') + ' '}
-            at {comp.location}</h4>
-          <p>{comp.details}</p>
-          <h3>{comp.compName}</h3>
+          <h3 className="title">{comp.compName}</h3>
+          <h4 className="short-des">{comp.competitiveness} {comp.sport}</h4>
+          <h4 className="type">Event details: </h4>
+          <p className="details">{comp.details}</p>
+          <div className="logisitics">
+            <h4 className="players">
+              {comp.activePlayers.length}/{comp.players} Found</h4>
+            <h4 className="date-time">{convertTime(comp.time) + ' '}
+              on {dateFormat(comp.date, 'mediumDate')}</h4>
+          </div>
         </div>
+
         <div className="park-map">
+          <h3 className="park">{comp.pickedPark[0].name}</h3>
           <Map
             googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
               apiKey.placesApi}&parks=places&callback=initMap`}
             nearbyParks={comp.pickedPark}
             loadingElement={
-              <div style={{ height: '200px', width: '200px'}} />
+              <div style={{ height: '300px', width: '300px'}} />
             }
             containerElement={
-              <div style={{ height: '200px', width: '200px'}} />
+              <div style={{ height: '300px', width: '300px'}} />
             }
             mapElement={
-              <div style={{ height: '200px', width: '200px'}}
+              <div style={{ height: '300px', width: '300px'}}
               />
             }
           />
         </div>
-        <button
-          onClick={ () => {
-            handleSubmit(liveUser, activePopup);
-            if (liveUser) {
-              userCompetitions(comp, activeUser);
-            }
-          }}>
-          Count Me In!
-        </button>
+        <div className="button-container">
+          <button
+            onClick={ () => {
+              handleSubmit(liveUser, activePopup);
+              if (liveUser) {
+                userCompetitions(comp, activeUser);
+              }
+            }}>
+            Count Me In!
+          </button>
+        </div>
       </div>
     </div>
   );

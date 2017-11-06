@@ -71,9 +71,9 @@ export class EventCreator extends Component {
     return (
       <div>
         <div className="EventCreator">
-          <h2 className="formTitle">Create New Competition</h2>
+          <h2 className="title">Create New Competition</h2>
           <input
-            className="text-input compName"
+            className="textInput compName"
             type="text"
             placeholder="Competition Name"
             value={this.state.compName}
@@ -88,7 +88,7 @@ export class EventCreator extends Component {
             <option value="Flag Football">Flag Football</option>
           </select>
           <input
-            className="text-input players"
+            className="textInput players"
             type="number"
             pattern="\d*"
             placeholder="# Players Needed"
@@ -124,8 +124,8 @@ export class EventCreator extends Component {
             <span className="text3">Competitive</span>
             <br />
           </form>
-          <form>
-            <h3 className="formTitle">Event Date and Time</h3>
+          <h3 className="formTitle">Event Date and Time</h3>
+          <form className="date-time">
             <input
               className="date-input"
               type="date"
@@ -140,8 +140,8 @@ export class EventCreator extends Component {
               step="1800"
               onChange={ this.updateState.bind(this, 'time')}/>
           </form>
-          <input
-            className="textInput"
+          <textarea
+            className="textInput textarea"
             type="textarea"
             placeholder="Other details competitors should know about..."
             rows="5"
@@ -157,6 +157,11 @@ export class EventCreator extends Component {
             onChange={ this.updateState.bind(this, 'location') }/>
           <button onClick={ () =>
             this.getLocation(this.state.location) }>Find Park</button>
+            {this.state.pickedPark &&
+              <div>
+                {this.state.pickedPark[0]}
+              </div>
+            }
           <div className="park-map">
             <Map
               pickPark={this.pickPark}
@@ -164,13 +169,13 @@ export class EventCreator extends Component {
                 apiKey.placesApi}&parks=places&callback=initMap`}
               nearbyParks={this.props.nearbyParks}
               loadingElement={
-                <div style={{ height: '200px', width: '200px'}} />
+                <div style={{ height: '300px', width: '300px'}} />
               }
               containerElement={
-                <div style={{ height: '200px', width: '200px'}} />
+                <div style={{ height: '300px', width: '300px'}} />
               }
               mapElement={
-                <div style={{ height: '200px', width: '200px'}}
+                <div style={{ height: '300px', width: '300px'}}
                 />
               }
             />

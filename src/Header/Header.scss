@@ -9,7 +9,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  align-content: center;
   grid-area: top;
+  z-index: 1;
 }
 
 .Header .headerPrompt {
@@ -22,8 +24,9 @@
 .Header h1 {
   margin: 0;
   position: absolute;
-  top: 30px;
+  top: 15px;
   left: 20px;
+  font-size: 3.5em;
 }
 
 .Header h2 {
@@ -44,13 +47,13 @@
   font-weight: bold;
   margin-left: auto;
   border: none;
-  background-color: $secondary-one;
+  background-color: $primary-one;
     &:hover {
-      background-color: $gray;
+      background-color: $gray-black;
     }
   color: $gray-black;
     &:hover {
-      color: $secondary-one;
+      color: $primary-one;
     }
   width: 100px;
   height: 50px;
