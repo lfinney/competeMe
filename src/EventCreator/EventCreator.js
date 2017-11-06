@@ -163,11 +163,17 @@ export class EventCreator extends Component {
             this.getLocation(this.state.location) ;
           }
           }>Find Park</button>
-          {this.state.pickedPark &&
-            <div>
-              {this.state.pickedPark[0]}
-            </div>
-          }
+          <div className="selected-park">
+            {this.state.pickedPark.length < 1 ?
+              <div className="park-name">
+                no park selected yet
+              </div>
+              :
+              <div className="park-name">
+                <h3>Current selection:  {this.state.pickedPark[0].name}</h3>
+              </div>
+            }
+          </div>
           <div className="park-map">
             <Map
               pickPark={this.pickPark}
