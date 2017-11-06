@@ -155,13 +155,19 @@ export class EventCreator extends Component {
             placeholder="Park Search"
             value={this.state.location}
             onChange={ this.updateState.bind(this, 'location') }/>
-          <button onClick={ () =>
-            this.getLocation(this.state.location) }>Find Park</button>
-            {this.state.pickedPark &&
-              <div>
-                {this.state.pickedPark[0]}
-              </div>
+          <button onClick={ () =>{
+            if (!this.props.liveUser) {
+              this.props.activePopup(true);
+              return;
             }
+            this.getLocation(this.state.location) ;
+          }
+          }>Find Park</button>
+          {this.state.pickedPark &&
+            <div>
+              {this.state.pickedPark[0]}
+            </div>
+          }
           <div className="park-map">
             <Map
               pickPark={this.pickPark}
