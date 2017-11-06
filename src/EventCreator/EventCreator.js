@@ -58,6 +58,7 @@ export class EventCreator extends Component {
       `json?location=39.7508,-104.9966&radius=200&type=park` +
       `&keyword=${userSearch}&key=${apiKey.placesApi}`)
       .then(res => res.json()).then(parkData => {
+        console.log(parkData);
         this.props.parkSearch(parkData.results);
         this.setState({nearbyParks: parkData.results});
       });
@@ -163,11 +164,6 @@ export class EventCreator extends Component {
             this.getLocation(this.state.location) ;
           }
           }>Find Park</button>
-          {this.state.pickedPark &&
-            <div>
-              {this.state.pickedPark[0]}
-            </div>
-          }
           <div className="park-map">
             <Map
               pickPark={this.pickPark}
