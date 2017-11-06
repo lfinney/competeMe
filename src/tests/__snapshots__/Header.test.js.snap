@@ -24,7 +24,9 @@ ShallowWrapper {
         <div
           className="headerPrompt"
 >
-          <h2>
+          <h2
+                    className="welcome-message"
+          >
                     Sign-in using Google to join the competitions!
           </h2>
           <button
@@ -56,7 +58,9 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h2>
+            <h2
+              className="welcome-message"
+>
               Sign-in using Google to join the competitions!
 </h2>,
             <button
@@ -75,6 +79,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Sign-in using Google to join the competitions!",
+              "className": "welcome-message",
             },
             "ref": null,
             "rendered": "Sign-in using Google to join the competitions!",
@@ -112,7 +117,9 @@ ShallowWrapper {
           <div
             className="headerPrompt"
 >
-            <h2>
+            <h2
+                        className="welcome-message"
+            >
                         Sign-in using Google to join the competitions!
             </h2>
             <button
@@ -144,7 +151,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h2>
+              <h2
+                className="welcome-message"
+>
                 Sign-in using Google to join the competitions!
 </h2>,
               <button
@@ -163,6 +172,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Sign-in using Google to join the competitions!",
+                "className": "welcome-message",
               },
               "ref": null,
               "rendered": "Sign-in using Google to join the competitions!",

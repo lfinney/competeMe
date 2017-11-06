@@ -19,8 +19,7 @@ export const joinComp = (comp, activeUser) => {
 export const locationDefaults = () => {
   return (dispatch) => {
     navigator.geolocation.getCurrentPosition( position => {
-      console.log(position.cords);
-      dispatch(userLocation(position.coords))
+      dispatch(userLocation(position.coords));
     }
     );
   };

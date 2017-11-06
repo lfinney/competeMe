@@ -20,7 +20,10 @@ export const loadUserComps = (activeUser, activeCompetitions) => {
     return (comp.activePlayers.includes(activeUser.userId));
   });
 
-  console.log(joinedCompetitions);
+  return joinedCompetitions;
 
-  // joinedCompetitions create a new action/reducer that will simply take this array and populate into the activeUsers's competitions array as soon as they clcik the button to go to that path. The function should only fire if the activeUsers competions array is currently empty
+  // joinedCompetitions create a new action/reducer that will simply take this
+  // array and populate into the activeUsers's competitions array as soon as
+  // they clcik the button to go to that path. The function should only fire if
+  // the activeUsers competions array is currently empty
 };

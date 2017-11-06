@@ -54,7 +54,9 @@ export class EventCreator extends Component {
   getLocation(userSearch) {
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     fetch(
-      `${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.7508,-104.9966&radius=200&type=park&keyword=${userSearch}&key=${apiKey.placesApi}`)
+      `${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/` +
+      `json?location=39.7508,-104.9966&radius=200&type=park` +
+      `&keyword=${userSearch}&key=${apiKey.placesApi}`)
       .then(res => res.json()).then(parkData => {
         this.props.parkSearch(parkData.results);
         this.setState({nearbyParks: parkData.results});
@@ -69,14 +71,15 @@ export class EventCreator extends Component {
     return (
       <div>
         <div className="EventCreator">
-          <h2 className="formTitle">Create New Competition</h2>
+          <h2 className="title">Create New Competition</h2>
           <input
-            className="text-input"
+            className="textInput compName"
             type="text"
             placeholder="Competition Name"
             value={this.state.compName}
             onChange={ this.updateState.bind(this, 'compName') }/>
           <select
+            className="sportDropDown"
             value={this.state.value}
             onChange={ this.updateState.bind(this, 'sport')}>
             <option value="">-Select a Sport-</option>
@@ -85,7 +88,7 @@ export class EventCreator extends Component {
             <option value="Flag Football">Flag Football</option>
           </select>
           <input
-            className="text-input"
+            className="textInput players"
             type="number"
             pattern="\d*"
             placeholder="# Players Needed"
@@ -121,8 +124,8 @@ export class EventCreator extends Component {
             <span className="text3">Competitive</span>
             <br />
           </form>
-          <form>
-            <h3 className="formTitle">Event Date and Time</h3>
+          <h3 className="formTitle">Event Date and Time</h3>
+          <form className="date-time">
             <input
               className="date-input"
               type="date"
@@ -137,8 +140,8 @@ export class EventCreator extends Component {
               step="1800"
               onChange={ this.updateState.bind(this, 'time')}/>
           </form>
-          <input
-            className="textInput"
+          <textarea
+            className="textInput textarea"
             type="textarea"
             placeholder="Other details competitors should know about..."
             rows="5"
@@ -147,12 +150,24 @@ export class EventCreator extends Component {
             onChange={ this.updateState.bind(this, 'details') }/>
           <h3 className="formTitle">Pick a Park to Play At</h3>
           <input
-            className="text-input"
+            className="text-input parkSearch"
             type="text"
             placeholder="Park Search"
             value={this.state.location}
             onChange={ this.updateState.bind(this, 'location') }/>
-          <button onClick={ () => this.getLocation(this.state.location) }>Find Park</button>
+          <button onClick={ () =>{
+            if (!this.props.liveUser) {
+              this.props.activePopup(true);
+              return;
+            }
+            this.getLocation(this.state.location) ;
+          }
+          }>Find Park</button>
+          {this.state.pickedPark &&
+            <div>
+              {this.state.pickedPark[0]}
+            </div>
+          }
           <div className="park-map">
             <Map
               pickPark={this.pickPark}
@@ -160,14 +175,14 @@ export class EventCreator extends Component {
                 apiKey.placesApi}&parks=places&callback=initMap`}
               nearbyParks={this.props.nearbyParks}
               loadingElement={
-                <div style={{ height: '200px', width: '200px'}} />
+                <div style={{ height: '300px', width: '300px'}} />
               }
               containerElement={
-                <div style={{ height: '200px', width: '200px'}} />
+                <div style={{ height: '300px', width: '300px'}} />
               }
               mapElement={
-                <div style={{ height: '200px', width: '200px'}}
-              />
+                <div style={{ height: '300px', width: '300px'}}
+                />
               }
             />
           </div>
@@ -201,7 +216,7 @@ const mapDispatchToProps = (dispatch) => ({
   userCompetitions: (comp, activeUser) => {
     dispatch(joinComp(comp, activeUser));
   },
-  parkSearch: ( searchResults ) => { dispatch(parkSearch(searchResults)); },
+  parkSearch: ( searchResults ) => { dispatch(parkSearch(searchResults)); }
 });
 
 

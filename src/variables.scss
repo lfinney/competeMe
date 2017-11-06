@@ -1,5 +1,6 @@
 $primary-one: rgba(109, 163, 77, 1);
-$primary-two: rgba(47, 72, 127, 1);
+$primary-two: rgba(196, 53, 50, 1);
+$primary-two-accent: rgba(248, 196, 102, 1);
 $primary-accent: rgba(69, 115, 174, 1);
 $secondary-one: rgba(246, 174, 45, 1);
 $secondary-two: rgba(242, 100, 25, 1);
@@ -9,6 +10,8 @@ $gray: rgba(122, 125, 125, 1);
 $gray-black: rgba(57, 57, 57, 1);
 $black: rgba(26, 26, 26, 1);
 $grass: rgba(106, 145, 67, 1);
-// $body-font: 'Roboto', sans-serif;
-// $headers-font:  'Oswald', sans-serif;
+$body-font: 'Roboto', sans-serif;
+$headers-font:  'Oswald', sans-serif;
 $border-radius: 10px;
+$shadow: 8px 8px 0px 1px rgba(26, 26, 26, .4);
+$border: solid 2px $black;

@@ -6,9 +6,11 @@
   background-image:   url('localhost:3000/../assets/background-grass-texture.png');
   background-color: $grass;
   display: grid;
-  grid-template-columns: auto 400px;
-  grid-template-rows: 100px auto;
+  grid-template-rows: 120px auto;
+  grid-template-columns: auto 650px;
   grid-template-areas:
     "top top"
     "left right";
+  height: 100vh;
+  overflow: scroll;
 }

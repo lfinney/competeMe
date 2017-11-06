@@ -1,23 +1,34 @@
 .EventCreator {
   display: inline-block;
   grid-area: right;
-  width: 370px;
-  background-color: #7a7d7d;
+  width: 90%;
+  min-width: 450px;
+  background-color: #393939;
   border-radius: 10px;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  box-shadow: 8px 8px 0px 1px rgba(26, 26, 26, 0.4);
+  border: solid 2px #1a1a1a;
+  min-height: 900px; }
 
-.EventCreator h2 {
-  color: #2f487f; }
+.EventCreator .title {
+  color: #f6ae2d;
+  font-weight: bold;
+  font-size: 2em; }
+
+.EventCreator .formTitle {
+  color: #f6ae2d;
+  font-size: 1.5em;
+  margin: 25px 0 5px 0; }
 
 .EventCreator .radioButtons {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
   grid-template-areas: "rad1 text1" "rad2 text2" "rad3 text3";
-  height: 60px; }
+  margin-bottom: 15px; }
 
 .rad1 {
   grid-area: rad1; }
@@ -29,7 +40,9 @@
   grid-area: rad3; }
 
 .text1, .text2, .text3 {
-  margin-right: auto; }
+  margin-right: auto;
+  font-size: 1.3em;
+  color: #f8c466; }
 
 .text1 {
   grid-area: text1; }
@@ -40,17 +53,58 @@
 .text3 {
   grid-area: text3; }
 
-.EventCreator .formTitle, .textInput, select, form {
+.EventCreator .textInput, select, .parkSearch {
   width: 80%;
-  margin: 10px; }
+  margin: 10px;
+  padding-left: 5px;
+  height: 30px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: none;
+  background-color: #f8c466; }
 
-.date-input {
-  width: 100%;
-  margin: 0; }
+.EventCreator select {
+  border: none; }
 
-.map {
+.EventCreator .date-time {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.EventCreator .textarea {
+  height: 60px; }
+
+.EventCreator .date-input, .time-input {
+  width: 48%;
+  height: 30px;
+  margin: 5px 0;
+  border-radius: 10px;
+  font-size: 1.2em;
+  padding-left: 5px;
+  background-color: #f8c466;
+  border: none; }
+
+.EventCreator .map {
   width: 200px;
   height: 200px; }
 
 .EventCreator button {
-  width: 40%; }
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  width: 300px;
+  height: 50px;
+  margin: 15px;
+  background-color: #f6ae2d;
+  color: #1a1a1a;
+  border-radius: 10px;
+  border: solid 2px #1a1a1a; }
+  .EventCreator button:hover {
+    background-color: #1a1a1a; }
+  .EventCreator button:hover {
+    color: #f6ae2d; }
+
+.EventCreator ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #1a1a1a; }

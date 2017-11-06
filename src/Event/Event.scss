@@ -1,40 +1,97 @@
 @import '../variables.scss';
 
 .Event {
-  background-color: $gray;
+  background-color: $primary-accent;
   border-radius: $border-radius;
-  margin: 0px 15px 15px 15px;
-  box-shadow: 5px 5px 0px 1px rgba(26, 26, 26, .75);
+  margin: 20px auto;
+  box-shadow: $shadow;
+  border: $border;
+  width: 75%;
+  min-width: 750px;
 }
 
 .Event h3, h4, p {
   margin: 10px 0;
 }
 
+.Event .title {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.Event .type, .date-time, .players {
+  font-size: 1.4em;
+}
+
+.Event .short-des {
+  font-style: italic;
+}
+
 .Event .event-info {
   display: grid;
-  grid-template-columns: auto 250px 125px;
+  grid-template-columns: auto 350px 250px;
   grid-template-areas: "info map button"
 }
 
-.Event .event-test-details {
+.Event .park {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: inline-block;
+  width: 80%;
+  padding: 5px;
+}
+
+.Event .event-text-details {
   grid-area: info;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
+  margin: 20px;
+}
+
+.Event .logisitics {
+  border: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 
 .Event .park-map {
-  width: 200px;
-  height: 200px;
-  background-color: $black;
-  margin: 25px;
+  width: 350px;
+  height: 100%;
+  margin: 0 25px 25px 25px;
   grid-area: map;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
 }
 
 .Event button {
-  width: 100px;
+  width: 150px;
   height: 100px;
-  margin-top: 75px;
   grid-area: button;
+  border: none;
+  background-color: $secondary-one;
+    &:hover {
+      background-color: $gray-black;
+    }
+  color: $gray-black;
+    &:hover {
+      color: $secondary-one;
+    }
+  border-radius: $border-radius;
+  font-size: 1em;
+  font-weight: bold;
+  border: $border;
+}
+
+.Event .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

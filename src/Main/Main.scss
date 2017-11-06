@@ -11,14 +11,30 @@
   justify-content: space-around;
 }
 
-.Main .nav-tabs h2 {
-  margin: 15px 0 0 0;
-  padding: 5px 10px;
-  color: $secondary-two;
+.Main .display-link {
+  margin: 15px;
+  padding: 10px;
+  border-radius: $border-radius;
+  text-decoration: none;
+  color: $secondary-one;
+  text-shadow: 2px 2px 3px $black;
   background-color: $gray-black;
   &:hover {
-    background-color: $gray-white;
-  }
-  border-top-right-radius: $border-radius;
-  border-top-left-radius: $border-radius;
+    background-color: $primary-accent;
+    text-shadow: 2px 2px 3px $black;
+  };
+  box-shadow: $shadow;
+  border: $border;
+  width: 30%;
+  min-width: 325px;
+
+}
+
+.Main h2 {
+  margin: 10px;
+}
+
+.Main .selected {
+  background-color: $primary-accent;
+  text-shadow: 2px 2px 3px $black;
 }

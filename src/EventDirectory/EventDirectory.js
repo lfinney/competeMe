@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Event from '../Event/Event';
 
-const EventDirectory = ({ competitions, liveUser, activePopup, userCompetitions, activeUser }) => {
+const EventDirectory = ({ competitions, liveUser, activePopup,
+  userCompetitions, activeUser }) => {
 
   const compCatalogue = competitions.map( (comp) => {
     return <Event

@@ -1,0 +1,31 @@
+@import '../variables.scss';
+
+.Popup {
+  background-color: $gray;
+  font-size: 1.2em;
+  position: absolute;
+  width: 500px;
+  top: 250px;
+  left: calc(50vw - (350px / 2));
+  padding: 10px;
+  z-index: 3;
+  border-radius: $border-radius;
+  border: $border;
+  color: $black;
+}
+
+.Popup .remove-popup {
+  width: 100px;
+  height: 50px;
+  margin: 15px;
+  background-color: $secondary-one;
+    &:hover {
+      background-color: $gray-black;
+    };
+  color: $gray-black;
+    &:hover {
+      color: $secondary-one;
+    };
+  border-radius: $border-radius;
+  border: $border;
+}

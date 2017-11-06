@@ -7,12 +7,25 @@
   display: flex;
   justify-content: space-around; }
 
-.Main .nav-tabs h2 {
-  margin: 15px 0 0 0;
-  padding: 5px 10px;
-  color: #f26419;
+.Main .display-link {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #f6ae2d;
+  text-shadow: 2px 2px 3px #1a1a1a;
   background-color: #393939;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px; }
-  .Main .nav-tabs h2:hover {
-    background-color: #c1c9c3; }
+  box-shadow: 8px 8px 0px 1px rgba(26, 26, 26, 0.4);
+  border: solid 2px #1a1a1a;
+  width: 30%;
+  min-width: 325px; }
+  .Main .display-link:hover {
+    background-color: #4573ae;
+    text-shadow: 2px 2px 3px #1a1a1a; }
+
+.Main h2 {
+  margin: 10px; }
+
+.Main .selected {
+  background-color: #4573ae;
+  text-shadow: 2px 2px 3px #1a1a1a; }
