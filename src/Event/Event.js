@@ -33,7 +33,7 @@ const Event = ({ comp, liveUser, activePopup,
             }
             mapElement={
               <div style={{ height: '200px', width: '200px'}}
-            />
+              />
             }
           />
         </div>

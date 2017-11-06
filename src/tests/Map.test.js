@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Map from '../Map/Map';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 
 describe('Map', () => {

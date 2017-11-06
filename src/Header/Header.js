@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { activeUser } from './headerActions';
 import PropTypes from 'prop-types';
-import firebase, { auth, provider } from '../firebase.js';
+import { auth, provider } from '../firebase.js';
 import Popup from '../Popup/Popup';
 
 export class Header extends Component {
@@ -54,7 +54,9 @@ export class Header extends Component {
           </div>
           :
           <div className="headerPrompt">
-            <h2 className="welcome-message">Sign-in using Google to join the competitions!</h2>
+            <h2 className="welcome-message">
+              Sign-in using Google to join the competitions!
+            </h2>
             <button onClick={this.login}>Log In</button>
           </div>
         }
@@ -68,7 +70,8 @@ export class Header extends Component {
 Header.propTypes = {
   activeUser: PropTypes.func,
   user: PropTypes.object,
-  liveUser: PropTypes.bool
+  liveUser: PropTypes.bool,
+  activePopup: PropTypes.bool
 };
 
 const mapStateToProps = (store) => ({

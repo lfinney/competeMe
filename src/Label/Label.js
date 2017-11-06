@@ -24,12 +24,10 @@ export default class Label extends Component {
       //   onMouseOver={() => this.toggleLabel()}
       //   onMouseOut={() => this.toggleLabel()}>
       //   { this.state.showLabel &&
-          <div
-            className="park-label"
-            >
-            {parkName}
-          </div>
-        // }
+      <div className="park-label">
+        {parkName}
+      </div>
+      // }
       // </div>
     );
   }

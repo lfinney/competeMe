@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from '../Main/Main';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 
 const middlewares = [];

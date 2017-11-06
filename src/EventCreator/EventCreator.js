@@ -54,7 +54,9 @@ export class EventCreator extends Component {
   getLocation(userSearch) {
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     fetch(
-      `${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.7508,-104.9966&radius=200&type=park&keyword=${userSearch}&key=${apiKey.placesApi}`)
+      `${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/` +
+      `json?location=39.7508,-104.9966&radius=200&type=park` +
+      `&keyword=${userSearch}&key=${apiKey.placesApi}`)
       .then(res => res.json()).then(parkData => {
         this.props.parkSearch(parkData.results);
         this.setState({nearbyParks: parkData.results});
@@ -153,7 +155,8 @@ export class EventCreator extends Component {
             placeholder="Park Search"
             value={this.state.location}
             onChange={ this.updateState.bind(this, 'location') }/>
-          <button onClick={ () => this.getLocation(this.state.location) }>Find Park</button>
+          <button onClick={ () =>
+            this.getLocation(this.state.location) }>Find Park</button>
           <div className="park-map">
             <Map
               pickPark={this.pickPark}
@@ -168,7 +171,7 @@ export class EventCreator extends Component {
               }
               mapElement={
                 <div style={{ height: '200px', width: '200px'}}
-              />
+                />
               }
             />
           </div>
@@ -202,7 +205,7 @@ const mapDispatchToProps = (dispatch) => ({
   userCompetitions: (comp, activeUser) => {
     dispatch(joinComp(comp, activeUser));
   },
-  parkSearch: ( searchResults ) => { dispatch(parkSearch(searchResults)); },
+  parkSearch: ( searchResults ) => { dispatch(parkSearch(searchResults)); }
 });
 
 
