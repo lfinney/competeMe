@@ -15,18 +15,20 @@ export class Main extends Component {
     this.props.getUserLocation();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.liveUser && (this.props.competitions.length !== nextProps.competitions.length)) {
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.liveUser &&
+      (this.props.competitions.length !== nextProps.competitions.length)) {
       this.props.loadUserComps(this.props.activeUser, nextProps.competitions);
     }
+    return true;
   }
 
   render() {
     let displayComps;
     if (this.props.location.pathname === '/my-competitions') {
       this.props.competitions ?
-      displayComps = this.props.activeUser.competitions :
-      displayComps = [];
+        displayComps = this.props.activeUser.competitions :
+        displayComps = [];
     }
     if (this.props.location.pathname === '/all-competitions') {
       displayComps = this.props.competitions;

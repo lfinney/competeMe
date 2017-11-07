@@ -16,12 +16,10 @@ export const fetchFromFirebase = () => {
 };
 
 export const loadUserComps = (activeUser, activeCompetitions) => {
-  console.log(activeCompetitions);
   return (dispatch) => {
     const joinedCompetitions = activeCompetitions.filter( (comp) => {
       return (comp.activePlayers.includes(activeUser.userId));
     });
-    console.log(joinedCompetitions);
     dispatch(updateUserComps(joinedCompetitions, activeUser));
   };
   // joinedCompetitions create a new action/reducer that will simply take this
