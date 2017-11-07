@@ -16,18 +16,10 @@ export class Main extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.activeUser && (this.props.competitions.length !== nextProps.competitions.length)) {
+    if (this.props.liveUser && (this.props.competitions.length !== nextProps.competitions.length)) {
       this.props.loadUserComps(this.props.activeUser, nextProps.competitions);
     }
   }
-  //
-  // checkForCompetitions() {
-  //   if (this.props.activeUser) {
-  //     console.log(this.props.competitions);
-  //
-  //     this.props.loadUserComps(this.props.activeUser, nextProps.competitions);
-  //   }
-  // }
 
   render() {
     let displayComps;
