@@ -17,9 +17,9 @@ export class Main extends Component {
   }
 
   componentWillUpdate(nextProps) {
-    if ( this.props.competitions.length !== nextProps.competitions.length) {
+    if ( this.props.activeUser  && (this.props.competitions.length !== nextProps.competitions.length)) {
       const { activeUser, competitions } =  nextProps;
-      loadUserComps(activeUser, competitions);
+      this.props.loadUserComps(activeUser, competitions);
     }
   }
 
@@ -68,6 +68,7 @@ Main.propTypes = {
   activePopup: PropTypes.func,
   userCompetitions: PropTypes.func,
   getUserLocation: PropTypes.func,
+  loadUserComps: PropTypes.func,
   activeUser: PropTypes.object,
   location: PropTypes.object
 };
@@ -85,7 +86,10 @@ const mapDispatchToProps = (dispatch) => {
     userCompetitions: (comp, activeUser) => {
       dispatch(joinComp(comp, activeUser));
     },
-    getUserLocation: () => { dispatch(locationDefaults()); }
+    getUserLocation: () => { dispatch(locationDefaults()); },
+    loadUserComps: (activeUser, competitions) => {
+      dispatch(loadUserComps(activeUser, competitions));
+    }
   };
 };
 

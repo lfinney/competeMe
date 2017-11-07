@@ -18,3 +18,6 @@ export const userLocation = (location) => {
     location
   };
 };
+
+
+//Youre in the middle of writing an action fo post the user's pre-joined competitions to the display container

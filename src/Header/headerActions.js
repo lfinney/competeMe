@@ -5,6 +5,15 @@ export const activeUser = (user) => {
   };
 };
 
+export const updateUserComps = (joinedCompetitions, activeUser) => {
+  console.log(joinedCompetitions);
+  console.log(activeUser);
+  return {
+    type: 'UPDATE_USER_COMPS',
+    joinedCompetitions,
+    activeUser
+  };
+};
 
 export const userCompetitions = (comp, activeUser) => {
   return {
