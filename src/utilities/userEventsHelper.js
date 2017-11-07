@@ -39,3 +39,4 @@ export const defaultUserFormState = {
 };
 
 export const mapDimensions = { height: '300px', width: '300px'};
+export const defaultMapPlacement = { lat:39.7508006, lng:-104.9965947 };
