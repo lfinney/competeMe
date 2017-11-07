@@ -33,12 +33,17 @@
   margin: 0;
 }
 
-.Header p {
-}
-
 .Header .welcome-message {
   display: inline-block;
-  margin: auto;
+  margin-left: auto;
+  width: 60%;
+}
+
+.Header .header-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .Header button {

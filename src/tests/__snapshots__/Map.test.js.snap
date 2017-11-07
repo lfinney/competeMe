@@ -57,7 +57,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": FiberNode {
                   "_debugID": 5,
@@ -65,7 +65,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": [Circular],
                   "child": null,
@@ -209,7 +209,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": FiberNode {
                     "_debugID": 5,
@@ -217,7 +217,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": [Circular],
                     "child": null,
@@ -460,7 +460,7 @@ ReactWrapper {
             "_debugOwner": null,
             "_debugSource": Object {
               "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-              "lineNumber": 12,
+              "lineNumber": 11,
             },
             "alternate": FiberNode {
               "_debugID": 5,
@@ -468,7 +468,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": [Circular],
               "child": null,
@@ -834,7 +834,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": FiberNode {
                       "_debugID": 5,
@@ -842,7 +842,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": [Circular],
                       "child": null,
@@ -1074,7 +1074,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": FiberNode {
                 "_debugID": 5,
@@ -1082,7 +1082,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": [Circular],
                 "child": null,
@@ -1386,7 +1386,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": FiberNode {
                         "_debugID": 5,
@@ -1394,7 +1394,7 @@ ReactWrapper {
                         "_debugOwner": null,
                         "_debugSource": Object {
                           "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                          "lineNumber": 12,
+                          "lineNumber": 11,
                         },
                         "alternate": [Circular],
                         "child": null,
@@ -1741,7 +1741,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": FiberNode {
                       "_debugID": 5,
@@ -1749,7 +1749,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": [Circular],
                       "child": null,
@@ -1954,7 +1954,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": FiberNode {
                 "_debugID": 5,
@@ -1962,7 +1962,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": [Circular],
                 "child": null,
@@ -2220,7 +2220,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": FiberNode {
                   "_debugID": 5,
@@ -2228,7 +2228,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": [Circular],
                   "child": null,
@@ -2525,7 +2525,7 @@ ReactWrapper {
             "_debugOwner": null,
             "_debugSource": Object {
               "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-              "lineNumber": 12,
+              "lineNumber": 11,
             },
             "alternate": FiberNode {
               "_debugID": 5,
@@ -2533,7 +2533,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": [Circular],
               "child": null,
@@ -2628,7 +2628,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": FiberNode {
                   "_debugID": 5,
@@ -2636,7 +2636,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": [Circular],
                   "child": null,
@@ -2796,7 +2796,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": FiberNode {
                     "_debugID": 5,
@@ -2804,7 +2804,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": [Circular],
                     "child": null,
@@ -3063,7 +3063,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": FiberNode {
                       "_debugID": 5,
@@ -3071,7 +3071,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": [Circular],
                       "child": null,
@@ -3219,7 +3219,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": FiberNode {
                     "_debugID": 5,
@@ -3227,7 +3227,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": [Circular],
                     "child": null,
@@ -3391,7 +3391,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": FiberNode {
                     "_debugID": 5,
@@ -3399,7 +3399,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": [Circular],
                     "child": null,
@@ -3559,7 +3559,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": FiberNode {
                       "_debugID": 5,
@@ -3567,7 +3567,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": [Circular],
                       "child": null,
@@ -3773,7 +3773,7 @@ ReactWrapper {
           "_debugOwner": null,
           "_debugSource": Object {
             "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-            "lineNumber": 12,
+            "lineNumber": 11,
           },
           "alternate": FiberNode {
             "_debugID": 5,
@@ -3781,7 +3781,7 @@ ReactWrapper {
             "_debugOwner": null,
             "_debugSource": Object {
               "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-              "lineNumber": 12,
+              "lineNumber": 11,
             },
             "alternate": [Circular],
             "child": null,
@@ -5300,7 +5300,7 @@ ReactWrapper {
           "_debugOwner": null,
           "_debugSource": Object {
             "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-            "lineNumber": 12,
+            "lineNumber": 11,
           },
           "alternate": FiberNode {
             "_debugID": 5,
@@ -5308,7 +5308,7 @@ ReactWrapper {
             "_debugOwner": null,
             "_debugSource": Object {
               "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-              "lineNumber": 12,
+              "lineNumber": 11,
             },
             "alternate": [Circular],
             "child": null,
@@ -6829,7 +6829,7 @@ ReactWrapper {
           "_debugOwner": null,
           "_debugSource": Object {
             "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-            "lineNumber": 12,
+            "lineNumber": 11,
           },
           "alternate": FiberNode {
             "_debugID": 5,
@@ -6837,7 +6837,7 @@ ReactWrapper {
             "_debugOwner": null,
             "_debugSource": Object {
               "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-              "lineNumber": 12,
+              "lineNumber": 11,
             },
             "alternate": [Circular],
             "child": null,
@@ -8391,7 +8391,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": FiberNode {
                   "_debugID": 5,
@@ -8399,7 +8399,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": [Circular],
                   "child": null,
@@ -8543,7 +8543,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": FiberNode {
                     "_debugID": 5,
@@ -8551,7 +8551,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": [Circular],
                     "child": null,
@@ -8794,7 +8794,7 @@ ReactWrapper {
             "_debugOwner": null,
             "_debugSource": Object {
               "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-              "lineNumber": 12,
+              "lineNumber": 11,
             },
             "alternate": FiberNode {
               "_debugID": 5,
@@ -8802,7 +8802,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": [Circular],
               "child": null,
@@ -9168,7 +9168,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": FiberNode {
                       "_debugID": 5,
@@ -9176,7 +9176,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": [Circular],
                       "child": null,
@@ -9408,7 +9408,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": FiberNode {
                 "_debugID": 5,
@@ -9416,7 +9416,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": [Circular],
                 "child": null,
@@ -9720,7 +9720,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": FiberNode {
                         "_debugID": 5,
@@ -9728,7 +9728,7 @@ ReactWrapper {
                         "_debugOwner": null,
                         "_debugSource": Object {
                           "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                          "lineNumber": 12,
+                          "lineNumber": 11,
                         },
                         "alternate": [Circular],
                         "child": null,
@@ -10118,7 +10118,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": FiberNode {
                     "_debugID": 5,
@@ -10126,7 +10126,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": [Circular],
                     "child": null,
@@ -10270,7 +10270,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": FiberNode {
                       "_debugID": 5,
@@ -10278,7 +10278,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": [Circular],
                       "child": null,
@@ -10521,7 +10521,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": FiberNode {
                 "_debugID": 5,
@@ -10529,7 +10529,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": [Circular],
                 "child": null,
@@ -10895,7 +10895,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": FiberNode {
                         "_debugID": 5,
@@ -10903,7 +10903,7 @@ ReactWrapper {
                         "_debugOwner": null,
                         "_debugSource": Object {
                           "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                          "lineNumber": 12,
+                          "lineNumber": 11,
                         },
                         "alternate": [Circular],
                         "child": null,
@@ -11135,7 +11135,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": FiberNode {
                   "_debugID": 5,
@@ -11143,7 +11143,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": [Circular],
                   "child": null,
@@ -11447,7 +11447,7 @@ ReactWrapper {
                         "_debugOwner": null,
                         "_debugSource": Object {
                           "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                          "lineNumber": 12,
+                          "lineNumber": 11,
                         },
                         "alternate": FiberNode {
                           "_debugID": 5,
@@ -11455,7 +11455,7 @@ ReactWrapper {
                           "_debugOwner": null,
                           "_debugSource": Object {
                             "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                            "lineNumber": 12,
+                            "lineNumber": 11,
                           },
                           "alternate": [Circular],
                           "child": null,
@@ -11802,7 +11802,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": FiberNode {
                         "_debugID": 5,
@@ -11810,7 +11810,7 @@ ReactWrapper {
                         "_debugOwner": null,
                         "_debugSource": Object {
                           "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                          "lineNumber": 12,
+                          "lineNumber": 11,
                         },
                         "alternate": [Circular],
                         "child": null,
@@ -12015,7 +12015,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": FiberNode {
                   "_debugID": 5,
@@ -12023,7 +12023,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": [Circular],
                   "child": null,
@@ -12281,7 +12281,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": FiberNode {
                     "_debugID": 5,
@@ -12289,7 +12289,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": [Circular],
                     "child": null,
@@ -12586,7 +12586,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": FiberNode {
                 "_debugID": 5,
@@ -12594,7 +12594,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": [Circular],
                 "child": null,
@@ -12689,7 +12689,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": FiberNode {
                     "_debugID": 5,
@@ -12697,7 +12697,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": [Circular],
                     "child": null,
@@ -12857,7 +12857,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": FiberNode {
                       "_debugID": 5,
@@ -12865,7 +12865,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": [Circular],
                       "child": null,
@@ -13124,7 +13124,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": FiberNode {
                         "_debugID": 5,
@@ -13132,7 +13132,7 @@ ReactWrapper {
                         "_debugOwner": null,
                         "_debugSource": Object {
                           "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                          "lineNumber": 12,
+                          "lineNumber": 11,
                         },
                         "alternate": [Circular],
                         "child": null,
@@ -13280,7 +13280,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": FiberNode {
                       "_debugID": 5,
@@ -13288,7 +13288,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": [Circular],
                       "child": null,
@@ -13452,7 +13452,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": FiberNode {
                       "_debugID": 5,
@@ -13460,7 +13460,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": [Circular],
                       "child": null,
@@ -13620,7 +13620,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": FiberNode {
                         "_debugID": 5,
@@ -13628,7 +13628,7 @@ ReactWrapper {
                         "_debugOwner": null,
                         "_debugSource": Object {
                           "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                          "lineNumber": 12,
+                          "lineNumber": 11,
                         },
                         "alternate": [Circular],
                         "child": null,
@@ -13834,7 +13834,7 @@ ReactWrapper {
             "_debugOwner": null,
             "_debugSource": Object {
               "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-              "lineNumber": 12,
+              "lineNumber": 11,
             },
             "alternate": FiberNode {
               "_debugID": 5,
@@ -13842,7 +13842,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": [Circular],
               "child": null,
@@ -15361,7 +15361,7 @@ ReactWrapper {
             "_debugOwner": null,
             "_debugSource": Object {
               "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-              "lineNumber": 12,
+              "lineNumber": 11,
             },
             "alternate": FiberNode {
               "_debugID": 5,
@@ -15369,7 +15369,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": [Circular],
               "child": null,
@@ -16890,7 +16890,7 @@ ReactWrapper {
             "_debugOwner": null,
             "_debugSource": Object {
               "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-              "lineNumber": 12,
+              "lineNumber": 11,
             },
             "alternate": FiberNode {
               "_debugID": 5,
@@ -16898,7 +16898,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": [Circular],
               "child": null,
@@ -18452,7 +18452,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": FiberNode {
                     "_debugID": 5,
@@ -18460,7 +18460,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": [Circular],
                     "child": null,
@@ -18604,7 +18604,7 @@ ReactWrapper {
                     "_debugOwner": null,
                     "_debugSource": Object {
                       "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                      "lineNumber": 12,
+                      "lineNumber": 11,
                     },
                     "alternate": FiberNode {
                       "_debugID": 5,
@@ -18612,7 +18612,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": [Circular],
                       "child": null,
@@ -18855,7 +18855,7 @@ ReactWrapper {
               "_debugOwner": null,
               "_debugSource": Object {
                 "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                "lineNumber": 12,
+                "lineNumber": 11,
               },
               "alternate": FiberNode {
                 "_debugID": 5,
@@ -18863,7 +18863,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": [Circular],
                 "child": null,
@@ -19229,7 +19229,7 @@ ReactWrapper {
                       "_debugOwner": null,
                       "_debugSource": Object {
                         "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                        "lineNumber": 12,
+                        "lineNumber": 11,
                       },
                       "alternate": FiberNode {
                         "_debugID": 5,
@@ -19237,7 +19237,7 @@ ReactWrapper {
                         "_debugOwner": null,
                         "_debugSource": Object {
                           "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                          "lineNumber": 12,
+                          "lineNumber": 11,
                         },
                         "alternate": [Circular],
                         "child": null,
@@ -19469,7 +19469,7 @@ ReactWrapper {
                 "_debugOwner": null,
                 "_debugSource": Object {
                   "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                  "lineNumber": 12,
+                  "lineNumber": 11,
                 },
                 "alternate": FiberNode {
                   "_debugID": 5,
@@ -19477,7 +19477,7 @@ ReactWrapper {
                   "_debugOwner": null,
                   "_debugSource": Object {
                     "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                    "lineNumber": 12,
+                    "lineNumber": 11,
                   },
                   "alternate": [Circular],
                   "child": null,
@@ -19781,7 +19781,7 @@ ReactWrapper {
                         "_debugOwner": null,
                         "_debugSource": Object {
                           "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                          "lineNumber": 12,
+                          "lineNumber": 11,
                         },
                         "alternate": FiberNode {
                           "_debugID": 5,
@@ -19789,7 +19789,7 @@ ReactWrapper {
                           "_debugOwner": null,
                           "_debugSource": Object {
                             "fileName": "/Users/Luke/Coding/mod-3/competeme/src/tests/Map.test.js",
-                            "lineNumber": 12,
+                            "lineNumber": 11,
                           },
                           "alternate": [Circular],
                           "child": null,

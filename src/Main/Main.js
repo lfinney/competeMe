@@ -13,17 +13,27 @@ export class Main extends Component {
   componentDidMount() {
     this.props.fetchFromFirebase();
     this.props.getUserLocation();
-
   }
 
-  componentWillUpdate(nextProps) {
-    if ( this.props.competitions.length !== nextProps.competitions.length) {
-      const { activeUser, competitions } =  nextProps;
-      loadUserComps(activeUser, competitions);
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.liveUser &&
+      (this.props.competitions.length !== nextProps.competitions.length)) {
+      this.props.loadUserComps(this.props.activeUser, nextProps.competitions);
     }
+    return true;
   }
 
   render() {
+    let displayComps;
+    if (this.props.location.pathname === '/my-competitions') {
+      this.props.competitions ?
+        displayComps = this.props.activeUser.competitions :
+        displayComps = [];
+    }
+    if (this.props.location.pathname === '/all-competitions') {
+      displayComps = this.props.competitions;
+    }
+
     return (
       <div className="Main">
         <div className="nav-tabs">
@@ -44,22 +54,12 @@ export class Main extends Component {
             </h2>
           </NavLink>
         </div>
-        { this.props.location.pathname === '/my-competitions' &&
-         this.props.liveUser ?
-          <EventDirectory
-            competitions={this.props.activeUser.competitions}
-            liveUser={this.props.liveUser}
-            activePopup={this.props.activePopup}
-            userCompetitions={this.props.userCompetitions}
-            activeUser={this.props.activeUser}/>
-          :
-          <EventDirectory
-            competitions={this.props.competitions}
-            liveUser={this.props.liveUser}
-            activePopup={this.props.activePopup}
-            userCompetitions={this.props.userCompetitions}
-            activeUser={this.props.activeUser}/>
-        }
+        <EventDirectory
+          competitions={displayComps}
+          liveUser={this.props.liveUser}
+          activePopup={this.props.activePopup}
+          userCompetitions={this.props.userCompetitions}
+          activeUser={this.props.activeUser}/>
       </div>
     );
   }
@@ -72,6 +72,7 @@ Main.propTypes = {
   activePopup: PropTypes.func,
   userCompetitions: PropTypes.func,
   getUserLocation: PropTypes.func,
+  loadUserComps: PropTypes.func,
   activeUser: PropTypes.object,
   location: PropTypes.object
 };
@@ -89,7 +90,10 @@ const mapDispatchToProps = (dispatch) => {
     userCompetitions: (comp, activeUser) => {
       dispatch(joinComp(comp, activeUser));
     },
-    getUserLocation: () => { dispatch(locationDefaults()); }
+    getUserLocation: () => { dispatch(locationDefaults()); },
+    loadUserComps: (activeUser, competitions) => {
+      dispatch(loadUserComps(activeUser, competitions));
+    }
   };
 };
 
