@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { submitComp, activePopup, parkSearch } from './eventCreatorActions';
-import { mapDimensions, defaultUserFormState, joinComp } from '../utilities/userEventsHelper';
+import { mapDimensions, defaultUserFormState,
+  joinComp } from '../utilities/userEventsHelper';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
 import PropTypes from 'prop-types';

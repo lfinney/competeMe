@@ -41,27 +41,31 @@ export class Header extends Component {
   }
 
   render () {
+    let displayText;
+    this.props.liveUser ?
+      displayText =  <div className="header-text">
+        <div>
+          <h2>Ready to get your game on, {this.props.user.displayName}?</h2>
+          <p>Sign-in to join or create a game below.</p>
+        </div>
+        <button onClick={this.logout}>Log Out</button>
+      </div> :
+      displayText = <div className="header-text">
+        <h2>
+        Sign-in using Google to join the competitions!
+        </h2>
+        <button onClick={this.login}>Log In</button>
+      </div>;
+
     return (
       <div className="Header">
         <h1>CompeteMe</h1>
-        {this.props.liveUser ?
-          <div className="headerPrompt">
-            <div className="welcome-message">
-              <h2>Ready to get your game on, {this.props.user.displayName}?</h2>
-              <p>Sign-in to join or create a game below.</p>
-            </div>
-            <button onClick={this.logout}>Log Out</button>
-          </div>
-          :
-          <div className="headerPrompt">
-            <h2 className="welcome-message">
-              Sign-in using Google to join the competitions!
-            </h2>
-            <button onClick={this.login}>Log In</button>
-          </div>
-        }
+        <div className="welcome-message">
+          {displayText}
+        </div>
         {
-          this.props.activePopup && <Popup />        }
+          this.props.activePopup && <Popup />
+        }
       </div>
     );
   }
