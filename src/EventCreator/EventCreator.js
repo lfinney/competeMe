@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { submitComp, activePopup, parkSearch } from './eventCreatorActions';
-import { defaultUserFormState, joinComp } from '../utilities/userEventsHelper';
+import { mapDimensions, defaultUserFormState, joinComp } from '../utilities/userEventsHelper';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
 import PropTypes from 'prop-types';
@@ -55,7 +55,7 @@ export class EventCreator extends Component {
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     fetch(
       `${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/` +
-      `json?location=39.7508,-104.9966&radius=200&type=park` +
+      `json?location=39.7508,-104.9966&radius=1000&type=park` +
       `&keyword=${userSearch}&key=${apiKey.placesApi}`)
       .then(res => res.json()).then(parkData => {
         this.props.parkSearch(parkData.results);
@@ -166,7 +166,7 @@ export class EventCreator extends Component {
           <div className="selected-park">
             {this.state.pickedPark.length < 1 ?
               <div className="park-name">
-                no park selected yet
+                <h3 className="italitcs">no park selected yet</h3>
               </div>
               :
               <div className="park-name">
@@ -181,14 +181,13 @@ export class EventCreator extends Component {
                 apiKey.placesApi}&parks=places&callback=initMap`}
               nearbyParks={this.props.nearbyParks}
               loadingElement={
-                <div style={{ height: '300px', width: '300px'}} />
+                <div style={mapDimensions} />
               }
               containerElement={
-                <div style={{ height: '300px', width: '300px'}} />
+                <div style={mapDimensions} />
               }
               mapElement={
-                <div style={{ height: '300px', width: '300px'}}
-                />
+                <div style={mapDimensions} />
               }
             />
           </div>

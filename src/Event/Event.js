@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { handleSubmit } from '../utilities/userEventsHelper';
+import { mapDimensions, handleSubmit } from '../utilities/userEventsHelper';
 import Map from '../Map/Map';
 import apiKey from '../apiKeys';
+
 const dateFormat = require('dateformat');
 const convertTime = require('convert-time');
 
@@ -31,14 +32,13 @@ const Event = ({ comp, liveUser, activePopup,
               apiKey.placesApi}&parks=places&callback=initMap`}
             nearbyParks={comp.pickedPark}
             loadingElement={
-              <div style={{ height: '300px', width: '300px'}} />
+              <div style={mapDimensions} />
             }
             containerElement={
-              <div style={{ height: '300px', width: '300px'}} />
+              <div style={mapDimensions} />
             }
             mapElement={
-              <div style={{ height: '300px', width: '300px'}}
-              />
+              <div style={mapDimensions} />
             }
           />
         </div>

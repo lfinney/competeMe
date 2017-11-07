@@ -21,12 +21,12 @@ ShallowWrapper {
         className="EventCreator"
 >
         <h2
-                className="formTitle"
+                className="title"
         >
                 Create New Competition
         </h2>
         <input
-                className="text-input compName"
+                className="textInput compName"
                 onChange={[Function]}
                 placeholder="Competition Name"
                 type="text"
@@ -59,7 +59,7 @@ ShallowWrapper {
                 </option>
         </select>
         <input
-                className="text-input players"
+                className="textInput players"
                 onChange={[Function]}
                 pattern="\\\\d*"
                 placeholder="# Players Needed"
@@ -118,12 +118,14 @@ ShallowWrapper {
                 </span>
                 <br />
         </form>
-        <form>
-                <h3
-                        className="formTitle"
-                >
-                        Event Date and Time
-                </h3>
+        <h3
+                className="formTitle"
+        >
+                Event Date and Time
+        </h3>
+        <form
+                className="date-time"
+        >
                 <input
                         className="date-input"
                         name="date"
@@ -140,8 +142,8 @@ ShallowWrapper {
                         value="15:00"
                 />
         </form>
-        <input
-                className="textInput"
+        <textarea
+                className="textInput textarea"
                 cols="40"
                 onChange={[Function]}
                 placeholder="Other details competitors should know about..."
@@ -174,8 +176,8 @@ ShallowWrapper {
                                 <div
                                         style={
                                                 Object {
-                                                        "height": "200px",
-                                                        "width": "200px",
+                                                        "height": "300px",
+                                                        "width": "300px",
                                                       }
                                         }
                                 />
@@ -185,8 +187,8 @@ ShallowWrapper {
                                 <div
                                         style={
                                                 Object {
-                                                        "height": "200px",
-                                                        "width": "200px",
+                                                        "height": "300px",
+                                                        "width": "300px",
                                                       }
                                         }
                                 />
@@ -195,8 +197,8 @@ ShallowWrapper {
                                 <div
                                         style={
                                                 Object {
-                                                        "height": "200px",
-                                                        "width": "200px",
+                                                        "height": "300px",
+                                                        "width": "300px",
                                                       }
                                         }
                                 />
@@ -220,12 +222,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h2
-            className="formTitle"
+            className="title"
 >
             Create New Competition
 </h2>,
           <input
-            className="text-input compName"
+            className="textInput compName"
             onChange={[Function]}
             placeholder="Competition Name"
             type="text"
@@ -258,7 +260,7 @@ ShallowWrapper {
             </option>
 </select>,
           <input
-            className="text-input players"
+            className="textInput players"
             onChange={[Function]}
             pattern="\\\\d*"
             placeholder="# Players Needed"
@@ -317,12 +319,14 @@ ShallowWrapper {
             </span>
             <br />
 </form>,
-          <form>
-            <h3
-                        className="formTitle"
-            >
-                        Event Date and Time
-            </h3>
+          <h3
+            className="formTitle"
+>
+            Event Date and Time
+</h3>,
+          <form
+            className="date-time"
+>
             <input
                         className="date-input"
                         name="date"
@@ -339,8 +343,8 @@ ShallowWrapper {
                         value="15:00"
             />
 </form>,
-          <input
-            className="textInput"
+          <textarea
+            className="textInput textarea"
             cols="40"
             onChange={[Function]}
             placeholder="Other details competitors should know about..."
@@ -373,8 +377,8 @@ ShallowWrapper {
                                     <div
                                                 style={
                                                             Object {
-                                                                        "height": "200px",
-                                                                        "width": "200px",
+                                                                        "height": "300px",
+                                                                        "width": "300px",
                                                                       }
                                                 }
                                     />
@@ -384,8 +388,8 @@ ShallowWrapper {
                                     <div
                                                 style={
                                                             Object {
-                                                                        "height": "200px",
-                                                                        "width": "200px",
+                                                                        "height": "300px",
+                                                                        "width": "300px",
                                                                       }
                                                 }
                                     />
@@ -394,8 +398,8 @@ ShallowWrapper {
                                     <div
                                                 style={
                                                             Object {
-                                                                        "height": "200px",
-                                                                        "width": "200px",
+                                                                        "height": "300px",
+                                                                        "width": "300px",
                                                                       }
                                                 }
                                     />
@@ -420,7 +424,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Create New Competition",
-            "className": "formTitle",
+            "className": "title",
           },
           "ref": null,
           "rendered": "Create New Competition",
@@ -431,7 +435,7 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "className": "text-input compName",
+            "className": "textInput compName",
             "onChange": [Function],
             "placeholder": "Competition Name",
             "type": "text",
@@ -530,7 +534,7 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "className": "text-input players",
+            "className": "textInput players",
             "onChange": [Function],
             "pattern": "\\\\d*",
             "placeholder": "# Players Needed",
@@ -726,12 +730,19 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
+            "children": "Event Date and Time",
+            "className": "formTitle",
+          },
+          "ref": null,
+          "rendered": "Event Date and Time",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
             "children": Array [
-              <h3
-                className="formTitle"
->
-                Event Date and Time
-</h3>,
               <input
                 className="date-input"
                 name="date"
@@ -748,21 +759,10 @@ ShallowWrapper {
                 value="15:00"
 />,
             ],
+            "className": "date-time",
           },
           "ref": null,
           "rendered": Array [
-            Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Event Date and Time",
-                "className": "formTitle",
-              },
-              "ref": null,
-              "rendered": "Event Date and Time",
-              "type": "h3",
-            },
             Object {
               "instance": null,
               "key": null,
@@ -802,7 +802,7 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "className": "textInput",
+            "className": "textInput textarea",
             "cols": "40",
             "onChange": [Function],
             "placeholder": "Other details competitors should know about...",
@@ -812,7 +812,7 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": null,
-          "type": "input",
+          "type": "textarea",
         },
         Object {
           "instance": null,
@@ -863,8 +863,8 @@ ShallowWrapper {
                             <div
                                           style={
                                                         Object {
-                                                                      "height": "200px",
-                                                                      "width": "200px",
+                                                                      "height": "300px",
+                                                                      "width": "300px",
                                                                     }
                                           }
                             />
@@ -874,8 +874,8 @@ ShallowWrapper {
                             <div
                                           style={
                                                         Object {
-                                                                      "height": "200px",
-                                                                      "width": "200px",
+                                                                      "height": "300px",
+                                                                      "width": "300px",
                                                                     }
                                           }
                             />
@@ -884,8 +884,8 @@ ShallowWrapper {
                             <div
                                           style={
                                                         Object {
-                                                                      "height": "200px",
-                                                                      "width": "200px",
+                                                                      "height": "300px",
+                                                                      "width": "300px",
                                                                     }
                                           }
                             />
@@ -904,8 +904,8 @@ ShallowWrapper {
               "containerElement": <div
                 style={
                                 Object {
-                                                "height": "200px",
-                                                "width": "200px",
+                                                "height": "300px",
+                                                "width": "300px",
                                               }
                 }
 />,
@@ -913,16 +913,16 @@ ShallowWrapper {
               "loadingElement": <div
                 style={
                                 Object {
-                                                "height": "200px",
-                                                "width": "200px",
+                                                "height": "300px",
+                                                "width": "300px",
                                               }
                 }
 />,
               "mapElement": <div
                 style={
                                 Object {
-                                                "height": "200px",
-                                                "width": "200px",
+                                                "height": "300px",
+                                                "width": "300px",
                                               }
                 }
 />,
@@ -962,12 +962,12 @@ ShallowWrapper {
           className="EventCreator"
 >
           <h2
-                    className="formTitle"
+                    className="title"
           >
                     Create New Competition
           </h2>
           <input
-                    className="text-input compName"
+                    className="textInput compName"
                     onChange={[Function]}
                     placeholder="Competition Name"
                     type="text"
@@ -1000,7 +1000,7 @@ ShallowWrapper {
                     </option>
           </select>
           <input
-                    className="text-input players"
+                    className="textInput players"
                     onChange={[Function]}
                     pattern="\\\\d*"
                     placeholder="# Players Needed"
@@ -1059,12 +1059,14 @@ ShallowWrapper {
                     </span>
                     <br />
           </form>
-          <form>
-                    <h3
-                              className="formTitle"
-                    >
-                              Event Date and Time
-                    </h3>
+          <h3
+                    className="formTitle"
+          >
+                    Event Date and Time
+          </h3>
+          <form
+                    className="date-time"
+          >
                     <input
                               className="date-input"
                               name="date"
@@ -1081,8 +1083,8 @@ ShallowWrapper {
                               value="15:00"
                     />
           </form>
-          <input
-                    className="textInput"
+          <textarea
+                    className="textInput textarea"
                     cols="40"
                     onChange={[Function]}
                     placeholder="Other details competitors should know about..."
@@ -1115,8 +1117,8 @@ ShallowWrapper {
                                         <div
                                                   style={
                                                             Object {
-                                                                      "height": "200px",
-                                                                      "width": "200px",
+                                                                      "height": "300px",
+                                                                      "width": "300px",
                                                                     }
                                                   }
                                         />
@@ -1126,8 +1128,8 @@ ShallowWrapper {
                                         <div
                                                   style={
                                                             Object {
-                                                                      "height": "200px",
-                                                                      "width": "200px",
+                                                                      "height": "300px",
+                                                                      "width": "300px",
                                                                     }
                                                   }
                                         />
@@ -1136,8 +1138,8 @@ ShallowWrapper {
                                         <div
                                                   style={
                                                             Object {
-                                                                      "height": "200px",
-                                                                      "width": "200px",
+                                                                      "height": "300px",
+                                                                      "width": "300px",
                                                                     }
                                                   }
                                         />
@@ -1161,12 +1163,12 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h2
-              className="formTitle"
+              className="title"
 >
               Create New Competition
 </h2>,
             <input
-              className="text-input compName"
+              className="textInput compName"
               onChange={[Function]}
               placeholder="Competition Name"
               type="text"
@@ -1199,7 +1201,7 @@ ShallowWrapper {
               </option>
 </select>,
             <input
-              className="text-input players"
+              className="textInput players"
               onChange={[Function]}
               pattern="\\\\d*"
               placeholder="# Players Needed"
@@ -1258,12 +1260,14 @@ ShallowWrapper {
               </span>
               <br />
 </form>,
-            <form>
-              <h3
-                            className="formTitle"
-              >
-                            Event Date and Time
-              </h3>
+            <h3
+              className="formTitle"
+>
+              Event Date and Time
+</h3>,
+            <form
+              className="date-time"
+>
               <input
                             className="date-input"
                             name="date"
@@ -1280,8 +1284,8 @@ ShallowWrapper {
                             value="15:00"
               />
 </form>,
-            <input
-              className="textInput"
+            <textarea
+              className="textInput textarea"
               cols="40"
               onChange={[Function]}
               placeholder="Other details competitors should know about..."
@@ -1314,8 +1318,8 @@ ShallowWrapper {
                                           <div
                                                         style={
                                                                       Object {
-                                                                                    "height": "200px",
-                                                                                    "width": "200px",
+                                                                                    "height": "300px",
+                                                                                    "width": "300px",
                                                                                   }
                                                         }
                                           />
@@ -1325,8 +1329,8 @@ ShallowWrapper {
                                           <div
                                                         style={
                                                                       Object {
-                                                                                    "height": "200px",
-                                                                                    "width": "200px",
+                                                                                    "height": "300px",
+                                                                                    "width": "300px",
                                                                                   }
                                                         }
                                           />
@@ -1335,8 +1339,8 @@ ShallowWrapper {
                                           <div
                                                         style={
                                                                       Object {
-                                                                                    "height": "200px",
-                                                                                    "width": "200px",
+                                                                                    "height": "300px",
+                                                                                    "width": "300px",
                                                                                   }
                                                         }
                                           />
@@ -1361,7 +1365,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Create New Competition",
-              "className": "formTitle",
+              "className": "title",
             },
             "ref": null,
             "rendered": "Create New Competition",
@@ -1372,7 +1376,7 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "className": "text-input compName",
+              "className": "textInput compName",
               "onChange": [Function],
               "placeholder": "Competition Name",
               "type": "text",
@@ -1471,7 +1475,7 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "className": "text-input players",
+              "className": "textInput players",
               "onChange": [Function],
               "pattern": "\\\\d*",
               "placeholder": "# Players Needed",
@@ -1667,12 +1671,19 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
+              "children": "Event Date and Time",
+              "className": "formTitle",
+            },
+            "ref": null,
+            "rendered": "Event Date and Time",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
               "children": Array [
-                <h3
-                  className="formTitle"
->
-                  Event Date and Time
-</h3>,
                 <input
                   className="date-input"
                   name="date"
@@ -1689,21 +1700,10 @@ ShallowWrapper {
                   value="15:00"
 />,
               ],
+              "className": "date-time",
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Event Date and Time",
-                  "className": "formTitle",
-                },
-                "ref": null,
-                "rendered": "Event Date and Time",
-                "type": "h3",
-              },
               Object {
                 "instance": null,
                 "key": null,
@@ -1743,7 +1743,7 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "className": "textInput",
+              "className": "textInput textarea",
               "cols": "40",
               "onChange": [Function],
               "placeholder": "Other details competitors should know about...",
@@ -1753,7 +1753,7 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": null,
-            "type": "input",
+            "type": "textarea",
           },
           Object {
             "instance": null,
@@ -1804,8 +1804,8 @@ ShallowWrapper {
                                 <div
                                                 style={
                                                                 Object {
-                                                                                "height": "200px",
-                                                                                "width": "200px",
+                                                                                "height": "300px",
+                                                                                "width": "300px",
                                                                               }
                                                 }
                                 />
@@ -1815,8 +1815,8 @@ ShallowWrapper {
                                 <div
                                                 style={
                                                                 Object {
-                                                                                "height": "200px",
-                                                                                "width": "200px",
+                                                                                "height": "300px",
+                                                                                "width": "300px",
                                                                               }
                                                 }
                                 />
@@ -1825,8 +1825,8 @@ ShallowWrapper {
                                 <div
                                                 style={
                                                                 Object {
-                                                                                "height": "200px",
-                                                                                "width": "200px",
+                                                                                "height": "300px",
+                                                                                "width": "300px",
                                                                               }
                                                 }
                                 />
@@ -1845,8 +1845,8 @@ ShallowWrapper {
                 "containerElement": <div
                   style={
                                     Object {
-                                                      "height": "200px",
-                                                      "width": "200px",
+                                                      "height": "300px",
+                                                      "width": "300px",
                                                     }
                   }
 />,
@@ -1854,16 +1854,16 @@ ShallowWrapper {
                 "loadingElement": <div
                   style={
                                     Object {
-                                                      "height": "200px",
-                                                      "width": "200px",
+                                                      "height": "300px",
+                                                      "width": "300px",
                                                     }
                   }
 />,
                 "mapElement": <div
                   style={
                                     Object {
-                                                      "height": "200px",
-                                                      "width": "200px",
+                                                      "height": "300px",
+                                                      "width": "300px",
                                                     }
                   }
 />,

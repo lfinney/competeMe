@@ -37,3 +37,5 @@ export const defaultUserFormState = {
   creator: '',
   activePlayers: null
 };
+
+export const mapDimensions = { height: '300px', width: '300px'};

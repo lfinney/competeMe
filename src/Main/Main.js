@@ -24,6 +24,12 @@ export class Main extends Component {
   }
 
   render() {
+    let displayComps;
+    this.props.location.pathname === '/my-competitions' &&
+    this.props.liveUser ?
+      displayComps = this.props.activeUser.competitions :
+      displayComps = this.props.competitions;
+
     return (
       <div className="Main">
         <div className="nav-tabs">
@@ -44,22 +50,12 @@ export class Main extends Component {
             </h2>
           </NavLink>
         </div>
-        { this.props.location.pathname === '/my-competitions' &&
-         this.props.liveUser ?
-          <EventDirectory
-            competitions={this.props.activeUser.competitions}
-            liveUser={this.props.liveUser}
-            activePopup={this.props.activePopup}
-            userCompetitions={this.props.userCompetitions}
-            activeUser={this.props.activeUser}/>
-          :
-          <EventDirectory
-            competitions={this.props.competitions}
-            liveUser={this.props.liveUser}
-            activePopup={this.props.activePopup}
-            userCompetitions={this.props.userCompetitions}
-            activeUser={this.props.activeUser}/>
-        }
+        <EventDirectory
+          competitions={displayComps}
+          liveUser={this.props.liveUser}
+          activePopup={this.props.activePopup}
+          userCompetitions={this.props.userCompetitions}
+          activeUser={this.props.activeUser}/>
       </div>
     );
   }

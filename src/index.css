@@ -186,6 +186,9 @@
   margin: 0;
   color: #f6ae2d; }
 
+.EventCreator .italitcs {
+  font-style: italic; }
+
 .EventCreator .map {
   width: 200px;
   height: 200px; }
