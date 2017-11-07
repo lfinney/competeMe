@@ -13,22 +13,32 @@ export class Main extends Component {
   componentDidMount() {
     this.props.fetchFromFirebase();
     this.props.getUserLocation();
-
   }
 
-  componentWillUpdate(nextProps) {
-    if ( this.props.activeUser  && (this.props.competitions.length !== nextProps.competitions.length)) {
-      const { activeUser, competitions } =  nextProps;
-      this.props.loadUserComps(activeUser, competitions);
+  componentWillReceiveProps(nextProps) {
+    if (this.props.activeUser && (this.props.competitions.length !== nextProps.competitions.length)) {
+      this.props.loadUserComps(this.props.activeUser, nextProps.competitions);
     }
   }
+  //
+  // checkForCompetitions() {
+  //   if (this.props.activeUser) {
+  //     console.log(this.props.competitions);
+  //
+  //     this.props.loadUserComps(this.props.activeUser, nextProps.competitions);
+  //   }
+  // }
 
   render() {
     let displayComps;
-    this.props.location.pathname === '/my-competitions' &&
-    this.props.liveUser ?
+    if (this.props.location.pathname === '/my-competitions') {
+      this.props.competitions ?
       displayComps = this.props.activeUser.competitions :
+      displayComps = [];
+    }
+    if (this.props.location.pathname === '/all-competitions') {
       displayComps = this.props.competitions;
+    }
 
     return (
       <div className="Main">
