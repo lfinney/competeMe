@@ -1,13 +1,6 @@
 import { userCompetitions } from '../Header/headerActions';
 import { userLocation } from '../Main/mainActions';
 
-export const handleSubmit = (liveUser, activePopup) => {
-  if (!liveUser) {
-    activePopup(true);
-    return;
-  }
-};
-
 export const joinComp = (comp, activeUser) => {
   let newComps = activeUser.competitions.includes(comp) ?
     activeUser.competitions.filter( item => item.id !== comp.id) :

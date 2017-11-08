@@ -45,10 +45,7 @@ const Event = ({ comp, liveUser, activePopup,
         <div className="button-container">
           <button
             onClick={ () => {
-              handleSubmit(liveUser, activePopup);
-              if (liveUser) {
-                userCompetitions(comp, activeUser);
-              }
+              liveUser ? userCompetitions(comp, activeUser) : activePopup(true);
             }}>
             Count Me In!
           </button>
