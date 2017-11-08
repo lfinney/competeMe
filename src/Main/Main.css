@@ -18,7 +18,10 @@
   box-shadow: 8px 8px 0px 1px rgba(26, 26, 26, 0.4);
   border: solid 2px #1a1a1a;
   width: 30%;
-  min-width: 325px; }
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .Main .display-link:hover {
     background-color: #4573ae;
     text-shadow: 2px 2px 3px #1a1a1a; }

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { activeUser } from './headerActions';
 import PropTypes from 'prop-types';
-import { auth, provider } from '../firebase.js';
+import firebase, { auth, provider } from '../firebase.js';
+import { userLogin } from '../utilities/firebaseHelper.js';
 import Popup from '../Popup/Popup';
 
 export class Header extends Component {

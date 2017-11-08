@@ -4,7 +4,6 @@
   display: inline-block;
   grid-area: right;
   width: 90%;
-  min-width: 450px;
   background-color: $gray-black;
   border-radius: $border-radius;
   margin: 20px auto;
@@ -19,13 +18,13 @@
 .EventCreator .title {
   color: $secondary-one;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .EventCreator .formTitle{
   color: $secondary-one;
-  font-size: 1.5em;
-  margin: 25px 0 5px 0;
+  font-size: 1.4em;
+  margin: 15px 0 5px 0;
 }
 
 .EventCreator .radioButtons {
@@ -36,7 +35,7 @@
     "rad1 text1"
     "rad2 text2"
     "rad3 text3";
-  // height: 60px;
+  height: 60px;
   margin-bottom: 15px;
 }
 
@@ -54,7 +53,7 @@
 
 .text1, .text2, .text3 {
   margin-right: auto;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: $primary-two-accent;
 
 }
@@ -75,8 +74,8 @@
   width: 80%;
   margin: 10px;
   padding-left: 5px;
-  height: 30px;
-  font-size: 1.2em;
+  height: 25px;
+  font-size: 1.1em;
   border-radius: $border-radius;
   border: none;
   background-color: $primary-two-accent;
@@ -99,10 +98,10 @@
 
 .EventCreator .date-input, .time-input {
   width: 48%;
-  height: 30px;
+  height: 25px;
   margin: 5px 0;
   border-radius: $border-radius;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding-left: 5px;
   background-color: $primary-two-accent;
   border: none;
@@ -110,7 +109,7 @@
 
 .EventCreator .selected-park {
   width: 100%;
-  height: 30px;
+  height: 25px;
 }
 
 .EventCreator .park-name h3 {

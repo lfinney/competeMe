@@ -6,8 +6,8 @@
   margin: 20px auto;
   box-shadow: $shadow;
   border: $border;
-  width: 75%;
-  min-width: 750px;
+  width: 100%;
+  min-width: 600px;
 }
 
 .Event h3, h4, p {
@@ -16,11 +16,11 @@
 
 .Event .title {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .Event .type, .date-time, .players {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .Event .short-des {
@@ -29,7 +29,7 @@
 
 .Event .event-info {
   display: grid;
-  grid-template-columns: auto 350px 250px;
+  grid-template-columns: auto 275px 100px;
   grid-template-areas: "info map button"
 }
 
@@ -59,9 +59,9 @@
 }
 
 .Event .park-map {
-  width: 350px;
+  width: 275px;
   height: 100%;
-  margin: 0 25px 25px 25px;
+  margin-bottom: 25px;
   grid-area: map;
   display: flex;
   justify-content: center;
@@ -71,8 +71,8 @@
 }
 
 .Event button {
-  width: 150px;
-  height: 100px;
+  width: 80%;
+  height: 50px;
   grid-area: button;
   border: none;
   background-color: $secondary-one;
@@ -84,7 +84,7 @@
       color: $secondary-one;
     }
   border-radius: $border-radius;
-  font-size: 1em;
+  font-size: .8em;
   font-weight: bold;
   border: $border;
 }

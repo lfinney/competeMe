@@ -1,7 +1,7 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap,
   GoogleMap, Marker } from 'react-google-maps';
-// import Label from '../Label/Label';
+import { defaultMapPlacement } from '../utilities/userEventsHelper';
 
 const Map = withScriptjs(withGoogleMap(({ nearbyParks, pickPark }) => {
 
@@ -25,7 +25,6 @@ const Map = withScriptjs(withGoogleMap(({ nearbyParks, pickPark }) => {
         position={{
           lat:parkObject.lat, lng:parkObject.lng}}
         onClick={() => pickPark(parkObject)}>
-        {/* <Label parkName={parkObject.name}/> */}
       </Marker>
     );
   });
@@ -34,14 +33,14 @@ const Map = withScriptjs(withGoogleMap(({ nearbyParks, pickPark }) => {
   const mapSearch = <GoogleMap
     className="Map"
     defaultZoom={12}
-    defaultCenter={{ lat:39.7508006, lng:-104.9965947 }}>
+    defaultCenter={defaultMapPlacement}>
     {markers}
   </GoogleMap>;
 
   const eventMap = <GoogleMap
     className="Map"
     defaultZoom={12}
-    defaultCenter={{ lat:39.7508006, lng:-104.9965947 }}>
+    defaultCenter={defaultMapPlacement}>
     {markers}
   </GoogleMap>;
 
