@@ -1,7 +1,7 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap,
   GoogleMap, Marker } from 'react-google-maps';
-import { defaultMapPlacement } from '.../utilities/userEventsHelper';
+import { defaultMapPlacement } from '../utilities/userEventsHelper';
 
 const Map = withScriptjs(withGoogleMap(({ nearbyParks, pickPark }) => {
 

@@ -1,6 +1,6 @@
 import { postToStore} from '../Main/mainActions';
 import { updateUserComps } from '../Header/headerActions';
-import firebase from '../firebase.js';
+import firebase, { auth, provider } from '../firebase.js';
 
 export const fetchFromFirebase = () => {
   return (dispatch) => {
@@ -22,8 +22,19 @@ export const loadUserComps = (activeUser, activeCompetitions) => {
     });
     dispatch(updateUserComps(joinedCompetitions, activeUser));
   };
-  // joinedCompetitions create a new action/reducer that will simply take this
-  // array and populate into the activeUsers's competitions array as soon as
-  // they clcik the button to go to that path. The function should only fire if
-  // the activeUsers competions array is currently empty
 };
+
+// export const userLogin = firebase => {
+//   auth.signInWithPopup(provider)
+//     .then((result) => result = result.user)
+//     .then((userData) => cleanUserData(userData));
+// };
+//
+// const cleanUserData = user => {
+//   return {
+//     userId: user.uid,
+//     displayName: user.displayName.split(' ')[0],
+//     email: user.email,
+//     competitions: []
+//   };
+// };

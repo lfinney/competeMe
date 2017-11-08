@@ -53,7 +53,7 @@ export class EventCreator extends Component {
   }
 
   getLocation(userSearch) {
-    const proxy = 'https://cors-anywhere.herokuapp.com/';
+    const proxy = 'https://galvanize-cors-proxy.herokuapp.com/';
     fetch(
       `${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/` +
       `json?location=39.7508,-104.9966&radius=1000&type=park` +

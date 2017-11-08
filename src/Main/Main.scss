@@ -26,7 +26,10 @@
   box-shadow: $shadow;
   border: $border;
   width: 30%;
-  min-width: 325px;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 

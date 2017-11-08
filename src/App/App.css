@@ -4,7 +4,7 @@
   background-color: #6a9143;
   display: grid;
   grid-template-rows: 120px auto;
-  grid-template-columns: auto 650px;
+  grid-template-columns: 60% minmax(425px, 40%);
   grid-template-areas: "top top" "left right";
   height: 100vh;
   overflow: scroll; }

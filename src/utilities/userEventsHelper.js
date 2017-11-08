@@ -38,5 +38,5 @@ export const defaultUserFormState = {
   activePlayers: null
 };
 
-export const mapDimensions = { height: '300px', width: '300px'};
+export const mapDimensions = { height: '250px', width: '250px'};
 export const defaultMapPlacement = { lat:39.7508006, lng:-104.9965947 };
