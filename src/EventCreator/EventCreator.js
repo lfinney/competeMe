@@ -48,7 +48,20 @@ export class EventCreator extends Component {
 
     compsRef.push(competition);
     this.props.submitComp(competition);
-    this.setState({ defaultUserFormState });
+    this.setState({
+      compName: defaultUserFormState.compName,
+      sport: defaultUserFormState.sport,
+      players: defaultUserFormState.players,
+      competitiveness: defaultUserFormState.competitiveness,
+      date: defaultUserFormState.date,
+      time: defaultUserFormState.time,
+      details: defaultUserFormState.details,
+      location: defaultUserFormState.location,
+      creator: defaultUserFormState.creator,
+      activePlayers: defaultUserFormState.activePlayers,
+      pickedPark: [],
+      nearbyParks: []
+    });
     this.props.userCompetitions(competition, this.props.activeUser);
   }
 
@@ -56,10 +69,9 @@ export class EventCreator extends Component {
     const proxy = 'https://galvanize-cors-proxy.herokuapp.com/';
     fetch(
       `${proxy}https://maps.googleapis.com/maps/api/place/nearbysearch/` +
-      `json?location=39.7508,-104.9966&radius=1000&type=park` +
+      `json?location=39.7508,-104.9966&radius=2000&type=park` +
       `&keyword=${userSearch}&key=${apiKey.placesApi}`)
       .then(res => res.json()).then(parkData => {
-        console.log(parkData);
         this.props.parkSearch(parkData.results);
         this.setState({nearbyParks: parkData.results});
       });

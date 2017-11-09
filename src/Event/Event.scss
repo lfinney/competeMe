@@ -1,39 +1,57 @@
 @import '../variables.scss';
 
 .Event {
-  background-color: $primary-accent;
+  background: $primary-accent;
+  background: -moz-linear-gradient(top, $primary-accent 0%, $primary-two 100%);
+  background: -webkit-linear-gradient(top, $primary-accent 0%, $primary-two 100%);
+  background: linear-gradient(to bottom, $primary-accent 0%, $primary-two 100%);
   border-radius: $border-radius;
   margin: 20px auto;
   box-shadow: $shadow;
   border: $border;
   width: 100%;
   min-width: 600px;
+  color: $black;
 }
 
-.Event h3, h4, p {
+.userEvent {
+  background: $black;
+  background: -moz-linear-gradient(top, $secondary-two 0%, $primary-one 100%);
+  background: -webkit-linear-gradient(top, $secondary-two 0%, $primary-one 100%);
+  background: linear-gradient(to bottom, $secondary-two 0%, $primary-one 100%);
+  border-radius: $border-radius;
+  margin: 20px auto;
+  box-shadow: $shadow;
+  border: $border;
+  width: 100%;
+  min-width: 600px;
+  color: $black;
+}
+
+.h3, h4, p {
   margin: 10px 0;
 }
 
-.Event .title {
+.title {
   font-weight: bold;
   font-size: 1.8em;
 }
 
-.Event .type, .date-time, .players {
+.type, .date-time, .players {
   font-size: 1.2em;
 }
 
-.Event .short-des {
+.short-des {
   font-style: italic;
 }
 
-.Event .event-info {
+.event-info {
   display: grid;
   grid-template-columns: auto 275px 100px;
   grid-template-areas: "info map button"
 }
 
-.Event .park {
+.park {
   font-size: 1.2em;
   font-weight: bold;
   display: inline-block;
@@ -41,7 +59,7 @@
   padding: 5px;
 }
 
-.Event .event-text-details {
+.event-text-details {
   grid-area: info;
   display: flex;
   flex-direction: column;
@@ -50,7 +68,7 @@
   margin: 20px;
 }
 
-.Event .logisitics {
+.logisitics {
   border: none;
   display: flex;
   justify-content: center;
@@ -58,7 +76,7 @@
   align-content: center;
 }
 
-.Event .park-map {
+.park-map {
   width: 275px;
   height: 100%;
   margin-bottom: 25px;
@@ -70,14 +88,21 @@
   z-index: 0;
 }
 
-.Event button {
+button {
   width: 80%;
   height: 50px;
+  margin-right: auto;
   grid-area: button;
   border: none;
-  background-color: $secondary-one;
+  background: $secondary-one;
+  background: -moz-linear-gradient(top, $primary-two-accent 0%, $secondary-one 100%);
+  background: -webkit-linear-gradient(top, $primary-two-accent 0%, $secondary-one 100%);
+  background: linear-gradient(to bottom, $primary-two-accent 0%, $secondary-one 100%);
     &:hover {
-      background-color: $gray-black;
+      background: $black;
+      background: -moz-linear-gradient(top, $gray-black 0%, $black 100%);
+      background: -webkit-linear-gradient(top, $gray-black 0%, $black 100%);
+      background: linear-gradient(to bottom, $gray-black 0%, $black 100%);
     }
   color: $gray-black;
     &:hover {
@@ -89,7 +114,7 @@
   border: $border;
 }
 
-.Event .button-container {
+.button-container {
   display: flex;
   justify-content: center;
   align-items: center;

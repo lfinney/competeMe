@@ -9,8 +9,13 @@ const convertTime = require('convert-time');
 
 const Event = ({ comp, liveUser, activePopup,
   userCompetitions, activeUser }) => {
+  // let cardClass;
+  // comp.activePlayers.includes(activeUser.userId) ?
+  //   cardClass = 'userEvent' :
+  //   cardClass = 'Event';
+
   return (
-    <div className="Event">
+    <div className='Event'>
       <div className="event-info">
         <div className="event-text-details">
           <h3 className="title">{comp.compName}</h3>

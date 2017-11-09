@@ -28,7 +28,9 @@ export const defaultUserFormState = {
   details: '',
   location: '',
   creator: '',
-  activePlayers: null
+  activePlayers: null,
+  pickedPark: [],
+  nearbyParks: []
 };
 
 export const mapDimensions = { height: '250px', width: '250px'};

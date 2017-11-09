@@ -19,7 +19,7 @@ const EventDirectory = ({ competitions, liveUser, activePopup,
     }) :
     compCatalogue = <div className="Event">
       <div className="event-text-details">
-          <h3 className="title">You have not joined any competitions yet.</h3>
+        <h3 className="title">You have not joined any competitions yet.</h3>
       </div>
     </div>;
 

@@ -60,6 +60,7 @@ export class Main extends Component {
           activePopup={this.props.activePopup}
           userCompetitions={this.props.userCompetitions}
           activeUser={this.props.activeUser}/>
+        <div className="credits">Icon <i>Sports balls</i> by Creative Mania from the Noun Project</div>
       </div>
     );
   }

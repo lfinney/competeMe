@@ -60,7 +60,10 @@ export class Header extends Component {
 
     return (
       <div className="Header">
-        <h1>CompeteMe</h1>
+        <h1>
+          {/* <img src="../assets/sportsballs-icon.svg" alt="collection of sports balls"/> */}
+          CompeteMe
+        </h1>
         <div className="welcome-message">
           {displayText}
         </div>

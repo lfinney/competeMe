@@ -18,9 +18,15 @@
   text-decoration: none;
   color: $secondary-one;
   text-shadow: 2px 2px 3px $black;
-  background-color: $gray-black;
+  background: $black;
+  background: -moz-linear-gradient(top, $gray-black 0%, $black 100%);
+  background: -webkit-linear-gradient(top, $gray-black 0%, $black 100%);
+  background: linear-gradient(to bottom, $gray-black 0%, $black 100%);
   &:hover {
-    background-color: $primary-accent;
+    background: $primary-accent;
+    background: -moz-linear-gradient(top, $primary-accent 0%, $primary-two 100%);
+    background: -webkit-linear-gradient(top, $primary-accent 0%, $primary-two 100%);
+    background: linear-gradient(to bottom, $primary-accent 0%, $primary-two 100%);
     text-shadow: 2px 2px 3px $black;
   };
   box-shadow: $shadow;
@@ -38,6 +44,17 @@
 }
 
 .Main .selected {
-  background-color: $primary-accent;
+  background: $primary-accent;
+  background: -moz-linear-gradient(top, $primary-accent 0%, $primary-two 100%);
+  background: -webkit-linear-gradient(top, $primary-accent 0%, $primary-two 100%);
+  background: linear-gradient(to bottom, $primary-accent 0%, $primary-two 100%);
   text-shadow: 2px 2px 3px $black;
+}
+
+.Main .credits {
+  font-size: .1em;
+  color: $gray-white;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
 }

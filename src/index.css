@@ -10,40 +10,57 @@
   overflow: scroll; }
 
 .Event {
-  background-color: #4573ae;
+  background: #4573ae;
+  background: -moz-linear-gradient(top, #4573ae 0%, #41588a 100%);
+  background: -webkit-linear-gradient(top, #4573ae 0%, #41588a 100%);
+  background: linear-gradient(to bottom, #4573ae 0%, #41588a 100%);
   border-radius: 10px;
   margin: 20px auto;
   box-shadow: 8px 8px 0px 1px rgba(26, 26, 26, 0.4);
   border: solid 2px #1a1a1a;
   width: 100%;
-  min-width: 600px; }
+  min-width: 600px;
+  color: #1a1a1a; }
 
-.Event h3, h4, p {
+.userEvent {
+  background: #1a1a1a;
+  background: -moz-linear-gradient(top, #94bc7d 0%, #507739 100%);
+  background: -webkit-linear-gradient(top, #94bc7d 0%, #507739 100%);
+  background: linear-gradient(to bottom, #94bc7d 0%, #507739 100%);
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 8px 8px 0px 1px rgba(26, 26, 26, 0.4);
+  border: solid 2px #1a1a1a;
+  width: 100%;
+  min-width: 600px;
+  color: #1a1a1a; }
+
+.h3, h4, p {
   margin: 10px 0; }
 
-.Event .title {
+.title {
   font-weight: bold;
   font-size: 1.8em; }
 
-.Event .type, .date-time, .players {
+.type, .date-time, .players {
   font-size: 1.2em; }
 
-.Event .short-des {
+.short-des {
   font-style: italic; }
 
-.Event .event-info {
+.event-info {
   display: grid;
   grid-template-columns: auto 275px 100px;
   grid-template-areas: "info map button"; }
 
-.Event .park {
+.park {
   font-size: 1.2em;
   font-weight: bold;
   display: inline-block;
   width: 80%;
   padding: 5px; }
 
-.Event .event-text-details {
+.event-text-details {
   grid-area: info;
   display: flex;
   flex-direction: column;
@@ -51,14 +68,14 @@
   align-items: center;
   margin: 20px; }
 
-.Event .logisitics {
+.logisitics {
   border: none;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-content: center; }
 
-.Event .park-map {
+.park-map {
   width: 275px;
   height: 100%;
   margin-bottom: 25px;
@@ -69,23 +86,30 @@
   flex-direction: column;
   z-index: 0; }
 
-.Event button {
+button {
   width: 80%;
   height: 50px;
+  margin-right: auto;
   grid-area: button;
   border: none;
-  background-color: #f6ae2d;
+  background: #f6ae2d;
+  background: -moz-linear-gradient(top, #f9d48f 0%, #f6ae2d 100%);
+  background: -webkit-linear-gradient(top, #f9d48f 0%, #f6ae2d 100%);
+  background: linear-gradient(to bottom, #f9d48f 0%, #f6ae2d 100%);
   color: #393939;
   border-radius: 10px;
   font-size: .8em;
   font-weight: bold;
   border: solid 2px #1a1a1a; }
-  .Event button:hover {
-    background-color: #393939; }
-  .Event button:hover {
+  button:hover {
+    background: #1a1a1a;
+    background: -moz-linear-gradient(top, #393939 0%, #1a1a1a 100%);
+    background: -webkit-linear-gradient(top, #393939 0%, #1a1a1a 100%);
+    background: linear-gradient(to bottom, #393939 0%, #1a1a1a 100%); }
+  button:hover {
     color: #f6ae2d; }
 
-.Event .button-container {
+.button-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,7 +119,10 @@
   display: inline-block;
   grid-area: right;
   width: 90%;
-  background-color: #393939;
+  background: #1a1a1a;
+  background: -moz-radial-gradient(top, #1a1a1a 0%, #393939 100%);
+  background: -webkit-radial-gradient(top, #1a1a1a 0%, #393939 100%);
+  background: radial-gradient(to bottom, #1a1a1a 0%, #393939 100%);
   border-radius: 10px;
   margin: 20px auto;
   display: flex;
@@ -200,12 +227,18 @@
   width: 300px;
   height: 50px;
   margin: 15px;
-  background-color: #f6ae2d;
+  background: #f6ae2d;
+  background: -moz-linear-gradient(top, #f9d48f 0%, #f6ae2d 100%);
+  background: -webkit-linear-gradient(top, #f9d48f 0%, #f6ae2d 100%);
+  background: linear-gradient(to bottom, #f9d48f 0%, #f6ae2d 100%);
   color: #1a1a1a;
   border-radius: 10px;
   border: solid 2px #1a1a1a; }
   .EventCreator button:hover {
-    background-color: #1a1a1a; }
+    background: #1a1a1a;
+    background: -moz-linear-gradient(top, #393939 0%, #1a1a1a 100%);
+    background: -webkit-linear-gradient(top, #393939 0%, #1a1a1a 100%);
+    background: linear-gradient(to bottom, #393939 0%, #1a1a1a 100%); }
   .EventCreator button:hover {
     color: #f6ae2d; }
 
@@ -222,11 +255,14 @@
   margin: auto; }
 
 .Header {
+  background: #1a1a1a;
+  background: -moz-linear-gradient(top, #393939 0%, #1a1a1a 100%);
+  background: -webkit-linear-gradient(top, #393939 0%, #1a1a1a 100%);
+  background: linear-gradient(to bottom, #393939 0%, #1a1a1a 100%);
   height: 100px;
   position: sticky;
   top: 0px;
-  color: #6da34d;
-  background-color: #1a1a1a;
+  color: #6a9143;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -266,16 +302,22 @@
   font-size: 1em;
   font-weight: bold;
   margin-left: auto;
-  border: none;
-  background-color: #6da34d;
-  color: #393939;
+  border: solid 2px #1a1a1a;
+  background: #1a1a1a;
+  background: -moz-linear-gradient(top, #94bc7d 0%, #507739 100%);
+  background: -webkit-linear-gradient(top, #94bc7d 0%, #507739 100%);
+  background: linear-gradient(to bottom, #94bc7d 0%, #507739 100%);
+  color: #1a1a1a;
   width: 100px;
   height: 50px;
   border-radius: 10px; }
   .Header button:hover {
-    background-color: #393939; }
+    background: #1a1a1a;
+    background: -moz-linear-gradient(top, #393939 0%, #1a1a1a 100%);
+    background: -webkit-linear-gradient(top, #393939 0%, #1a1a1a 100%);
+    background: linear-gradient(to bottom, #393939 0%, #1a1a1a 100%); }
   .Header button:hover {
-    color: #6da34d; }
+    color: #507739; }
 
 .Main {
   display: inline-block;
@@ -293,7 +335,10 @@
   text-decoration: none;
   color: #f6ae2d;
   text-shadow: 2px 2px 3px #1a1a1a;
-  background-color: #393939;
+  background: #1a1a1a;
+  background: -moz-linear-gradient(top, #393939 0%, #1a1a1a 100%);
+  background: -webkit-linear-gradient(top, #393939 0%, #1a1a1a 100%);
+  background: linear-gradient(to bottom, #393939 0%, #1a1a1a 100%);
   box-shadow: 8px 8px 0px 1px rgba(26, 26, 26, 0.4);
   border: solid 2px #1a1a1a;
   width: 30%;
@@ -302,15 +347,28 @@
   justify-content: center;
   align-items: center; }
   .Main .display-link:hover {
-    background-color: #4573ae;
+    background: #4573ae;
+    background: -moz-linear-gradient(top, #4573ae 0%, #41588a 100%);
+    background: -webkit-linear-gradient(top, #4573ae 0%, #41588a 100%);
+    background: linear-gradient(to bottom, #4573ae 0%, #41588a 100%);
     text-shadow: 2px 2px 3px #1a1a1a; }
 
 .Main h2 {
   margin: 10px; }
 
 .Main .selected {
-  background-color: #4573ae;
+  background: #4573ae;
+  background: -moz-linear-gradient(top, #4573ae 0%, #41588a 100%);
+  background: -webkit-linear-gradient(top, #4573ae 0%, #41588a 100%);
+  background: linear-gradient(to bottom, #4573ae 0%, #41588a 100%);
   text-shadow: 2px 2px 3px #1a1a1a; }
+
+.Main .credits {
+  font-size: .1em;
+  color: #c1c9c3;
+  z-index: 2;
+  position: absolute;
+  bottom: 0; }
 
 .label-container {
   position: relative;
