@@ -11,7 +11,7 @@
 
 ### Overview
 
-*CompeteMe* is a pick-up sports application. It's goal is to connect individuals who seek to create and play in pick-up sporting competitions.
+*CompeteMe* is a pick-up sports application. It's goal is to connect individuals who seek to create and play in pick-up sporting competitions. Currently most pick-up sports events essentially rely on word-of-mouth between individuals who know one another. This application seeks to make pick-up sports more accessible by helping transform this nature of pick-up-sports.
 
 ### Stack
 
